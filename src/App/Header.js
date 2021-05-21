@@ -2,14 +2,21 @@ import React from 'react'
 
 function Header() {
   return (
-    <section id="header">
-      <div className="caption">
-        <div className="title">Virtual Production</div>
-        <p>
-          Virtual production is the future of filmmaking. With real-time rendered computer graphics and camera tracking technologies, the 3D photo-realistic environment is shown on the LED walls. Backgrounds also move in full perspective with respect to the camera’s position.
-        </p>
+    <div id="header">
+      <div class="vimeo-wrapper">
+        <iframe src="https://player.vimeo.com/video/500283225?background=1&autoplay=1&loop=1&byline=0&title=0"
+                frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
-    </section>
+      <div className="logo">
+        <a href="https://www.moonshine.tw/" target="_blank"><img src={process.env.PUBLIC_URL + '/images/logo.svg'} alt="" /></a>
+
+      </div>
+      <div className="caption">
+        <div className="subtitle">影視製作的未來</div>
+        <div className="title">虛擬製片 VIRTUAL PRODUCTION</div>
+        <p>不需綠幕也不需後期製作，在攝影棚內即時拍出寫實場景</p>
+      </div>
+    </div>
   )
 }
 
