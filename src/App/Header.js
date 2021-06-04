@@ -3,9 +3,9 @@ import React from 'react'
 function Header() {
   return (
     <div id="header">
-      <div class="vimeo-wrapper">
+      <div className="vimeo-wrapper">
         <iframe src="https://player.vimeo.com/video/500283225?background=1&autoplay=1&loop=1&byline=0&title=0"
-                frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                frameBorder="0" allowFullScreen></iframe>
       </div>
       <div className="logo">
         <a href="https://www.moonshine.tw/" target="_blank"><img src={process.env.PUBLIC_URL + '/images/logo.svg'} alt="" /></a>

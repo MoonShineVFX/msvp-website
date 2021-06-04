@@ -2,6 +2,10 @@
 
 }
 @media screen and (max-width:768px) {
+  .container{
+    width: 100%;
+    margin: 0 auto;
+  }
   #header{
     .caption{
       width: 80%;

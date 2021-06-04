@@ -19,9 +19,12 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <Chapter1/>
+      <div className="container">
+        <Chapter1/>
+      </div>
       <Chapter2/>
       <Chapter3/>
+
       <Footer/>
     </div>
   );
