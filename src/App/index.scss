@@ -32,7 +32,12 @@ body{
     padding:25px;
     letter-spacing: 2px;
     img{
-      width: 68px;
+      width: 137px;
+      image-rendering: -moz-crisp-edges;         /* Firefox */
+      image-rendering:   -o-crisp-edges;         /* Opera */
+      image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+      image-rendering: crisp-edges;
+      -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
     }
     span{
       text-transform:initial;
