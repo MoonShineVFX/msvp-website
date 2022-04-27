@@ -1,21 +1,27 @@
-import React from 'react'
+import { getByTitle } from '@testing-library/react'
+import React,{useState} from 'react'
 import ReactPlayer from 'react-player'
-function Technology() {
+function Technology({techData}) {
+  const [currentId, setCurrentId] = useState(0);
+  const {tech} = techData
+  const handleClick= (index) =>{
+    setCurrentId(index)
+    // handler(dataId)
+  }
   return (
     <section id="technology">
       <h1>技術規格</h1>
       <div className="technology_content">
         <div className="technology_list">
           <ul>
-            <li>追蹤技術</li>
-            <li>追蹤技術</li>
-            <li>追蹤技術</li>
-            <li>追蹤技術</li>
-            <li>追蹤技術</li>
-            <li>追蹤技術</li>
-            <li>追蹤技術</li>
-            <li>追蹤技術</li>
-            <li>追蹤技術</li>
+            {techData ? 
+              tech.map((item,index)=>{
+                const {id,title,desc,image}=item
+                return(
+                  <li onClick={()=>handleClick(index)}>{title}</li>
+                )
+              }): null
+            }
           </ul>
         </div>
         <div className="technology_view">
@@ -29,8 +35,8 @@ function Technology() {
             />
           </div>
           <div className="caption">
-            <div className="title">追蹤技術</div>
-            <div className="desc">是一項全球嶄新的影視技術；取代傳統綠幕，虛擬製片用大型 LED 屏幕結合遊戲引擎 Unreal Engine，在拍攝現場呈現極具沉浸感的虛擬場景。</div>
+            <div className="title">{tech[currentId].title}</div>
+            <div className="desc">{tech[currentId].desc}</div>
           </div>
         </div>
        

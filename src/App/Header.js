@@ -8,8 +8,9 @@ function Header() {
                 frameBorder="0" allowFullScreen></iframe>
       </div>
       <div className="caption">
-        <p>不需綠幕也不需後期製作，在攝影棚內即時拍出寫實場景</p>
-        <div className="title">虛擬製片 VIRTUAL PRODUCTION</div>
+
+        <div className="title">VIRTUAL PRODUCTION</div>
+        <p>全台灣第一座大型 LED 攝影棚，提供虛擬製片 (Virtual Production) 多樣整合技術，如攝影機定位系統與 XR 延展技術並優化 Virtual Production 製程，從內容製作到串聯投播，提供最完整服務。</p>
         <button type='button' className="header_playbtn">播放影片</button>
       </div>
     </div>
