@@ -6,6 +6,7 @@ import Navbar from './Navbar'
 import Header from './Header'
 import Footer from './Footer'
 import Works from './Works'
+import Intro from './Intro';
 import About from './About'
 import Space from './Space'
 import Technology from './Technology'
@@ -13,128 +14,32 @@ import Partner from './/Partner'
 import Contact from './Contact'
 import WorkSingle from './WorkSingle';
 import SpaceSingle from './SpaceSingle';
+import HeaderVideo from './HeaderVideo';
 import Chapter1 from './Chapter1'
 import Chapter2 from './Chapter2'
 import Chapter3 from './Chapter3'
 
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+import worksjsonData from './worksData.json'
 import techData from './techArray.json'
+import navData from './navbar.json'
+import spacejsonData from './space.json'
 
 function App() {
 
-  const worksArray = [
-    {
-      id:1,
-      title:'2021 ASUS ROG CES 線上發表會花絮',
-      desc:'線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮',
-      link:'https://vimeo.com/701988669',
-      image:'/images/pic/pic03.jpg',
-      category:'PRESENTATION'
-    },
-    {
-      id:2,
-      title:'2021 ASUS ROG CES 線上發表會花絮',
-      desc:'線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮',
-      link:'https://vimeo.com/701988669',
-      image:'/images/pic/pic03.jpg',
-      category:'PRESENTATION'
-    },
-    {
-      id:3,
-      title:'2021 ASUS ROG CES 線上發表會花絮',
-      desc:'線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮',
-      link:'https://vimeo.com/701988669',
-      image:'/images/pic/pic03.jpg',
-      category:'PRESENTATION'
-    },
-    {
-      id:4,
-      title:'2021 ASUS ROG CES 線上發表會花絮',
-      desc:'線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮',
-      link:'https://vimeo.com/701988669',
-      image:'/images/pic/pic03.jpg',
-      category:'DRAMA'
-    },
-    {
-      id:5,
-      title:'2021 ASUS ROG CES 線上發表會花絮',
-      desc:'線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮',
-      link:'https://vimeo.com/701988669',
-      image:'/images/pic/pic03.jpg',
-      category:'PRESENTATION'
-    },
-    {
-      id:6,
-      title:'2021 ASUS ROG CES 線上發表會花絮',
-      desc:'線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮',
-      link:'https://vimeo.com/701988669',
-      image:'/images/pic/pic03.jpg',
-      category:'ADVERTISEMENT'
-    },
-    {
-      id:7,
-      title:'2021 ASUS ROG CES 線上發表會花絮',
-      desc:'線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮',
-      link:'https://vimeo.com/701988669',
-      image:'/images/pic/pic03.jpg',
-      category:'ADVERTISEMENT'
-    },
-    {
-      id:8,
-      title:'2021 ASUS ROG CES 線上發表會花絮',
-      desc:'線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮',
-      link:'https://vimeo.com/701988669',
-      image:'/images/pic/pic04.jpg',
-      category:'INTERNSHIP'
-    },
-    {
-      id:9,
-      title:'2021 ASUS ROG CES 線上發表會花絮6',
-      desc:'線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮線上發表會花絮',
-      link:'https://vimeo.com/701988669',
-      image:'/images/pic/pic04.jpg',
-      category:'METAVERSE CONCERT'
-    }
-  ]
-  const spaceArray = [
-    {
-      id:1,
-      title:'A 棚 ',
-      desc:'弧形 LED 及天幕，適合需大型空間、真實場景建置的拍攝',
-      purpose:'戲劇錄影、廣告拍攝、線上發表會、電競賽轉播',
-      spec:'270° LED 弧形螢幕、可升降 truss 供燈具架設、獨立 Wifi 網路、遠端監控系統',
-      spacespce:'總體面積：160 坪、舞台面積：86 坪、可用高度：6 公尺',
-      image:'/images/pic/pic04.jpg',
-    },
-    {
-      id:2,
-      title:'B 棚 ',
-      desc:'配合 XR 技術讓場景延伸，適合定點及小範圍走動的拍攝',
-      purpose:'MV 錄影、直播座談、線上發表會',
-      spec:'90° LED 直角螢幕、可升降 truss 供燈具架設、獨立 Wifi 網路、遠端監控系統',
-      spacespce:'總體面積：50 坪、舞台面積：7 坪、可用高度：5 公尺',
-      image:'/images/pic/pic04.jpg',
-    }
-  ]
-  const techArray = [
-    {
-      id:1,
-      title:'追蹤技術 ',
-      desc:'透過定位讓攝影鏡頭追蹤畫面，提升攝影團隊溝通效率。',
-      image:'/images/pic/pic04.jpg',
-    }
-  ]
+
   const [isOpen , setIsOpen] = useState(false)
   const [searchResults, setSearchResults] = useState([]);
-  const [workData, setWorkData] = useState(worksArray);
+  const [workData, setWorkData] = useState(worksjsonData);
   const [isSpaceOpen , setIsSapceOpen] = useState(false)
-  const [spaceData, setSpaceData] = useState(spaceArray);
+  const [spaceData, setSpaceData] = useState(spacejsonData);
   const [searchSpaceResults, setSearchSapceResults] = useState([]);
+  const [isHeaderOpen , setIsHeaderOpen] = useState(false)
 
   // 開啟單作品
   const handleAddClick = (dataId) => {
-    const results  =   workData.find((d)=>{
+    const results  =   workData.works.find((d)=>{
       return d.id === dataId
     })
     setSearchResults(results)
@@ -147,7 +52,7 @@ function App() {
 
   //開啟單空間資料
   const handleSpaceClick = (dataId) => {
-    const results  =   spaceData.find((d)=>{
+    const results  =   spaceData.space.find((d)=>{
       return d.id === dataId
     })
     setSearchSapceResults(results)
@@ -156,6 +61,14 @@ function App() {
   //開關單空間modal
   const handleSpaceOpen = () => {
     setIsSapceOpen(!isSpaceOpen)
+  }
+  //開啟header資料
+  const handleHeaderClick = (dataId) => {
+    setIsHeaderOpen(!isHeaderOpen)
+  };
+  //開關header modal
+  const handleHeaderOpen = () => {
+    setIsHeaderOpen(!isHeaderOpen)
   }
   
   useEffect(()=>{
@@ -169,12 +82,16 @@ function App() {
       {
         isSpaceOpen ?  <SpaceSingle data={searchSpaceResults} handler={handleSpaceOpen} visible={isSpaceOpen} /> : null
       }
+      {
+        isHeaderOpen ? <HeaderVideo handler={handleHeaderOpen} visible={isHeaderOpen}/> : null
+      }
 
-      <Navbar/>
-      <Header/>
-      <Works workData={worksArray} handler={handleAddClick} />
+      <Navbar navData={navData} />
+      <Header handler={handleHeaderClick}/>
+      <Works workData={worksjsonData} handler={handleAddClick} />
+      <Intro/>
       <About/>
-      <Space handler={handleSpaceClick} />
+      <Space spaceData={spacejsonData} handler={handleSpaceClick} />
       <Technology techData={techData} />
       <Partner/>
       <Contact/>

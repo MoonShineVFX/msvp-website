@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
-
 function Works({workData,handler}) {
-  const [data, setData] = useState(workData);
+  const {works} = workData
+  const [data, setData] = useState(works);
   const [currentCategory, setCurrentCategory] = useState('ALL');
   const filtersData = [
     {cht_name:"全部",eng_name:"ALL", status: false},
@@ -14,11 +14,11 @@ function Works({workData,handler}) {
   const filterCategory = (category)=>{
     if(category === 'ALL'){
       setCurrentCategory('ALL')
-      setData(workData)
+      setData(works)
       
       return
     }
-    const filteredData =  workData.filter((value)=>{
+    const filteredData =  works.filter((value)=>{
       return value.category === category;
     })
     setCurrentCategory(category)
@@ -51,10 +51,10 @@ function Works({workData,handler}) {
           data.map((item,index)=>{
           return(
             <div 
-              className={currentCategory === item.category || 'ALL' ? 'item active' : 'item'}
+              className={currentCategory === item.category || 'ALL' ? 'item' : 'item'}
               onClick={()=>handleClick(item.id) }
             >
-              <div className="item_bg" style={{backgroundImage: `url(${process.env.PUBLIC_URL + item.image})`}}>
+              <div className="item_bg" style={{backgroundImage: `url(${process.env.PUBLIC_URL +'/images/works/'+ item.image})`}}>
               </div>
             </div>
           )

@@ -10,7 +10,7 @@ function Technology({techData}) {
   }
   return (
     <section id="technology">
-      <h1>技術規格</h1>
+      <h1>研發技術</h1>
       <div className="technology_content">
         <div className="technology_list">
           <ul>

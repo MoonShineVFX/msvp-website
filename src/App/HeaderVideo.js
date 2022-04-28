@@ -1,7 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import ReactPlayer from 'react-player'
-function SpaceSingle({data,handler}) {
-  const {title,link,desc,purpose,spec,spacespce,image } = data
+function HeaderVideo({handler}) {
   // let finalIntro= intro.replace('\\n', '\n')
   const [active , setActive] = useState(false)
 
@@ -22,21 +21,22 @@ function SpaceSingle({data,handler}) {
   return (
     <div className="workitem">
       <div className={active ? "blackbg active" : "blackbg"} onClick={handleClick}></div>
-      <div className={active ? "itemContent active" : "itemContent"}>
+      <div className={active ? "header itemContent active" : "itemContent"}>
         <div className="closeBtn" onClick={handleClick}>X</div>
-        <div className="thumb player-wrapper" style={{backgroundImage: `url(${process.env.PUBLIC_URL + '/images/space/'+ image })`}}>
-          
+        <div className="thumb player-wrapper" >
+          <ReactPlayer 
+            className='react-player'
+            url='https://vimeo.com/500283225' 
+            width= "100%"
+            height= "100%"
+            controls={true}
+            volume={0.4}
+          />
         </div>
-        <article>
-          <div className="title">{title}</div>
-          <div className="description">{desc}</div>
-          <div className="description">{purpose}</div>
-          <div className="description">{spec}</div>
-          <div className="description">{spacespce}</div>
-        </article>
+
       </div>
     </div>
   )
 }
 
-export default SpaceSingle
+export default HeaderVideo

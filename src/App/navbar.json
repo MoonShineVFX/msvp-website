@@ -1,0 +1,46 @@
+{
+  "navbar":[
+    {
+      "id":1,
+      "chtName":"製作案例",
+      "engName":"CASE STUDY",
+      "type":"works"
+    },
+    {
+      "id":2,
+      "chtName":"虛擬製片介紹",
+      "engName":"INTRODUCTION",
+      "type":"intro"
+    },
+    {
+      "id":3,
+      "chtName":"夢想虛擬實景攝影棚",
+      "engName":"ABOUT",
+      "type":"about"
+    },
+    {
+      "id":4,
+      "chtName":"空間配置",
+      "engName":"SPACE CONFIGURATIONS",
+      "type":"space"
+    },
+    {
+      "id":5,
+      "chtName":"研發技術",
+      "engName":"VIRTUAL STUDIO R&D",
+      "type":"technology"
+    },
+    {
+      "id":6,
+      "chtName":"合作夥伴",
+      "engName":"PARTNERSHIP",
+      "type":"partner"
+    },
+    {
+      "id":7,
+      "chtName":"聯絡我們",
+      "engName":"CONTACT",
+      "type":"contact"
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import React from 'react'
-
-function Navbar() {
+import {Link} from "react-scroll";
+function Navbar({navData}) {
+  const {navbar} = navData
   return (
     <div id="navbar">
       <div className="logo">
@@ -8,27 +9,24 @@ function Navbar() {
       </div>
       <div className="navlist">
         <ul>
-          <li>
-            <a href="#">虛擬製片</a>
-          </li>
-          <li>
-            <a href="#">虛擬製片</a>
-          </li>
-          <li>
-            <a href="#">虛擬製片</a>
-          </li>
-          <li>
-            <a href="#">虛擬製片</a>
-          </li>
-          <li>
-            <a href="#">虛擬製片</a>
-          </li>
-          <li>
-            <a href="#">虛擬製片</a>
-          </li>
-          <li>
-            <a href="#">虛擬製片</a>
-          </li>
+          { navbar?
+            navbar.map((item,index)=>{
+              return(
+                <li key={index}>
+                  <Link 
+                    activeClass="active"
+                    to={item.type}
+                    offset={-100}
+                    smooth={true} 
+                    spy={true}
+                    
+                  >
+                    {item.chtName}
+                  </Link>
+                </li>
+              )
+            }): ""
+          }
         </ul>
       </div>
     </div>
