@@ -263,7 +263,7 @@ section{
     border-radius: 50%;
     font-weight: 300;
     font-family: Arial, sans-serif;
-    background-image: radial-gradient(ellipse at top left, #42454c61, #25282e78);
+    background-image: radial-gradient(ellipse at top left,#42454ccc,#25282ee8);
     box-shadow: 0 0 32px #000;
     backdrop-filter: blur(5px);
     border: 1px solid transparent;
@@ -305,7 +305,7 @@ section{
       background-size: cover;
     }
     article{
-      padding: 25px 25px;
+      padding: 20px;
       box-sizing: border-box;
       width: 100%;
       
@@ -317,7 +317,7 @@ section{
         font-size: 12px;
         line-height: 21px;
         color:#ddd;
-        max-height: 210px;
+        max-height: 121px;
         overflow-y: auto;
         white-space: pre-line;
       }
