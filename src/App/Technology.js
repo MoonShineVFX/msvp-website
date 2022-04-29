@@ -1,8 +1,9 @@
-import { getByTitle } from '@testing-library/react'
 import React,{useState} from 'react'
 import ReactPlayer from 'react-player'
+import { useTranslation } from 'react-i18next';
 function Technology({techData}) {
   const [currentId, setCurrentId] = useState(0);
+  const { t } = useTranslation();
   const {tech} = techData
   const handleClick= (index) =>{
     setCurrentId(index)
@@ -10,7 +11,7 @@ function Technology({techData}) {
   }
   return (
     <section id="technology">
-      <h1>研發技術</h1>
+      <h1>{t('section_title5')}</h1>
       <div className="technology_content">
         <div className="technology_list">
           <ul>

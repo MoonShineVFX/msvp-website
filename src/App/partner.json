@@ -1,0 +1,16 @@
+{
+  "partner":[
+    {
+      "id":1,
+      "image":"partner01.svg"
+    },
+    {
+      "id":2,
+      "image":"partner02.svg"
+    },
+    {
+      "id":2,
+      "image":"partner03.svg"
+    }
+  ]
+}

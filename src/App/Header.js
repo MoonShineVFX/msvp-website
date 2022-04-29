@@ -1,6 +1,7 @@
 import React from 'react'
-
+import { useTranslation } from 'react-i18next';
 function Header({handler}) {
+  const { t, i18n } = useTranslation();
   // 點擊作品
   const handleClick= () =>{
     handler()
@@ -14,8 +15,8 @@ function Header({handler}) {
       <div className="caption">
 
         <div className="title">VIRTUAL PRODUCTION</div>
-        <p>全台灣第一座大型 LED 攝影棚，提供虛擬製片 (Virtual Production) 多樣整合技術，如攝影機定位系統與 XR 延展技術並優化 Virtual Production 製程，從內容製作到串聯投播，提供最完整服務。</p>
-        <button type='button' className="header_playbtn" onClick={()=>handleClick()}>播放影片</button>
+        <p>{t('header_desc')}</p>
+        <button type='button' className="header_playbtn" onClick={()=>handleClick()}>{t('play_video')}</button>
       </div>
     </div>
   )

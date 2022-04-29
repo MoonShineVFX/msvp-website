@@ -1,6 +1,8 @@
 import React from 'react'
 import { GoogleMap, LoadScript ,Marker} from '@react-google-maps/api';
+import { useTranslation } from 'react-i18next';
 function Contact() {
+  const { t } = useTranslation();
   const containerStyle = {
     width: '100%',
     height: '320px',
@@ -42,7 +44,7 @@ function Contact() {
   };
   return (
     <section id="contact">
-      <h1>聯絡我們</h1>
+      <h1>{t('section_title7')}</h1>
       <div id="map" className="mt30">
         <LoadScript
           googleMapsApiKey="AIzaSyCY5JQ3g9D70gnfALdxc8z18XD7AtNw3wM"

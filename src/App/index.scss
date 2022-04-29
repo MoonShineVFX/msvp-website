@@ -51,6 +51,7 @@ a{
   width: 80%;
   margin: 0 auto;
 }
+.mobile_navlist{display: none;}
 #navbar{
   display: flex;
   justify-content: space-between;
@@ -67,7 +68,7 @@ a{
       display: flex;
       font-size: 8pt;
       li{
-
+        cursor: pointer;
         a{
           padding: 1rem;
           display: block;
@@ -81,6 +82,9 @@ a{
         }
       }
     }
+  }
+  .mobileNavBtn{
+    display: none;
   }
 }
 #header{
@@ -197,6 +201,7 @@ section{
       transition: 0.3s;
       opacity: 0.7;
       cursor: pointer;
+      position: relative;
       &:hover{
           opacity: 1;
           z-index: 5;
@@ -214,6 +219,13 @@ section{
         background-position: center;   
         transition: 0.3s;
         z-index: 1;
+      }
+      .title{
+        position: absolute;
+        z-index: 2;
+        font-size: 8pt;
+        bottom: 5px;
+        left: 5px;
       }
     }
   }
@@ -265,7 +277,7 @@ section{
     top: 50%;
     left: 50%;
     z-index: 2;
-    width: 780px;
+    width: 100%;
     color:white;
     transition: 0.5s ease;
     transform: translate(-50%,-40%);
@@ -540,7 +552,13 @@ section{
       li{
         flex: 1 0 21%;
         text-align: center;
-        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 0;
+        img{
+            width: 120px;
+        }
       }
     }
   }
@@ -559,8 +577,9 @@ section{
   .infoArea{
     display: flex;
     justify-content: flex-start;
-    align-items: center;
     margin-top: 50px;
+    align-items: flex-start;
+    flex-direction: column;
     .infoContent{
       position: relative;
       &.width1{
@@ -571,7 +590,6 @@ section{
       }
       &:first-child , &:nth-child(2){
         &:after{
-          content: "";
           position: absolute;
           background: var(--grey);
           width: 1px;

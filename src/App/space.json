@@ -2,20 +2,20 @@
   "space":[
     {
       "id":1,
-      "title":"A 棚 CAVE ",
-      "desc":"弧形 LED 及天幕，適合需大型空間、真實場景建置的拍攝",
-      "purpose":"戲劇錄影、廣告拍攝、線上發表會、電競賽轉播",
-      "spec":"270° LED 弧形螢幕、可升降 truss 供燈具架設、獨立 Wifi 網路、遠端監控系統",
-      "spacespce":"總體面積：160 坪、舞台面積：86 坪、可用高度：6 公尺",
+      "title":"space_title1",
+      "desc":"space_desc1",
+      "purpose":"space_purpose1",
+      "spec":"space_spec1",
+      "spacespce":"space_spacespce1",
       "image":"space01.png"
     },
     {
       "id":2,
-      "title":"B 棚 CUBE",
-      "desc":"配合 XR 技術讓場景延伸，適合定點及小範圍走動的拍攝",
-      "purpose":"MV 錄影、直播座談、線上發表會",
-      "spec":"90° LED 直角螢幕、可升降 truss 供燈具架設、獨立 Wifi 網路、遠端監控系統",
-      "spacespce":"總體面積：50 坪、舞台面積：7 坪、可用高度：5 公尺",
+      "title":"space_title2",
+      "desc":"space_desc2",
+      "purpose":"space_purpose2",
+      "spec":"space_spec2",
+      "spacespce":"space_spacespce2",
       "image":"space02.png"
     }
   ]

@@ -1,9 +1,10 @@
 import React,{useState,useEffect} from 'react'
-import ReactPlayer from 'react-player'
+import { useTranslation } from 'react-i18next';
 function SpaceSingle({data,handler}) {
   const {title,link,desc,purpose,spec,spacespce,image } = data
   // let finalIntro= intro.replace('\\n', '\n')
   const [active , setActive] = useState(false)
+  const { t } = useTranslation();
 
   // 點擊按鈕或背景關閉
   const handleClick= () =>{
@@ -28,11 +29,11 @@ function SpaceSingle({data,handler}) {
           
         </div>
         <article>
-          <div className="title">{title}</div>
-          <div className="description">{desc}</div>
-          <div className="description">{purpose}</div>
-          <div className="description">{spec}</div>
-          <div className="description">{spacespce}</div>
+          <div className="title">{t(`${title}`)}</div>
+          <div className="description">{t(`${desc}`)}</div>
+          <div className="description">{t(`${purpose}`)}</div>
+          <div className="description">{t(`${spec}`)}</div>
+          <div className="description">{t(`${spacespce}`)}</div>
         </article>
       </div>
     </div>

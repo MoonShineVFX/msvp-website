@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import './index.scss'
 import './mobileIndex.scss'
+import {Events} from "react-scroll";
 
 import Navbar from './Navbar'
 import Header from './Header'
@@ -15,6 +16,7 @@ import Contact from './Contact'
 import WorkSingle from './WorkSingle';
 import SpaceSingle from './SpaceSingle';
 import HeaderVideo from './HeaderVideo';
+import MobileNabar from './MobileNabar';
 import Chapter1 from './Chapter1'
 import Chapter2 from './Chapter2'
 import Chapter3 from './Chapter3'
@@ -36,6 +38,18 @@ function App() {
   const [spaceData, setSpaceData] = useState(spacejsonData);
   const [searchSpaceResults, setSearchSapceResults] = useState([]);
   const [isHeaderOpen , setIsHeaderOpen] = useState(false)
+  const [isToggled, setToggled] = useState(false);
+  const [isScorllEnd, setISScorllEnd]= useState(false)
+  const toggleTrueFalse = () => setToggled(!isToggled);
+  Events.scrollEvent.register('end', function(to, element) {
+    setISScorllEnd(!isScorllEnd)
+    setTimeout(()=>{
+      setToggled(false)
+      setISScorllEnd(false)
+    },800)
+    console.log(isToggled,isScorllEnd)
+  });
+ 
 
   // 開啟單作品
   const handleAddClick = (dataId) => {
@@ -76,6 +90,7 @@ function App() {
   },[])
   return (
     <div className="App">
+      <MobileNabar navData={navData} isToggled={isToggled} isScorllEnd={isScorllEnd}/>
       {
         isOpen ?  <WorkSingle data={searchResults} handler={handleOpen} visible={isOpen} /> : null
       }
@@ -86,7 +101,7 @@ function App() {
         isHeaderOpen ? <HeaderVideo handler={handleHeaderOpen} visible={isHeaderOpen}/> : null
       }
 
-      <Navbar navData={navData} />
+      <Navbar navData={navData} toggleTrueFalse={toggleTrueFalse} />
       <Header handler={handleHeaderClick}/>
       <Works workData={worksjsonData} handler={handleAddClick} />
       <Intro/>

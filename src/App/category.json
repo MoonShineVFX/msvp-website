@@ -1,0 +1,10 @@
+{
+  "category":[
+    {"cht_name":"work_catrgory1","eng_name":"ALL", "status": false},
+    {"cht_name":"work_catrgory2","eng_name":"PRESENTATION", "status": false},
+    {"cht_name":"work_catrgory3","eng_name":"METAVERSE CONCERT", "status": false},
+    {"cht_name":"work_catrgory4","eng_name":"ADVERTISEMENT", "status": false},
+    {"cht_name":"work_catrgory5","eng_name":"DRAMA", "status": false},
+    {"cht_name":"work_catrgory6","eng_name":"INTERNSHIP", "status": false}
+  ]
+}

@@ -1,14 +1,15 @@
 import React from 'react'
-
+import { useTranslation } from 'react-i18next';
 function Space({spaceData,handler}) {
   const {space} = spaceData
+  const { t } = useTranslation();
   // 點擊空間
   const handleClick= (dataId) =>{
     handler(dataId)
   }
   return (
     <section id="space">
-      <h1>攝影棚空間配置</h1>
+      <h1>{t('section_title4')}</h1>
       <div className="space_list">
         {
           space?
@@ -17,7 +18,7 @@ function Space({spaceData,handler}) {
               return(
                 <div className="space_item"  onClick={()=>handleClick(id)}>
                   <div className="space_item_bg" style={{backgroundImage: `url(${process.env.PUBLIC_URL + '/images/space/'+ image })`}}></div>
-                  <div className="title" >{title}</div>
+                  <div className="title" >{t(`${title}`)}</div>
                 </div>
               )
             }) : ""

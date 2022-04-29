@@ -1,9 +1,15 @@
 import React from 'react'
 import {Link} from "react-scroll";
-function Navbar({navData}) {
+import { FaBars } from "react-icons/fa";
+import { useTranslation } from 'react-i18next';
+function Navbar({navData , toggleTrueFalse}) {
   const {navbar} = navData
+  const { t, i18n } = useTranslation();
+  const changeLanguage = (lng) => {
+      i18n.changeLanguage(lng);
+  };
   return (
-    <div id="navbar">
+    <div id="navbar" className='site-menu'>
       <div className="logo">
         <img src={process.env.PUBLIC_URL+'/images/2022/MSXR_White_H.png'} alt="" />
       </div>
@@ -21,13 +27,23 @@ function Navbar({navData}) {
                     spy={true}
                     
                   >
-                    {item.chtName}
+                    {t(`${item.chtName}`)}
                   </Link>
                 </li>
               )
             }): ""
           }
+          <li className={i18n.language === 'zh-TW' ? 'active' : ''}>
+            <a onClick={() => changeLanguage("zh-TW")}>繁</a>
+          </li>
+          <li className={i18n.language === 'en' ? 'active' : ''}>
+            <a onClick={() => changeLanguage("en")}>ENG</a>
+          </li>
+          
         </ul>
+      </div>
+      <div className="mobileNavBtn" onClick={toggleTrueFalse}>
+          <FaBars/>
       </div>
     </div>
   )
