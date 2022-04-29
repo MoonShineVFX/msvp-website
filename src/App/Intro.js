@@ -13,7 +13,7 @@ function Intro() {
             <p>{t('intro_desc')}</p>
           </div>
           <div className="right_img">
-            <img src={process.env.PUBLIC_URL+'images/intro/intro01.png'} alt="" />
+            <img src={process.env.PUBLIC_URL+'/images/intro/intro01.png'} alt="" />
           </div>
         </div>
       </div>
