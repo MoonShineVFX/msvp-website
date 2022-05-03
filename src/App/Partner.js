@@ -11,8 +11,8 @@ function Partner({partnerData}) {
     infinite: true,
     speed: 500,
     autoplaySpeed: 2000,
-    slidesToShow: 7,
-    slidesToScroll: 2,
+    slidesToShow: 4,
+    slidesToScroll: 1,
     nextArrow: <FaChevronRight />,
     prevArrow: <FaChevronLeft />
   };

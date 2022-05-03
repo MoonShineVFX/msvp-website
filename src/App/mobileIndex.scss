@@ -29,6 +29,31 @@
       }
     } 
   }
+  .workitem {
+    .itemContent{
+      width: 80%;
+    }
+  }
+  #intro {
+    .about_intro {
+      .content {
+        .left_container{
+          overflow: initial;
+       }
+      }  
+    }
+  }
+  #about{
+    .about_detail{
+      .about_detail_list{
+        .about_slider{
+          .item{
+            padding-top: 180%;
+          }
+        }
+      }  
+    } 
+  } 
 
   #chapter1 {
     .flex-content{
