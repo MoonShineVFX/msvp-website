@@ -42,8 +42,18 @@ function Navbar({navData , toggleTrueFalse}) {
           
         </ul>
       </div>
-      <div className="mobileNavBtn" onClick={toggleTrueFalse}>
+
+      <div className="mobileNavBtn" >
+        <div className={i18n.language === 'zh-TW' ? 'active' : ''}>
+          <a onClick={() => changeLanguage("zh-TW")}>繁</a>
+        </div>
+        <div className={i18n.language === 'en' ? 'active' : ''}>
+          <a onClick={() => changeLanguage("en")}>ENG</a>
+        </div>
+        <div onClick={toggleTrueFalse}>
           <FaBars/>
+        </div>
+          
       </div>
     </div>
   )

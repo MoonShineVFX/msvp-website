@@ -42,8 +42,8 @@ function PureSliderAbout(props) {
     autoplaySpeed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <FaChevronRight size={40} />,
-    prevArrow: <FaChevronLeft size={40}/>,
+    nextArrow: <FaChevronRight size={40}  className="nextbtn"/>,
+    prevArrow: <FaChevronLeft size={40} className="prevbtn"/>,
     beforeChange:(current, next)=>setCurrentIndex(next)
   };
   

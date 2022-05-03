@@ -444,6 +444,13 @@ section.fluid_section{
     .about_detail_list{
       width: 50%;
       .about_slider{
+        .slick-next{
+          right: 25px;
+        }
+        .slick-prev{
+          left: 25px;
+          z-index: 1;
+        }
         .item{
           width: 100%;
           padding-top: 108%;
