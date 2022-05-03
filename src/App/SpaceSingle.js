@@ -31,9 +31,18 @@ function SpaceSingle({data,handler}) {
         <article>
           <div className="title">{t(`${title}`)}</div>
           <div className="description">{t(`${desc}`)}</div>
-          <div className="description">{t(`${purpose}`)}</div>
-          <div className="description">{t(`${spec}`)}</div>
-          <div className="description">{t(`${spacespce}`)}</div>
+          <div className="description">
+            <div>推薦用途</div>
+            <div dangerouslySetInnerHTML={{ __html:t(`${purpose}`) }}/>
+          </div>
+          <div className="description">
+            <div>器材規格</div>
+            <div dangerouslySetInnerHTML={{ __html:t(`${spec}`) }}/>
+          </div>
+          <div className="description">
+            <div>場地尺寸</div>
+            <div dangerouslySetInnerHTML={{ __html:t(`${spacespce}`) }}/>
+          </div>
         </article>
       </div>
     </div>

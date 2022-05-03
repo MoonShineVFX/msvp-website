@@ -2,38 +2,38 @@
   "tech":[
     {
       "id":1,
-      "title":"追蹤技術 ",
-      "desc":"透過定位讓攝影鏡頭追蹤畫面，提升攝影團隊溝通效率。",
+      "title":"tech_title1",
+      "desc":"tech_desc1",
       "image":"/images/pic/pic04.jpg"
     },
     {
       "id":2,
-      "title":"Moysys 場景延伸",
-      "desc":"將 LED 以外的場景透過運算即時合成，拍攝範圍將不再受限於攝影棚的大小，人物可融合於虛擬世界並更自在地運鏡。",
+      "title":"tech_title2",
+      "desc":"tech_desc2",
       "image":"/images/pic/pic04.jpg"
     },
     {
       "id":3,
-      "title":"360 素材運用",
-      "desc":"真實場景也能在虛擬攝影棚拍攝，不受限天氣與時間，降低拍攝時間與成本。",
+      "title":"tech_title3",
+      "desc":"tech_desc3",
       "image":"/images/pic/pic04.jpg"
     },
     {
       "id":4,
-      "title":"虛擬燈光串接技術 ",
-      "desc":"音樂可與實體燈光搭配做設計，讓虛擬背景的燈光串聯現場實體燈光，適用於音樂展演、舞台效果、虛擬演唱會。",
+      "title":"tech_title4",
+      "desc":"tech_desc4",
       "image":"/images/pic/pic04.jpg"
     },
     {
       "id":5,
-      "title":"AI 去背合成 ",
-      "desc":"將人物即時 AI 去背可讓運鏡不再受限於攝影棚大小，使用於後期製作創造更多樣的鏡頭表現。",
+      "title":"tech_title5",
+      "desc":"tech_desc5",
       "image":"/images/pic/pic04.jpg"
     },
     {
       "id":6,
-      "title":"群眾模擬系統 ",
-      "desc":"適用於演唱會、虛擬舞群、戰爭或體育館等觀眾場面並可與人臉辨識做結合，增加細節。",
+      "title":"tech_title6",
+      "desc":"tech_desc6",
       "image":"/images/pic/pic04.jpg"
     }
   ]

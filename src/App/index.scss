@@ -134,7 +134,7 @@ a{
   .caption{
     position: absolute;
     color:white;
-    width: 650px;
+    width: 700px;
     top:40%;
     left:50%;
     transform: translate(-50%, -50%);
@@ -144,6 +144,7 @@ a{
       font-size: 2rem;
       font-weight: bold;
       letter-spacing: 2px;
+      text-transform: capitalize;
     }
     p{
       font-weight: 100;
@@ -169,6 +170,9 @@ section{
   // padding:100px 50px;
   box-sizing: border-box;
   margin: 0 15%;
+}
+section.fluid_section{
+  margin: 0 5%;
 }
 #works{
   position: relative;
@@ -236,7 +240,7 @@ section{
   width: 100%;
   height: 100%;
   .blackbg{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.7);
@@ -253,7 +257,7 @@ section{
     position: absolute;
     width: 40px;
     height: 40px;
-    top: -20px;
+    top: 10px;
     right: -20px;
     z-index: 10;
     color: #fff;
@@ -320,6 +324,11 @@ section{
         max-height: 121px;
         overflow-y: auto;
         white-space: pre-line;
+        margin-top: 10px;
+        ul , li{
+          list-style-type: square;
+          margin-left: 10px;
+        }
       }
       .author{
         margin-top: 20px;
@@ -365,12 +374,20 @@ section{
     .content{
       display: flex;
       position: relative;
-      .left_word{
+      .left_container{
         border:1px solid var(--main-color01);
+        position: relative;
+        padding-top: 30%;
+        width: 50%;
+        overflow: hidden;
+      }
+      .left_word{
+        position: absolute;
         border-radius: 5px;
         box-sizing: border-box;
-        padding:5% 15% 8% 5%; 
-        width: 50%;
+        width: 70%;
+        top: 12%;
+        left:10%;
         .title{
           font-size: 1.3em;
         }
@@ -382,7 +399,7 @@ section{
       }
       .right_img{
         position: absolute;
-        top:40px;
+        top:20%;
         right:10px;
         width: 55%;
         img{
@@ -394,31 +411,59 @@ section{
 }
 #about{
   margin-top: 150px;
-  
+  svg{
+    fill: white;
+  }
   .about_detail{
     margin-top: 300px;
     display: flex;
+    justify-content: space-around;
     .about_detail_textcontent{
-      width: 35%;
-      padding:30px 40px 0 10px;
+      width: 40%;
+      padding:10% 40px 0 10px;
+      position: relative;
+      top:50%;
       .title{
-        font-size: 35px;
-        margin-bottom: 15px;
+        font-size: 2rem;
+        margin-bottom: 30px;
+        color: #43e7fe;
+        letter-spacing: 2px;
+        text-align: left;
       }
       .desc{
-        font-size: var(--main-p-font-size);
-        color:var(--grey);
-        line-height: 25px;
+        font-size: 16px;
+        color: #cacaca;
+        letter-spacing: 1px;
+        line-height: 150%;
+        text-align: left;
+        word-wrap: break-word;
+        font-weight: 100;
       }
     }
-    .about_detail_list{
-      width: 65%;
-      ul{
 
-        li{
-       
+    .about_detail_list{
+      width: 50%;
+      .about_slider{
+        .item{
+          width: 100%;
+          padding-top: 108%;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
         }
       }
+    }
+    .nav_group{
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      .button{
+        background: none;
+      }
+  
     }
   } 
 }
@@ -495,11 +540,15 @@ section{
       ul{
         li{
           font-size: var(--main-p-font-size);
-          line-height: 35px;
           box-sizing: border-box;
-          padding:5px 15px;
+          padding:10px 15px;
           color:var(--grey);
           cursor: pointer;
+          text-transform: capitalize;
+          margin-bottom: 20px;
+          &.active{
+            border:1px solid #fff;
+          }
           &:hover{
             border:1px solid #fff;
           }
@@ -559,6 +608,16 @@ section{
         img{
             width: 120px;
         }
+      }
+    }
+  }
+  .partner_slider{
+    line-height: 90px;
+    .item{
+      img{
+        width: 100px;
+        height: auto;
+        opacity: 0.8;
       }
     }
   }

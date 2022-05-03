@@ -2,15 +2,51 @@
   "partner":[
     {
       "id":1,
-      "image":"partner01.svg"
+      "image":"Acer.png"
     },
     {
       "id":2,
-      "image":"partner02.svg"
+      "image":"ASUS.png"
     },
     {
       "id":2,
-      "image":"partner03.svg"
+      "image":"rog.png"
+    },
+    {
+      "id":2,
+      "image":"Gamania.png"
+    },
+    {
+      "id":1,
+      "image":"Acer.png"
+    },
+    {
+      "id":2,
+      "image":"ASUS.png"
+    },
+    {
+      "id":2,
+      "image":"rog.png"
+    },
+    {
+      "id":2,
+      "image":"Gamania.png"
+    },
+    {
+      "id":1,
+      "image":"Acer.png"
+    },
+    {
+      "id":2,
+      "image":"ASUS.png"
+    },
+    {
+      "id":2,
+      "image":"rog.png"
+    },
+    {
+      "id":2,
+      "image":"Gamania.png"
     }
   ]
 }

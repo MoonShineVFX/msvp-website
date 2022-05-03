@@ -14,7 +14,7 @@ function Header({handler}) {
       </div>
       <div className="caption">
 
-        <div className="title">VIRTUAL PRODUCTION</div>
+        <div className="title">{t('header_title')}</div>
         <p>{t('header_desc')}</p>
         <button type='button' className="header_playbtn" onClick={()=>handleClick()}>{t('play_video')}</button>
       </div>

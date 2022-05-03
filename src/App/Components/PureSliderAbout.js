@@ -1,11 +1,13 @@
 import React,{useContext, useEffect, useState} from 'react'
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext,Image  } from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
+import Slider from "react-slick";
 import { FaChevronRight ,FaChevronLeft } from "react-icons/fa";
-
-function PureSliderAbout() {
-  const [currentIndex, setCurrentIndex] = useState(0)
+import { useTranslation } from 'react-i18next';
+import aboutjsonData from '../about.json'
+function PureSliderAbout(props) {
   
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const { t } = useTranslation();
+  const {about} = aboutjsonData
   const dataArray = [
     {
       title:'跨界完整虛擬製作製程',
@@ -28,56 +30,54 @@ function PureSliderAbout() {
       image: 'about04.png'
     }
   
+
   ]
   const [length, setLength] = useState(dataArray.length)
-  const next = () => {
-    if (currentIndex < (length - 1)) {
-        setCurrentIndex(prevState => prevState + 1)
-    }
-  }
 
-  const prev = () => {
-      if (currentIndex > 0) {
-          setCurrentIndex(prevState => prevState - 1)
-      }
-  }
+  var settings = {
+    autoplay: false,
+    dots: false,
+    infinite: true,
+    speed: 500,
+    autoplaySpeed: 2000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <FaChevronRight size={40} />,
+    prevArrow: <FaChevronLeft size={40}/>,
+    beforeChange:(current, next)=>setCurrentIndex(next)
+  };
+  
   return (
     <div id="slider_wrapper">
       <div className="about_detail">
         <div className="about_detail_textcontent">
           <div className="title">
-            {dataArray[currentIndex].title}
+            {t(`${about[currentIndex].title}`)}
           </div>
           <div className="desc">
-            {dataArray[currentIndex].desc}
+          {t(`${about[currentIndex].desc}`)}
           </div>
         </div>
-        <CarouselProvider
-          infinite={true}
-          className='about_detail_list'
-          naturalSlideWidth={100}
-          naturalSlideHeight={125}
-          totalSlides={dataArray.length}
-          currentSlide={currentIndex}
-          touchEnabled={false}
-          dragEnabled={false}
-          
-          >
-          <Slider  className='items'>
-            {dataArray.map((item,index)=>
-              <Slide index={index} key={index} className="item">
-                <div style={{backgroundImage: `url(${process.env.PUBLIC_URL + '/images/about/'+item.image})`}}></div>
+        <div className="about_detail_list">
+          <Slider  {...settings} className='about_slider items'>
+            {about.map((item,index)=>
+              <div>
+                <div 
+                  style={{backgroundImage: `url(${process.env.PUBLIC_URL + '/images/about/'+item.image})`}}
+                  className="item"
+                >
+                </div>
+              </div>
+
                 
-              </Slide>
             )}
 
-          </Slider>
-          <div className="nav_group">
-            <div type="button" className='button' onClick={prev}><FaChevronLeft size={40}/></div>
-            <div type="button" className='button'onClick={next}><FaChevronRight size={40}/></div>
-          </div>
+          </Slider> 
+          {/* <ButtonBack onClick={prev}><FaChevronLeft size={40}/></ButtonBack> */}
+          {/* <ButtonNext onClick={(e)=> next(e)}><FaChevronRight size={40}/></ButtonNext> */}
+        </div>
+
           
-        </CarouselProvider>
       </div>
      
     </div>

@@ -19,7 +19,12 @@ function Technology({techData}) {
               tech.map((item,index)=>{
                 const {id,title,desc,image}=item
                 return(
-                  <li onClick={()=>handleClick(index)}>{title}</li>
+                  <li 
+                    onClick={()=>handleClick(index)}
+                    className={currentId === index ? "active" : ""}
+                  >
+                    {t(`${title}`)}
+                  </li>
                 )
               }): null
             }
@@ -36,8 +41,8 @@ function Technology({techData}) {
             />
           </div>
           <div className="caption">
-            <div className="title">{tech[currentId].title}</div>
-            <div className="desc">{tech[currentId].desc}</div>
+            <div className="title">{t(`${tech[currentId].title}`)}</div>
+            <div className="desc">{t(`${tech[currentId].desc}`)}</div>
           </div>
         </div>
        

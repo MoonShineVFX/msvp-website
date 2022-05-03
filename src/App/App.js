@@ -1,6 +1,8 @@
 import React,{useState,useEffect} from 'react';
 import './index.scss'
 import './mobileIndex.scss'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import {Events} from "react-scroll";
 
 import Navbar from './Navbar'
@@ -27,6 +29,7 @@ import worksjsonData from './worksData.json'
 import techData from './techArray.json'
 import navData from './navbar.json'
 import spacejsonData from './space.json'
+import partnerjsonData from './partner.json'
 
 function App() {
 
@@ -108,7 +111,7 @@ function App() {
       <About/>
       <Space spaceData={spacejsonData} handler={handleSpaceClick} />
       <Technology techData={techData} />
-      <Partner/>
+      <Partner partnerData={partnerjsonData} />
       <Contact/>
 
 

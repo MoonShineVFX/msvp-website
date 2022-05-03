@@ -8,14 +8,16 @@
     position: relative;
   }
   .item{
+    border-radius: 10px;
     .carousel__inner-slide{
       width: 100%;
       height: auto;
       min-height: 500px;
       position: relative;
       border-radius: 10px;
+      padding-top: 50%;
+      
       div{
-        border-radius: 10px;
         position: absolute;
         top: 0;
         width: 100%;
@@ -23,21 +25,11 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+        border-radius: 10px;
       }
     }
   }
-  .nav_group{
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    .button{
-      background: none;
-    }
-
-  }
+  
   .box-container{
     display: flex;
     flex-wrap: nowrap;

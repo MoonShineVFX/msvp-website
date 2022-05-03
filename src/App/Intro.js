@@ -6,12 +6,15 @@ function Intro() {
     <section id="intro">
       <div className="about_intro">
         <div className="content">
-          <div className="left_word">
-            <div className="title">
-            {t('intro_title')}
+          <div className="left_container">
+            <div className="left_word">
+              <div className="title">
+              {t('intro_title')}
+              </div>
+              <p>{t('intro_desc')}</p>
             </div>
-            <p>{t('intro_desc')}</p>
           </div>
+
           <div className="right_img">
             <img src={process.env.PUBLIC_URL+'/images/intro/intro01.png'} alt="" />
           </div>
