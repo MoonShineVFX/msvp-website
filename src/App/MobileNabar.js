@@ -33,14 +33,6 @@ function MobileNabar({navData,isToggled,isScorllEnd}) {
               )
             }): ""
           }
-          <ul className='lang_btnGroup'>
-            <li className={i18n.language === 'zh-TW' ? 'active' : ''}>
-              <a onClick={() => changeLanguage("zh-TW")}>繁</a>
-            </li>
-            <li className={i18n.language === 'en' ? 'active' : ''}>
-              <a onClick={() => changeLanguage("en")}>ENG</a>
-            </li>
-          </ul>
 
         </ul>
     </div>
