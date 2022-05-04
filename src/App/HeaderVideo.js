@@ -26,7 +26,7 @@ function HeaderVideo({handler}) {
         <div className="thumb player-wrapper" >
           <ReactPlayer 
             className='react-player'
-            url='https://vimeo.com/500283225' 
+            url='https://vimeo.com/706129402' 
             width= "100%"
             height= "100%"
             controls={true}
