@@ -389,12 +389,21 @@ section.fluid_section{
         top: 12%;
         left:10%;
         .title{
-          font-size: 1.3em;
+          font-size: 1.3rem;
+          margin-bottom: 30px;
+          color: #43e7fe;
+          letter-spacing: 1px;
+          text-align: left;
+          text-transform: capitalize;
         }
         p{
-          font-size: var(--main-p-font-size);
-          line-height:25px;
-          color:var(--grey);
+          font-size: 14px;
+          color: #cacaca;
+          letter-spacing: 1px;
+          line-height: 150%;
+          text-align: left;
+          word-wrap: break-word;
+          font-weight: 300;
         }
       }
       .right_img{
@@ -410,9 +419,83 @@ section.fluid_section{
   }
 }
 #about{
-  margin-top: 150px;
+  margin-top: 250px;
   svg{
     fill: white;
+  }
+  .about_item{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:nth-child(2) , &:nth-child(4){
+      .about_item_text{
+        order: 2;
+      }
+      .about_item_img{
+        order: 1;
+      }
+    }
+    .about_item_text{
+       width: 50%; 
+       box-sizing: border-box;
+       padding:30px;
+       order: 1;
+
+      .title{
+        font-size: 2rem;
+        margin-bottom: 30px;
+        color: #43e7fe;
+        letter-spacing: 2px;
+        text-align: left;
+        
+      }
+      .desc{
+        font-size: 14px;
+        color: #cacaca;
+        letter-spacing: 1px;
+        line-height: 150%;
+        text-align: left;
+        word-wrap: break-word;
+        font-weight: 300;
+        
+      }
+    }
+    .about_item_img{
+      width: 50%;
+      box-sizing: border-box;
+      order: 2;
+      position: relative;
+      &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        // box-shadow: 5px 5px 5px 30px #000000 inset;
+        background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 35%, rgba(0,0,0,0) 65%, rgba(0,0,0,1) 100%);
+      
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        // box-shadow: 5px 5px 5px 30px #000000 inset;
+        background: linear-gradient(360deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 65%, rgba(0,0,0,1) 100%);
+      
+      }
+      img{
+        width: 100%;
+        opacity: .8;
+        filter:saturate(0.5);
+      }
+    }
   }
   .about_detail{
     margin-top: 300px;

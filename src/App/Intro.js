@@ -6,7 +6,7 @@ function Intro() {
     <section id="intro">
       <div className="about_intro">
         <div className="content">
-          <div className="left_container">
+          <div className="left_container" data-aos="fade-right">
             <div className="left_word">
               <div className="title">
               {t('intro_title')}
@@ -15,7 +15,7 @@ function Intro() {
             </div>
           </div>
 
-          <div className="right_img">
+          <div className="right_img" data-aos="fade-right">
             <img src={process.env.PUBLIC_URL+'/images/intro/intro01.png'} alt="" />
           </div>
         </div>

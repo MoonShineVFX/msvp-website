@@ -45,7 +45,7 @@ function Contact() {
   return (
     <section id="contact">
       <h1>{t('section_title7')}</h1>
-      <div id="map" className="mt30">
+      <div id="map" className="mt30" data-aos="fade">
         <LoadScript
           googleMapsApiKey="AIzaSyCY5JQ3g9D70gnfALdxc8z18XD7AtNw3wM"
         >

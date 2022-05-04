@@ -30,6 +30,7 @@ import techData from './techArray.json'
 import navData from './navbar.json'
 import spacejsonData from './space.json'
 import partnerjsonData from './partner.json'
+import aboutjsonData from './about.json'
 
 function App() {
 
@@ -108,7 +109,7 @@ function App() {
       <Header handler={handleHeaderClick}/>
       <Works workData={worksjsonData} handler={handleAddClick} />
       <Intro/>
-      <About/>
+      <About aboutData={aboutjsonData}/>
       <Space spaceData={spacejsonData} handler={handleSpaceClick} />
       <Technology techData={techData} />
       <Partner partnerData={partnerjsonData} />
