@@ -31,15 +31,10 @@ function Technology({techData}) {
           </ul>
         </div>
         <div className="technology_view">
-          <div className='player-wrapper'>
-            <ReactPlayer 
-              url="https://vimeo.com/524168527"
-              controls 
-              width='100%'
-              height='100%'
-              className='react-player'
-            />
+          <div className="technology_gif">
+            <img src={process.env.PUBLIC_URL +'/images/tech/'+ tech[currentId].image} alt="" />
           </div>
+          
           <div className="caption">
             <div className="title">{t(`${tech[currentId].title}`)}</div>
             <div className="desc">{t(`${tech[currentId].desc}`)}</div>

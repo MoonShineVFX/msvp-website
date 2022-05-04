@@ -4,37 +4,31 @@
       "id":1,
       "title":"tech_title1",
       "desc":"tech_desc1",
-      "image":"/images/pic/pic04.jpg"
+      "image":"tech01.gif"
     },
     {
       "id":2,
       "title":"tech_title2",
       "desc":"tech_desc2",
-      "image":"/images/pic/pic04.jpg"
+      "image":"tech02.gif"
     },
     {
       "id":3,
       "title":"tech_title3",
       "desc":"tech_desc3",
-      "image":"/images/pic/pic04.jpg"
+      "image":"tech03.gif"
     },
     {
       "id":4,
       "title":"tech_title4",
       "desc":"tech_desc4",
-      "image":"/images/pic/pic04.jpg"
+      "image":"tech04.gif"
     },
     {
       "id":5,
       "title":"tech_title5",
       "desc":"tech_desc5",
-      "image":"/images/pic/pic04.jpg"
-    },
-    {
-      "id":6,
-      "title":"tech_title6",
-      "desc":"tech_desc6",
-      "image":"/images/pic/pic04.jpg"
+      "image":"tech05.gif"
     }
   ]
 }
