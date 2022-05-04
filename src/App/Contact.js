@@ -45,7 +45,7 @@ function Contact() {
   return (
     <section id="contact">
       <h1>{t('section_title7')}</h1>
-      <div id="map" className="mt30" data-aos="fade">
+      <div id="map" className="mt30">
         <LoadScript
           googleMapsApiKey="AIzaSyCY5JQ3g9D70gnfALdxc8z18XD7AtNw3wM"
         >
@@ -74,7 +74,7 @@ function Contact() {
         <div className="infoArea">
           <div className="infoContent width1">
               <p>Tel</p>
-              <p>02-2785-7037</p>
+              <p>+886-2-27857037</p>
           </div>
           <div className="infoContent width1">
               <p>Email</p>
@@ -82,7 +82,7 @@ function Contact() {
           </div>
           <div className="infoContent width2">
               <p>Address</p>
-              <p>3F, No.481, Sec. 6, Zhongxiao E. Rd., Nangang Dist., Taipei City 115, Taiwan (R.O.C.)</p>
+              <p>No. 45, Ln. 515, Sec. 1, Datong Rd., Xizhi Dist., New Taipei City 221010 , Taiwan (R.O.C.)</p>
           </div>
         </div>
       </div>
