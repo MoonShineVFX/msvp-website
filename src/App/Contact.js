@@ -39,8 +39,8 @@ function Contact() {
       }
   ]
   const center = {
-    lat: 25.051027,
-    lng: 121.594860
+    lat: 25.062570,
+    lng: 121.643650
   };
   return (
     <section id="contact">
@@ -63,7 +63,6 @@ function Contact() {
                 lat: 25.051027,
                 lng: 121.594860
               }}
-              icon={process.env.PUBLIC_URL + '/img/2022/MS_landmark.svg'}
             />
             { /* Child components, such as markers, info windows, etc. */ }
             <></>
