@@ -9,7 +9,6 @@ import Navbar from './Navbar'
 import Header from './Header'
 import Footer from './Footer'
 import Works from './Works'
-import Intro from './Intro';
 import About from './About'
 import Space from './Space'
 import Technology from './Technology'
@@ -110,7 +109,6 @@ function App() {
       <Header handler={handleHeaderClick}/>
       <Works workData={worksjsonData} handler={handleAddClick} />
       <IntroBigBg/>
-      <Intro/>
       <About aboutData={aboutjsonData}/>
       <Space spaceData={spacejsonData} handler={handleSpaceClick} />
       <Technology techData={techData} />
