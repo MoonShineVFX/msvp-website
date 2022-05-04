@@ -60,8 +60,8 @@ function Contact() {
           >
             <Marker 
               position={{
-                lat: 25.051027,
-                lng: 121.594860
+                lat: 25.062570,
+                lng: 121.643650
               }}
             />
             { /* Child components, such as markers, info windows, etc. */ }
