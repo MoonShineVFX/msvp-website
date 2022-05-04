@@ -60,6 +60,19 @@
       }  
     }
   }
+  #intro_bigbg{
+    .intro_content{
+      padding:5rem 2rem;
+      .title{
+        font-size: 1rem;
+        font-weight: 300;
+        margin-bottom: 10px;
+      }
+      .desc{
+        font-size: 14px;
+      }
+    }
+  }
   #about{
     .about_item{
       flex-direction: column;
@@ -220,8 +233,17 @@
   }
   .workitem{
     .itemContent{
-      width: 100%;
+      width: 90%;
+ 
     }
+    .img_itemContent{
+      width: 90%;
+      .img_thumb{
+        min-height: 200px;
+        max-height: 300px;
+      }
+    }
+  
   }
   #intro{
     .about_intro{
@@ -245,6 +267,20 @@
           top: 0px;
           right: 0px;
         }
+      }
+    }
+  }
+  #intro_bigbg{
+    .intro_content{
+      padding:1rem 0rem;
+      margin:  0 5%;
+      .title{
+        font-size: 1rem;
+        font-weight: 300;
+        margin-bottom: 10px;
+      }
+      .desc{
+        font-size: 14px;
       }
     }
   }

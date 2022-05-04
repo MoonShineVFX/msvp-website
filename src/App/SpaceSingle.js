@@ -23,9 +23,9 @@ function SpaceSingle({data,handler}) {
   return (
     <div className="workitem">
       <div className={active ? "blackbg active" : "blackbg"} onClick={handleClick}></div>
-      <div className={active ? "itemContent active" : "itemContent"}>
+      <div className={active ? "itemContent img_itemContent active" : "itemContent img_itemContent"}>
         <div className="closeBtn" onClick={handleClick}>X</div>
-        <div className="thumb player-wrapper" style={{backgroundImage: `url(${process.env.PUBLIC_URL + '/images/space/'+ image })`}}>
+        <div className="thumb img_thumb" style={{backgroundImage: `url(${process.env.PUBLIC_URL + '/images/space/'+ image })`}}>
           
         </div>
         <article>

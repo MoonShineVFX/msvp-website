@@ -1,5 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next';
+
 function Intro() {
   const { t } = useTranslation();
   return (

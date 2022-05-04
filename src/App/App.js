@@ -19,6 +19,7 @@ import WorkSingle from './WorkSingle';
 import SpaceSingle from './SpaceSingle';
 import HeaderVideo from './HeaderVideo';
 import MobileNabar from './MobileNabar';
+import IntroBigBg from './IntroBigBg';
 import Chapter1 from './Chapter1'
 import Chapter2 from './Chapter2'
 import Chapter3 from './Chapter3'
@@ -108,6 +109,7 @@ function App() {
       <Navbar navData={navData} toggleTrueFalse={toggleTrueFalse} />
       <Header handler={handleHeaderClick}/>
       <Works workData={worksjsonData} handler={handleAddClick} />
+      <IntroBigBg/>
       <Intro/>
       <About aboutData={aboutjsonData}/>
       <Space spaceData={spacejsonData} handler={handleSpaceClick} />
