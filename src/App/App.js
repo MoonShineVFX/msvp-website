@@ -12,16 +12,13 @@ import Works from './Works'
 import About from './About'
 import Space from './Space'
 import Technology from './Technology'
-import Partner from './/Partner'
 import Contact from './Contact'
 import WorkSingle from './WorkSingle';
 import SpaceSingle from './SpaceSingle';
 import HeaderVideo from './HeaderVideo';
 import MobileNabar from './MobileNabar';
 import IntroBigBg from './IntroBigBg';
-import Chapter1 from './Chapter1'
-import Chapter2 from './Chapter2'
-import Chapter3 from './Chapter3'
+import PartnerMarquee from './PartnerMarquee';
 
 import Aos from 'aos'
 import 'aos/dist/aos.css'
@@ -112,7 +109,7 @@ function App() {
       <About aboutData={aboutjsonData}/>
       <Space spaceData={spacejsonData} handler={handleSpaceClick} />
       <Technology techData={techData} />
-      <Partner partnerData={partnerjsonData} />
+      <PartnerMarquee  partnerData={partnerjsonData}/>
       <Contact/>
 
 

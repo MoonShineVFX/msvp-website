@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import { useTranslation } from 'react-i18next';
 function SpaceSingle({data,handler}) {
-  const {title,link,desc,purpose,spec,spacespce,image } = data
+  const {title,link,desc,purpose,spec,spacespce,image,space_image1 } = data
   // let finalIntro= intro.replace('\\n', '\n')
   const [active , setActive] = useState(false)
   const { t } = useTranslation();
@@ -31,6 +31,9 @@ function SpaceSingle({data,handler}) {
         <article>
           <div className="title">{t(`${title}`)}</div>
           <div className="description">{t(`${desc}`)}</div>
+          <div className="space_image">
+            <img src={process.env.PUBLIC_URL + '/images/space/'+ space_image1 } alt="" />
+          </div>
           <div className="description">
             <div>{t('spec_desc_title1')}</div>
             <div dangerouslySetInnerHTML={{ __html:t(`${purpose}`) }}/>

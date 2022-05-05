@@ -7,7 +7,8 @@
       "purpose":"space_purpose1",
       "spec":"space_spec1",
       "spacespce":"space_spacespce1",
-      "image":"space01.png"
+      "image":"space01.png",
+      "space_image1":"space01-2.png"
     },
     {
       "id":2,
@@ -16,7 +17,9 @@
       "purpose":"space_purpose2",
       "spec":"space_spec2",
       "spacespce":"space_spacespce2",
-      "image":"space02.png"
+      "image":"space02.png",
+      "space_image1":""
+      
     }
   ]
 }

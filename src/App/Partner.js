@@ -42,9 +42,7 @@ function Partner({partnerData}) {
   return (
     <section id="partner" className='fluid_section'>
       <h1>{t('section_title6')}</h1>
-        <br />
-        <br />
-        <br />
+        
         <Slider {...settings} className='partner_slider'>
         {
             partner?

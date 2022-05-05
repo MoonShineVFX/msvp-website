@@ -333,9 +333,16 @@ section.fluid_section{
         overflow-y: auto;
         white-space: pre-line;
         margin-top: 10px;
+
         ul , li{
           list-style-type: square;
           margin-left: 10px;
+        }
+       
+      }
+      .space_image{
+        img{
+          width: 70%;
         }
       }
       .author{
@@ -717,6 +724,7 @@ section.fluid_section{
           font-size: 1em;
           margin-bottom: 15px;
           letter-spacing: 1px;
+          text-transform: capitalize;
         }
         .desc{
           font-size: var(--main-p-font-size);
@@ -764,6 +772,47 @@ section.fluid_section{
         opacity: 0.8;
       }
     }
+  }
+}
+#partner_marquee{
+  margin-top: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    .marquee {
+      height: 100px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .marquee-content {
+      // display: flex;
+      // justify-content: flex-start;
+      // animation: 208s linear 0s infinite normal none running
+      display: inline-block;
+ 
+      .marquee-item{
+        float: left;
+        vertical-align: middle;
+        width: 150px;
+        height: 50px;
+        margin: 0 1.2rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          display: block;
+          width: 100px;
+        }
+      } 
+    }
+}
+@keyframes scrolling {
+  0% { 
+    transform: translateX(0%);  
+  }
+  100% { 
+    transform: translateX(-113%);  
   }
 }
 #contact{
