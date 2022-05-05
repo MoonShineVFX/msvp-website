@@ -10,7 +10,7 @@
       "id":2,
       "chtName":"navbar2",
       "engName":"INTRODUCTION",
-      "type":"intro"
+      "type":"intro_bigbg"
     },
     {
       "id":3,
@@ -34,7 +34,7 @@
       "id":6,
       "chtName":"navbar6",
       "engName":"PARTNERSHIP",
-      "type":"partner"
+      "type":"partner_marquee"
     },
     {
       "id":7,
