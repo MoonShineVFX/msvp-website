@@ -33,12 +33,16 @@ function Navbar({navData , toggleTrueFalse}) {
               )
             }): ""
           }
-          <li className={i18n.language === 'zh-TW' ? 'active' : ''}>
-            <a onClick={() => changeLanguage("zh-TW")}>中文</a>
-          </li>
-          <li className={i18n.language === 'en' ? 'active' : ''}>
-            <a onClick={() => changeLanguage("en")}>ENG</a>
-          </li>
+          <div className='lang_btngroup'>
+            <li className={i18n.language === 'zh-TW' ? 'active' : ''}>
+              <a onClick={() => changeLanguage("zh-TW")}>中文</a>
+            </li>
+            <li className='divider'>/</li>
+            <li className={i18n.language === 'en' ? 'active' : ''}>
+                <a onClick={() => changeLanguage("en")}>ENG</a>
+            </li>
+          </div>
+
           
         </ul>
       </div>
