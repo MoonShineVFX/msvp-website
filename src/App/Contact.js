@@ -81,7 +81,7 @@ function Contact() {
           </div>
           <div className="infoContent width2">
               <p>Address</p>
-              <p>No. 45, Ln. 515, Sec. 1, Datong Rd., Xizhi Dist., New Taipei City 221010 , Taiwan (R.O.C.)</p>
+              <p>{t('address')}</p>
           </div>
         </div>
       </div>
