@@ -1,0 +1,92 @@
+
+#Pages_about{
+  margin-top: 200px;
+}
+.pageHeader{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding:25%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  &::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0.5) 40%, rgb(0, 0, 0) 90%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-blend-mode: multiply;
+  }
+}
+#About_staff{
+  z-index: 1;
+  .aboutstaff_list{
+    display: flex;
+    flex-wrap: wrap;
+    .aboutstaff_item{
+      flex: 1 3 30%;
+      padding-top: 45%;
+      margin-right:   1.5%;
+      margin-bottom:   1.5%;
+      border-radius: 5px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &::before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: rgb(0,0,0);
+        background: linear-gradient(180deg, rgba(0,0,0,0.3) 40%, rgb(26, 26, 26) 90%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-blend-mode: multiply;
+      }
+      &:nth-child(3n+0){
+        margin-right: 0;
+      }
+      &:last-child{
+        
+      }
+      .person_info{
+        position: absolute;
+        width: 100%;
+        top: 60%;
+        left:0;
+        z-index: 1;
+        .name{
+          font-size: 35px;
+          font-weight: bold;
+          text-align: center;
+          color: #f3f3f3;
+        }
+        .bar{
+          width: 10px;
+          height: 3px;
+          background: #fff;
+          margin: 25px auto;
+       
+        }
+        .name_subtext{
+          text-align: center;
+          font-weight: 800;
+        }
+      }
+
+
+    }
+  }
+}

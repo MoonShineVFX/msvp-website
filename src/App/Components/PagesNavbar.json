@@ -1,0 +1,28 @@
+{
+  "navbar":[
+    {
+      "id":1,
+      "chtName":"pagenavbar1",
+      "engName":"HOME",
+      "type":""
+    },
+    {
+      "id":2,
+      "chtName":"pagenavbar2",
+      "engName":"ABOUT",
+      "type":"about"
+    },
+    {
+      "id":3,
+      "chtName":"pagenavbar3",
+      "engName":"SERVICES",
+      "type":"services"
+    },
+    {
+      "id":4,
+      "chtName":"pagenavbar4",
+      "engName":"EDUCATION",
+      "type":"education"
+    }
+  ]
+}

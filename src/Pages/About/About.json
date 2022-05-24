@@ -1,0 +1,119 @@
+{
+  "aboutstaff":[
+    {
+      "id":1,
+      "name":"Wang Xin Xiang",
+      "name_subtext":"Production Director",
+      "image":"p01.jpg"
+    },
+    {
+      "id":2,
+      "name":"Hsu Hwa Chin",
+      "name_subtext":"Animation Assitant Director",
+      "image":"p01.jpg"
+    },
+    {
+      "id":3,
+      "name":"Lee Wei Te",
+      "name_subtext":"Project Manager",
+      "image":"p01.jpg"
+    },
+    {
+      "id":4,
+      "name":"Jen Chia Sheng",
+      "name_subtext":"Project Assistant",
+      "image":"p01.jpg"
+    },
+    {
+      "id":5,
+      "name":"Huang Yung Jie",
+      "name_subtext":"Senior Technical Artist",
+      "image":"p01.jpg"
+    },
+    {
+      "id":6,
+      "name":"Wang Wen Fan",
+      "name_subtext":"Technical Artist",
+      "image":"p01.jpg"
+    },
+    {
+      "id":7,
+      "name":"Zhao Zun Yu",
+      "name_subtext":"Technical Artist",
+      "image":"p01.jpg"
+    },
+    {
+      "id":8,
+      "name":"Zeng Yong Jing",
+      "name_subtext":"Technical Artist",
+      "image":"p01.jpg"
+    },
+    {
+      "id":9,
+      "name":"Lin Yi Yi",
+      "name_subtext":"Technical Artist",
+      "image":"p01.jpg"
+    },
+    {
+      "id":10,
+      "name":"Chen I Tsang",
+      "name_subtext":"Technical Artist",
+      "image":"p01.jpg"
+    },
+    {
+      "id":11,
+      "name":"Ho Cyhun Hsien",
+      "name_subtext":"Technical Artist",
+      "image":"p01.jpg"
+    },
+    {
+      "id":12,
+      "name":"Chang Hsuan Hao",
+      "name_subtext":"Senior Engineer",
+      "image":"p01.jpg"
+    },
+    {
+      "id":13,
+      "name":"Wu Yi Ting",
+      "name_subtext":"Technical Artist",
+      "image":"p01.jpg"
+    },
+    {
+      "id":14,
+      "name":"Hung Chia Fu",
+      "name_subtext":"Technical Artist",
+      "image":"p01.jpg"
+    },
+    {
+      "id":15,
+      "name":"Chen Han Chun",
+      "name_subtext":"CG Artist",
+      "image":"p01.jpg"
+    },
+    {
+      "id":16,
+      "name":"Tseng Yu Chen",
+      "name_subtext":"CG Artist",
+      "image":"p01.jpg"
+    },
+    {
+      "id":17,
+      "name":"Huang YuTing",
+      "name_subtext":"CG Artist",
+      "image":"p01.jpg"
+    },
+    {
+      "id":18,
+      "name":"Li Ming Xue",
+      "name_subtext":"CG Artist",
+      "image":"p01.jpg"
+    },
+    {
+      "id":19,
+      "name":"Chen Wei Jing",
+      "name_subtext":"CG Artist",
+      "image":"p01.jpg"
+    }
+  ]
+}
+
