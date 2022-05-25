@@ -12,6 +12,8 @@ import Footer from '../App/Footer'
 //pages
 import Home from '../Pages/Home'
 import About from '../Pages/About/About'
+import Services from '../Pages/Services/Services';
+import Education from '../Pages/Education/Education';
 
 
 //data
@@ -32,6 +34,8 @@ function App() {
       <Routes> 
         <Route path="" element={<Home />} />
         <Route path="about" element={<About />} />
+        <Route path="services" element={<Services />} />
+        <Route path="education" element={<Education />} />
       </Routes>
       <Footer/>
     </BrowserRouter>

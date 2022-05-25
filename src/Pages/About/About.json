@@ -2,117 +2,136 @@
   "aboutstaff":[
     {
       "id":1,
+      "nick_name":"XÎÁÑG",
       "name":"Wang Xin Xiang",
       "name_subtext":"Production Director",
       "image":"p01.jpg"
     },
     {
       "id":2,
+      "nick_name":"XÎÁÑG",
       "name":"Hsu Hwa Chin",
       "name_subtext":"Animation Assitant Director",
-      "image":"p01.jpg"
+      "image":"p02.jpg"
     },
     {
       "id":3,
+      "nick_name":"Weite",
       "name":"Lee Wei Te",
       "name_subtext":"Project Manager",
-      "image":"p01.jpg"
+      "image":"p03.jpg"
     },
     {
       "id":4,
+      "nick_name":"XÎÁÑG",
       "name":"Jen Chia Sheng",
       "name_subtext":"Project Assistant",
-      "image":"p01.jpg"
+      "image":"p04.jpg"
     },
     {
       "id":5,
+      "nick_name":"XÎÁÑG",
       "name":"Huang Yung Jie",
       "name_subtext":"Senior Technical Artist",
       "image":"p01.jpg"
     },
     {
       "id":6,
+      "nick_name":"Vann",
       "name":"Wang Wen Fan",
       "name_subtext":"Technical Artist",
-      "image":"p01.jpg"
+      "image":"p02.jpg"
     },
     {
       "id":7,
+      "nick_name":"Jimmy",
       "name":"Zhao Zun Yu",
       "name_subtext":"Technical Artist",
-      "image":"p01.jpg"
+      "image":"p03.jpg"
     },
     {
       "id":8,
+      "nick_name":"XÎÁÑG",
       "name":"Zeng Yong Jing",
       "name_subtext":"Technical Artist",
-      "image":"p01.jpg"
+      "image":"p04.jpg"
     },
     {
       "id":9,
+      "nick_name":"Liz",
       "name":"Lin Yi Yi",
       "name_subtext":"Technical Artist",
       "image":"p01.jpg"
     },
     {
       "id":10,
+      "nick_name":"Tim",
       "name":"Chen I Tsang",
       "name_subtext":"Technical Artist",
-      "image":"p01.jpg"
+      "image":"p02.jpg"
     },
     {
       "id":11,
+      "nick_name":"Jason",
       "name":"Ho Cyhun Hsien",
       "name_subtext":"Technical Artist",
-      "image":"p01.jpg"
+      "image":"p03.jpg"
     },
     {
       "id":12,
+      "nick_name":"XÎÁÑG",
       "name":"Chang Hsuan Hao",
       "name_subtext":"Senior Engineer",
-      "image":"p01.jpg"
+      "image":"p04.jpg"
     },
     {
       "id":13,
+      "nick_name":"Esther",
       "name":"Wu Yi Ting",
       "name_subtext":"Technical Artist",
       "image":"p01.jpg"
     },
     {
       "id":14,
+      "nick_name":"XÎÁÑG",
       "name":"Hung Chia Fu",
       "name_subtext":"Technical Artist",
-      "image":"p01.jpg"
+      "image":"p02.jpg"
     },
     {
       "id":15,
+      "nick_name":"Hanna",
       "name":"Chen Han Chun",
       "name_subtext":"CG Artist",
-      "image":"p01.jpg"
+      "image":"p03.jpg"
     },
     {
       "id":16,
+      "nick_name":"Eunice",
       "name":"Tseng Yu Chen",
       "name_subtext":"CG Artist",
-      "image":"p01.jpg"
+      "image":"p04.jpg"
     },
     {
       "id":17,
+      "nick_name":"Doris",
       "name":"Huang YuTing",
       "name_subtext":"CG Artist",
       "image":"p01.jpg"
     },
     {
       "id":18,
+      "nick_name":"XÎÁÑG",
       "name":"Li Ming Xue",
       "name_subtext":"CG Artist",
-      "image":"p01.jpg"
+      "image":"p02.jpg"
     },
     {
       "id":19,
+      "nick_name":"Vivi",
       "name":"Chen Wei Jing",
       "name_subtext":"CG Artist",
-      "image":"p01.jpg"
+      "image":"p03.jpg"
     }
   ]
 }

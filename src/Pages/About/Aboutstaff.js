@@ -6,6 +6,14 @@ function Aboutstaff({data}) {
       <div className="unitHeader">
         <h1> Our Team</h1>
       </div>
+      <div className="about_department_list">
+        <ul>
+          <li>Animation Team</li>
+          <li>Managment Team</li>
+          <li>Tech Team</li>
+          <li>Art Team</li>
+        </ul>
+      </div>
       <div className="aboutstaff_list">
         {
           data?

@@ -194,6 +194,69 @@ section{
 section.fluid_section{
   margin: 0 15%;
 }
+.pageHeader{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 92vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  &::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0.5) 40%, rgb(0, 0, 0) 90%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-blend-mode: multiply;
+  }
+  .caption{
+    position: absolute;
+    color:white;
+    width: 700px;
+    top:40%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    .title{
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: capitalize;
+    }
+    .desc{
+      font-weight: 100;
+      font-size: 8pt;
+      line-height: 1.2;
+      letter-spacing: 2px;
+    }
+    p{
+      font-weight: 100;
+      font-size: 8pt;
+      line-height: 1.2;
+      letter-spacing: 2px;
+    }
+    .header_playbtn{
+      outline: none;
+      background: var(--main-color01);
+      border:0;
+      font-size: 8pt;
+      letter-spacing: 1px;
+      color:var(--white);
+      padding:10px 30px;
+      border-radius: 50px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+  }
+}
 #works{
   position: relative;
   margin-top: -200px;
@@ -1048,4 +1111,6 @@ section.fluid_section{
 
 
 @import 'slider';
-@import '../Pages/About/about'
+@import '../Pages/About/about';
+@import '../Pages//Education/education';
+@import '../Pages/Services/services'
