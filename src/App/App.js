@@ -1,10 +1,11 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import { BrowserRouter , Routes, Route} from 'react-router-dom';
 import './index.scss'
 import './mobileIndex.scss'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 import PagesNavbar from './Components/PagesNavbar'
 import Footer from '../App/Footer'
 
@@ -26,6 +27,11 @@ function App() {
   const [isToggled, setToggled] = useState(false);
   const [isScorllEnd, setISScorllEnd]= useState(false)
   const toggleTrueFalse = () => setToggled(!isToggled);
+
+
+  useEffect(()=>{
+    Aos.init({duration: 1500})
+  },[])
 
 
   return (

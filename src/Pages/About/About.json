@@ -5,133 +5,160 @@
       "nick_name":"XÎÁÑG",
       "name":"Wang Xin Xiang",
       "name_subtext":"Production Director",
-      "image":"p01.jpg"
+      "image":"p01.png",
+      "team":"Animation"
     },
     {
       "id":2,
-      "nick_name":"XÎÁÑG",
+      "nick_name":"Zoe",
       "name":"Hsu Hwa Chin",
       "name_subtext":"Animation Assitant Director",
-      "image":"p02.jpg"
+      "image":"p02.png",
+      "team":"Animation"
     },
     {
       "id":3,
       "nick_name":"Weite",
       "name":"Lee Wei Te",
       "name_subtext":"Project Manager",
-      "image":"p03.jpg"
+      "image":"p03.png",
+      "team":"Managment"
     },
     {
       "id":4,
-      "nick_name":"XÎÁÑG",
+      "nick_name":"hua sheng",
       "name":"Jen Chia Sheng",
       "name_subtext":"Project Assistant",
-      "image":"p04.jpg"
+      "image":"p04.png",
+      "team":"Managment"
     },
     {
       "id":5,
-      "nick_name":"XÎÁÑG",
+      "nick_name":"Vance",
       "name":"Huang Yung Jie",
       "name_subtext":"Senior Technical Artist",
-      "image":"p01.jpg"
+      "image":"p05.png",
+      "team":"Tech"
     },
     {
       "id":6,
       "nick_name":"Vann",
       "name":"Wang Wen Fan",
       "name_subtext":"Technical Artist",
-      "image":"p02.jpg"
+      "image":"p06.png",
+      "team":"Tech"
     },
     {
       "id":7,
       "nick_name":"Jimmy",
       "name":"Zhao Zun Yu",
       "name_subtext":"Technical Artist",
-      "image":"p03.jpg"
+      "image":"p07.png",
+      "team":"Tech"
     },
     {
       "id":8,
-      "nick_name":"XÎÁÑG",
+      "nick_name":"Jing",
       "name":"Zeng Yong Jing",
       "name_subtext":"Technical Artist",
-      "image":"p04.jpg"
+      "image":"p08.png",
+      "team":"Tech"
     },
     {
       "id":9,
       "nick_name":"Liz",
       "name":"Lin Yi Yi",
       "name_subtext":"Technical Artist",
-      "image":"p01.jpg"
+      "image":"p09.png",
+      "team":"Tech"
     },
     {
       "id":10,
       "nick_name":"Tim",
       "name":"Chen I Tsang",
       "name_subtext":"Technical Artist",
-      "image":"p02.jpg"
+      "image":"p10.png",
+      "team":"Tech"
     },
     {
       "id":11,
       "nick_name":"Jason",
       "name":"Ho Cyhun Hsien",
       "name_subtext":"Technical Artist",
-      "image":"p03.jpg"
+      "image":"p11.png",
+      "team":"Tech"
     },
     {
       "id":12,
-      "nick_name":"XÎÁÑG",
+      "nick_name":"Jeffrey",
       "name":"Chang Hsuan Hao",
       "name_subtext":"Senior Engineer",
-      "image":"p04.jpg"
+      "image":"p12.png",
+      "team":"Tech"
     },
     {
       "id":13,
       "nick_name":"Esther",
       "name":"Wu Yi Ting",
       "name_subtext":"Technical Artist",
-      "image":"p01.jpg"
+      "image":"p13.png",
+      "team":"Tech"
     },
     {
       "id":14,
-      "nick_name":"XÎÁÑG",
+      "nick_name":"Jeff",
       "name":"Hung Chia Fu",
       "name_subtext":"Technical Artist",
-      "image":"p02.jpg"
+      "image":"p14.png",
+      "team":"Tech"
     },
     {
       "id":15,
-      "nick_name":"Hanna",
-      "name":"Chen Han Chun",
-      "name_subtext":"CG Artist",
-      "image":"p03.jpg"
+      "nick_name":"Duri",
+      "name":"Shen Shih Che",
+      "name_subtext":"Software Engineer",
+      "image":"p15.png",
+      "team":"Tech"
     },
     {
       "id":16,
-      "nick_name":"Eunice",
-      "name":"Tseng Yu Chen",
+      "nick_name":"Hanna",
+      "name":"Chen Han Chun",
       "name_subtext":"CG Artist",
-      "image":"p04.jpg"
+      "image":"p16.png",
+      "team":"Art"
     },
     {
       "id":17,
-      "nick_name":"Doris",
-      "name":"Huang YuTing",
+      "nick_name":"Eunice",
+      "name":"Tseng Yu Chen",
       "name_subtext":"CG Artist",
-      "image":"p01.jpg"
+      "image":"p17.png",
+      "team":"Art"
     },
     {
       "id":18,
-      "nick_name":"XÎÁÑG",
-      "name":"Li Ming Xue",
+      "nick_name":"Doris",
+      "name":"Huang YuTing",
       "name_subtext":"CG Artist",
-      "image":"p02.jpg"
+      "image":"p18.png",
+      "team":"Art"
     },
     {
       "id":19,
+      "nick_name":"MING",
+      "name":"Li Ming Xue",
+      "name_subtext":"CG Artist",
+      "image":"p19.png",
+      "team":"Art"
+    },
+    {
+      "id":20,
       "nick_name":"Vivi",
       "name":"Chen Wei Jing",
       "name_subtext":"CG Artist",
-      "image":"p03.jpg"
+      "image":"p20.png",
+      "team":"Art"
     }
   ]
 }

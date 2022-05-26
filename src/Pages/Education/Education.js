@@ -1,6 +1,13 @@
-import React from 'react'
+import React,{useState} from 'react'
+import EduChart from './EduChart'
+import EduPlace from './EduPlace'
+import LatestCourse from './LatestCourse'
+import EduPortfolio from './EduPortfolio'
+
+import worksjsonData from '../../App/worksData.json'
 
 function Education() {
+
   return (
     <div id="Pages_education">
       <div 
@@ -16,7 +23,10 @@ function Education() {
 
       </div>
 
-      5566
+      <EduChart />
+      <EduPlace />
+      <LatestCourse />
+      <EduPortfolio  workData={worksjsonData}/>
     </div>
   )
 }

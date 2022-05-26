@@ -11,7 +11,7 @@ function About() {
       >
 
       </div>
-      <Aboutstaff data={aboutstaff} />
+      <Aboutstaff aboutStaffData={aboutstaff} />
     </div>
   )
 }

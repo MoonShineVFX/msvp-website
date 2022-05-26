@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next';
-function About({aboutData}) {
+function HomeAbout({aboutData}) {
   const {about} =aboutData
   const { t } = useTranslation();
   return (
@@ -27,4 +27,4 @@ function About({aboutData}) {
   )
 }
 
-export default About
+export default HomeAbout

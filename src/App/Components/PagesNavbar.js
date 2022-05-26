@@ -1,13 +1,15 @@
 import React from 'react'
 import { FaBars } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
-import { Link } from "react-router-dom";
+import { Link ,useLocation  } from "react-router-dom";
 
 function PagesNavbar({data ,toggleTrueFalse}) {
   const { t, i18n } = useTranslation();
   const changeLanguage = (lng) => {
       i18n.changeLanguage(lng);
   };
+  const { pathname } = useLocation();
+  console.log(pathname)
   return (
     <div id="navbar" className='site-menu'>
       <div className="logo">
@@ -20,12 +22,9 @@ function PagesNavbar({data ,toggleTrueFalse}) {
               return(
                 <li key={index}>
                   <Link 
-                    activeClass="active"
                     to={item.type}
-                    offset={-100}
-                    smooth={true} 
                     spy={true}
-                    
+                    className={ pathname.substring(1) === item.type ? 'active' : ''}
                   >
                     {t(`${item.chtName}`)}
                   </Link>

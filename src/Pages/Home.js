@@ -3,7 +3,7 @@ import React,{useState,useEffect} from 'react';
 import Header from '../App/Header'
 
 import Works from '../App/Works'
-import About from '../App/About'
+import HomeAbout from '../App/HomeAbout'
 import Space from '../App/Space'
 // import Technology from '../App/Technology'
 import Contact from '../App/Contact'
@@ -14,8 +14,7 @@ import MobileNabar from '../App/MobileNabar';
 import IntroBigBg from '../App/IntroBigBg';
 import PartnerMarquee from '../App/PartnerMarquee';
 
-import Aos from 'aos'
-import 'aos/dist/aos.css'
+
 //data
 import worksjsonData from '../App/worksData.json'
 import techData from '../App/techArray.json'
@@ -67,9 +66,7 @@ function Home() {
     setIsHeaderOpen(!isHeaderOpen)
   }
   
-  useEffect(()=>{
-    Aos.init({duration: 1500})
-  },[])
+
 
   return (
     <div>
