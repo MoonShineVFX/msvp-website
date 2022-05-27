@@ -1,15 +1,15 @@
 import React from 'react'
-
+import { useTranslation } from 'react-i18next';
 function LatestCourse() {
+  const { t } = useTranslation();
   return (
     <div className='edu_latestCourse'>
-      <h1>Learn Unreal Engine</h1>
-
+      <h1>{t('FeaturedCourse')}</h1>
       <div className="latestCourse_list">
         <ul>
 
             <li 
-              className="latestCourse_item"
+              className="latestCourse_item" data-aos="fade-up"
               style={{backgroundImage: `url(${process.env.PUBLIC_URL +'/images/education/course/c01.jpg'})`}}
             >
               <div className="latestCourse_info">
@@ -18,7 +18,7 @@ function LatestCourse() {
             </li >
 
             <li  
-              className="latestCourse_item"
+              className="latestCourse_item" data-aos="fade-up"
               style={{backgroundImage: `url(${process.env.PUBLIC_URL +'/images/education/course/c01.jpg'})`}}
             >
               <div className="latestCourse_info">
@@ -27,7 +27,7 @@ function LatestCourse() {
             </li >
 
             <li  
-              className="latestCourse_item"
+              className="latestCourse_item" data-aos="fade-up"
               style={{backgroundImage: `url(${process.env.PUBLIC_URL +'/images/education/course/c01.jpg'})`}}
             >
               <div className="latestCourse_info">
@@ -36,7 +36,7 @@ function LatestCourse() {
             </li >
 
             <li  
-              className="latestCourse_item"
+              className="latestCourse_item" data-aos="fade-up"
               style={{backgroundImage: `url(${process.env.PUBLIC_URL +'/images/education/course/c01.jpg'})`}}
             >
               <div className="latestCourse_info">

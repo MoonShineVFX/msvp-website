@@ -1,0 +1,67 @@
+{
+  "works":[
+    {
+      "id":1,
+      "title":"Swamp of Illusions 沼澤幻像",
+      "desc":" ",
+      "link":"https://vimeo.com/615677167",
+      "image":"eduwork01.jpg"
+    },
+    {
+      "id":2,
+      "title":"Spininess of Reality 尖刺現實",
+      "desc":" ",
+      "link":"https://vimeo.com/615664792",
+      "image":"eduwork02.jpg"
+    },
+    {
+      "id":3,
+      "title":"C137-Yarma",
+      "desc":" ",
+      "link":"https://vimeo.com/615589822",
+      "image":"eduwork03.jpg"
+    },
+    {
+      "id":4,
+      "title":"C132-Retta",
+      "desc":" ",
+      "link":"https://vimeo.com/616664652",
+      "image":"eduwork04.jpg"
+    },
+    {
+      "id":5,
+      "title":"Signal",
+      "desc":" ",
+      "link":"https://vimeo.com/453252751",
+      "image":"eduwork05.jpg"
+    },
+    {
+      "id":6,
+      "title":"LD55OX",
+      "desc":" ",
+      "link":"https://vimeo.com/453253380",
+      "image":"eduwork06.jpg"
+    },
+    {
+      "id":7,
+      "title":"Force",
+      "desc":" ",
+      "link":"https://youtu.be/4HR-3kJR8Y4",
+      "image":"eduwork07.jpg"
+    },
+    {
+      "id":8,
+      "title":"Underwater",
+      "desc":" ",
+      "link":"https://youtu.be/iVMQDUW-foA",
+      "image":"eduwork08.jpg"
+    },
+    {
+      "id":9,
+      "title":"玩了",
+      "desc":" ",
+      "link":"https://youtu.be/QcqStzz3ynk",
+      "image":"eduwork09.jpg"
+    }
+  ]
+}

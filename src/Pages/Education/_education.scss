@@ -5,6 +5,7 @@
 }
 .chartlist{
   margin-top: -150px;
+  margin-bottom: 100px;
   ul{
     display: flex;
     justify-content: space-between;
@@ -72,29 +73,72 @@
           text-align: center;
           font-size: 13px;
           line-height: 20px;
+          color: rgb(255,255,255,0.7);
         }
       }
     }
   }
 }
+.edu_intro_bigbg{
+  position: relative;
+  padding-bottom: 100px;
+
+  .bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    z-index: -1;
+  }
+  .intro_content{
+    padding-top: 100px;
+    margin:  0 15%;
+
+    .title{
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+      color: #fff;
+      letter-spacing: 1px;
+      text-align: left;
+      text-transform: capitalize;
+      font-weight: 800;
+    }
+    .desc{
+      font-size: 18px;
+      color: #cacaca;
+      letter-spacing: 1px;
+      line-height: 150%;
+      text-align: left;
+      word-wrap: break-word;
+      font-weight: 300;
+    }
+  }
+}
 .edu_latestCourse{
-  margin-top: 150px;
-  
+  margin: 0 15%;
+  margin-top: 100px;
   h1{
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 50px;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #ededed;
+    letter-spacing: 1px;
+    text-align: left;
+    text-transform: capitalize;
+    font-weight: 800;
   }
   .latestCourse_list{
-    margin: 0 15%;
+    
     ul{
       display: flex;
       flex-wrap: wrap;
       .latestCourse_item{
         flex: 0 0 23%;
-        padding-top: 30%;
+        padding-top: 32%;
         margin-right: 2%;
         margin-bottom: 2%;
         border-radius: 6px;
@@ -118,7 +162,7 @@
           height: 100%;
           border-radius: 6px;
           background: rgb(0,0,0);
-          background: linear-gradient(180deg, rgba(0,0,0,0.3) 40%, rgba(15, 15, 15, 0.89) 90%);
+          background: linear-gradient(180deg, rgba(0,0,0,0.1) 40%, rgba(15, 15, 15, 0.89) 90%);
           position: absolute;
           top: 0;
           left: 0;

@@ -48,6 +48,10 @@
       justify-content: center;
       align-items: center;
       filter: grayscale(50%);
+      transition: 0.3s;
+      &:hover{
+        transform: translateY(-5px);
+      }
       &::before{
         content: '';
         width: 100%;
@@ -83,7 +87,7 @@
           width: 10px;
           height: 3px;
           background: #fff;
-          margin: 25px auto;
+          margin: 18px auto;
        
         }
         .name_subtext{

@@ -1,15 +1,38 @@
 import React,{useState} from 'react'
 import EduChart from './EduChart'
 import EduPlace from './EduPlace'
+import EduBigBg from './EduBigBg'
 import LatestCourse from './LatestCourse'
-import EduPortfolio from './EduPortfolio'
 
-import worksjsonData from '../../App/worksData.json'
+import EduPortfolio from './EduPortfolio'
+import EduPortfolioSingle from './EduPortfolioSingle'
+
+
+import EduWorkjsonsData from '../Education/EduWorksData.json'
 
 function Education() {
+  const [isOpen , setIsOpen] = useState(false)
+  const [searchResults, setSearchResults] = useState([]);
+  const [workData, setWorkData] = useState(EduWorkjsonsData);
+  // 開啟單作品
+  const handleAddClick = (dataId) => {
+    const results  =   workData.works.find((d)=>{
+      return d.id === dataId
+    })
+    setSearchResults(results)
+    setIsOpen(!isOpen)
+  };
+   // 開啟作品modal
+   const handleOpen = () => {
+    setIsOpen(!isOpen)
+  }
+
 
   return (
     <div id="Pages_education">
+      {
+        isOpen ?  <EduPortfolioSingle data={searchResults} handler={handleOpen} visible={isOpen} /> : null
+      }
       <div 
         className="pageHeader" 
         style={{backgroundImage: `url(${process.env.PUBLIC_URL +'/images/intro/intro01.jpg'})`}}
@@ -25,8 +48,8 @@ function Education() {
 
       <EduChart />
       <EduPlace />
-      <LatestCourse />
-      <EduPortfolio  workData={worksjsonData}/>
+      <EduBigBg />
+      <EduPortfolio  workData={EduWorkjsonsData} handler={handleAddClick}/>
     </div>
   )
 }
