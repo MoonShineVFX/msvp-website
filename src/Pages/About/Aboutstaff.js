@@ -34,15 +34,15 @@ function Aboutstaff({aboutStaffData}) {
             className={currentCategory === 'Tech' ? 'button active' : 'button'}
             onClick={()=> filterCategory('Tech')}>Tech Team</li>  
           <li 
-            className={currentCategory === 'Managment' ? 'button active' : 'button'}
-            onClick={()=> filterCategory('Managment')}>Managment Team</li>
-
+            className={currentCategory === 'Animation' ? 'button active' : 'button'}
+            onClick={()=> filterCategory('Animation')}>Animation Team</li>
           <li 
             className={currentCategory === 'Art' ? 'button active' : 'button'}
             onClick={()=> filterCategory('Art')}>Art Team</li>
+
           <li 
-            className={currentCategory === 'Animation' ? 'button active' : 'button'}
-            onClick={()=> filterCategory('Animation')}>Animation Team</li>
+            className={currentCategory === 'Managment' ? 'button active' : 'button'}
+            onClick={()=> filterCategory('Managment')}>Managment Team</li>
         </ul>
       </div>
       <motion.div layout className="aboutstaff_list">
