@@ -1,0 +1,246 @@
+#Pages_education {
+  margin-bottom: 200px;
+}
+
+.chartlist {
+  margin-top: -150px;
+  margin-bottom: 100px;
+}
+.chartlist ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chartlist ul li .chartlist_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chartlist ul li .chartlist_item .imgicon {
+  margin-bottom: 20px;
+}
+.chartlist ul li .chartlist_item .title {
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+.chartlist ul li .chartlist_item .number {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 25px;
+}
+.chartlist ul li .chartlist_item .sub_text {
+  font-size: 8px;
+  font-weight: normal;
+  line-height: 25px;
+}
+
+.eduplace .eduplace_list .eduplace_item {
+  width: 100%;
+  min-height: 10vh;
+  background: #292929;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 50px 0;
+}
+.eduplace .eduplace_list .eduplace_item.set2 {
+  background: rgba(41, 41, 41, 0.558);
+}
+.eduplace .eduplace_list .eduplace_item.set2 .left {
+  order: 2;
+}
+.eduplace .eduplace_list .eduplace_item.set2 .right {
+  order: 1;
+}
+.eduplace .eduplace_list .eduplace_item .left {
+  width: 40%;
+}
+.eduplace .eduplace_list .eduplace_item .left .edu_slider img {
+  width: 100%;
+}
+.eduplace .eduplace_list .eduplace_item .right {
+  width: 35%;
+}
+.eduplace .eduplace_list .eduplace_item .right .title {
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.eduplace .eduplace_list .eduplace_item .right .desc {
+  text-align: center;
+  font-size: 13px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.edu_intro_bigbg {
+  position: relative;
+  padding-bottom: 100px;
+}
+.edu_intro_bigbg .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  z-index: -1;
+}
+.edu_intro_bigbg .intro_content {
+  padding-top: 100px;
+  margin: 0 15%;
+}
+.edu_intro_bigbg .intro_content .title {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: left;
+  text-transform: capitalize;
+  font-weight: 800;
+}
+.edu_intro_bigbg .intro_content .desc {
+  font-size: 18px;
+  color: #cacaca;
+  letter-spacing: 1px;
+  line-height: 150%;
+  text-align: left;
+  word-wrap: break-word;
+  font-weight: 300;
+}
+
+.edu_latestCourse {
+  margin: 0 15%;
+  margin-top: 100px;
+}
+.edu_latestCourse h1 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #ededed;
+  letter-spacing: 1px;
+  text-align: left;
+  text-transform: capitalize;
+  font-weight: 800;
+}
+.edu_latestCourse .latestCourse_list ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.edu_latestCourse .latestCourse_list ul .latestCourse_item {
+  flex: 0 0 23%;
+  padding-top: 32%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  border-radius: 6px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  cursor: pointer;
+  filter: grayscale(50%);
+}
+.edu_latestCourse .latestCourse_list ul .latestCourse_item:hover {
+  filter: grayscale(0%);
+  transform: translateY(-5px);
+}
+.edu_latestCourse .latestCourse_list ul .latestCourse_item::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  background: black;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 40%, rgba(15, 15, 15, 0.89) 90%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-blend-mode: multiply;
+}
+.edu_latestCourse .latestCourse_list ul .latestCourse_item:nth-child(4n+0) {
+  margin-right: 0;
+}
+.edu_latestCourse .latestCourse_list ul .latestCourse_item .latestCourse_info {
+  position: absolute;
+  width: 100%;
+  bottom: 5%;
+  left: 0%;
+  z-index: 1;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.edu_latestCourse .latestCourse_list ul .latestCourse_item .latestCourse_info .title {
+  font-size: 20px;
+  font-weight: 100;
+  text-align: left;
+  color: #f3f3f3;
+}
+.edu_latestCourse .latestCourse_list ul .latestCourse_item .latestCourse_info .bar {
+  width: 10px;
+  height: 3px;
+  background: #fff;
+  margin: 25px auto;
+}
+.edu_latestCourse .latestCourse_list ul .latestCourse_item .latestCourse_info .name_subtext {
+  text-align: center;
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.edu_Portfolio {
+  margin-top: 150px;
+}
+.edu_Portfolio h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+}
+.edu_Portfolio .edu_Portfolio_list {
+  margin: 0 15%;
+}
+.edu_Portfolio .edu_Portfolio_list ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.edu_Portfolio .edu_Portfolio_list ul .edu_Portfolio_item {
+  flex: 0 0 24%;
+  height: 169px;
+  margin: 3px;
+  transition: 0.3s;
+  opacity: 0.7;
+  cursor: pointer;
+  position: relative;
+}
+.edu_Portfolio .edu_Portfolio_list ul .edu_Portfolio_item:hover {
+  opacity: 1;
+  z-index: 5;
+}
+.edu_Portfolio .edu_Portfolio_list ul .edu_Portfolio_item:hover .item_bg {
+  transform: scale(1.1);
+}
+.edu_Portfolio .edu_Portfolio_list ul .edu_Portfolio_item .item_bg {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.3s;
+  z-index: 1;
+}
+.edu_Portfolio .edu_Portfolio_list ul .edu_Portfolio_item .title {
+  position: absolute;
+  z-index: 2;
+  font-size: 8pt;
+  bottom: 5px;
+  left: 5px;
+}

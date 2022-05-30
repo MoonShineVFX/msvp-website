@@ -163,15 +163,6 @@
       "team":"Animation"
     },
     {
-      "id":22,
-      "nick_name":"Wayne",
-      "name":"Ju Wei Cheng",
-      "chtname":"朱韋丞",
-      "name_subtext":"Studio Manager",
-      "image":"p22.png",
-      "team":"Managment"
-    },
-    {
       "id":3,
       "nick_name":"Weite",
       "name":"Lee Wei Te",
@@ -187,6 +178,15 @@
       "chtname":"任珈陞",
       "name_subtext":"Project Assistant",
       "image":"p04.png",
+      "team":"Managment"
+    },
+    {
+      "id":22,
+      "nick_name":"Wayne",
+      "name":"Ju Wei Cheng",
+      "chtname":"朱韋丞",
+      "name_subtext":"Studio Manager",
+      "image":"p22.png",
       "team":"Managment"
     },
     {

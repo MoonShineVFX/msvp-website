@@ -44,7 +44,7 @@ function EduPlace() {
         </div>
         <div className="eduplace_item set2">
           <div className="left">
-            <Slider {...settings}>
+            <Slider {...settings} className="edu_slider">
               <div>
                 <img src={process.env.PUBLIC_URL +'/images/education/m01.png'} alt="" />
               </div>

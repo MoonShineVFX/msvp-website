@@ -1,0 +1,133 @@
+#Pages_services {
+  margin-bottom: 200px;
+}
+
+#servives_about {
+  margin-top: -200px;
+}
+#servives_about svg {
+  fill: white;
+}
+#servives_about .about_item {
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#servives_about .about_item:nth-child(2) .about_item_text, #servives_about .about_item:nth-child(4) .about_item_text {
+  order: 2;
+}
+#servives_about .about_item:nth-child(2) .about_item_img, #servives_about .about_item:nth-child(4) .about_item_img {
+  order: 1;
+}
+#servives_about .about_item .about_item_text {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 30px;
+  order: 1;
+}
+#servives_about .about_item .about_item_text .title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #43e7fe;
+  letter-spacing: 2px;
+  text-align: left;
+}
+#servives_about .about_item .about_item_text .desc {
+  font-size: 14px;
+  color: #cacaca;
+  letter-spacing: 1px;
+  line-height: 150%;
+  text-align: left;
+  word-wrap: break-word;
+  font-weight: 300;
+}
+#servives_about .about_item .about_item_text .desc div {
+  margin-bottom: 15px;
+}
+#servives_about .about_item .about_item_img {
+  width: 50%;
+  box-sizing: border-box;
+  order: 2;
+  position: relative;
+}
+#servives_about .about_item .about_item_img::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: linear-gradient(90deg, black 0%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0) 65%, black 100%);
+}
+#servives_about .about_item .about_item_img::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: linear-gradient(360deg, black 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 65%, black 100%);
+}
+#servives_about .about_item .about_item_img img {
+  width: 100%;
+  opacity: 0.8;
+  filter: saturate(0.5);
+}
+#servives_about .about_detail {
+  margin-top: 300px;
+  display: flex;
+  justify-content: space-around;
+}
+#servives_about .about_detail .about_detail_textcontent {
+  width: 40%;
+  padding: 10% 40px 0 10px;
+  position: relative;
+  top: 50%;
+}
+#servives_about .about_detail .about_detail_textcontent .title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #43e7fe;
+  letter-spacing: 2px;
+  text-align: left;
+}
+#servives_about .about_detail .about_detail_textcontent .desc {
+  font-size: 16px;
+  color: #cacaca;
+  letter-spacing: 1px;
+  line-height: 150%;
+  text-align: left;
+  word-wrap: break-word;
+  font-weight: 100;
+}
+#servives_about .about_detail .about_detail_list {
+  width: 50%;
+}
+#servives_about .about_detail .about_detail_list .about_slider .slick-next {
+  right: 25px;
+}
+#servives_about .about_detail .about_detail_list .about_slider .slick-prev {
+  left: 25px;
+  z-index: 1;
+}
+#servives_about .about_detail .about_detail_list .about_slider .item {
+  width: 100%;
+  padding-top: 108%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#servives_about .about_detail .nav_group {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+#servives_about .about_detail .nav_group .button {
+  background: none;
+}

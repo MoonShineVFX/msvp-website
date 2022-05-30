@@ -113,6 +113,7 @@
     } 
   } 
   #About_staff{
+    margin-top: -450px;
     .about_department_list{
       ul{
         flex-wrap: wrap;
@@ -137,6 +138,34 @@
       }
     }
   }
+  #Pages_services{
+    #servives_about{
+      margin-top: -450px;
+    }
+  }
+  .edu_latestCourse{
+    .latestCourse_list{
+      ul{
+        .latestCourse_item {
+          .latestCourse_info{
+            .title{
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .edu_Portfolio{
+    .edu_Portfolio_list{
+      ul{
+        .edu_Portfolio_item{
+          flex: 0 0 23.3%;
+          height: 139px;
+        }
+      } 
+    } 
+  } 
 
   
 }
@@ -336,6 +365,20 @@
         }
       }
     }
+  }
+  #About_staff{
+    margin-top: -250px;
+    .aboutstaff_list{
+      .aboutstaff_item{
+        flex: 0 0 48%;
+        padding-top: 55%;
+        margin-right: 2.5%;
+        margin-bottom: 2.5%;
+        &:nth-child(2n+0){
+          margin-right: 0;
+        }
+      }
+    } 
   }
 
 }
