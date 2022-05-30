@@ -4,6 +4,7 @@
       "id":1,
       "nick_name":"XÎÁÑG",
       "name":"Wang Xin Xiang",
+      "chtname":"王信翔",
       "name_subtext":"Production Director",
       "image":"p01.png",
       "team":"Animation"
@@ -12,6 +13,7 @@
       "id":2,
       "nick_name":"Zoe",
       "name":"Hsu Hwa Chin",
+      "chtname":"徐華璟",
       "name_subtext":"Animation Assitant Director",
       "image":"p02.png",
       "team":"Animation"
@@ -20,6 +22,7 @@
       "id":3,
       "nick_name":"Weite",
       "name":"Lee Wei Te",
+      "chtname":"李維德",
       "name_subtext":"Project Manager",
       "image":"p03.png",
       "team":"Managment"
@@ -28,6 +31,7 @@
       "id":4,
       "nick_name":"hua sheng",
       "name":"Jen Chia Sheng",
+      "chtname":"任珈陞",
       "name_subtext":"Project Assistant",
       "image":"p04.png",
       "team":"Managment"
@@ -36,6 +40,7 @@
       "id":5,
       "nick_name":"Vance",
       "name":"Huang Yung Jie",
+      "chtname":"黃永杰",
       "name_subtext":"Senior Technical Artist",
       "image":"p05.png",
       "team":"Tech"
@@ -44,6 +49,7 @@
       "id":6,
       "nick_name":"Vann",
       "name":"Wang Wen Fan",
+      "chtname":"王文凡",
       "name_subtext":"Technical Artist",
       "image":"p06.png",
       "team":"Tech"
@@ -52,6 +58,7 @@
       "id":7,
       "nick_name":"Jimmy",
       "name":"Zhao Zun Yu",
+      "chtname":"趙俊宇",
       "name_subtext":"Technical Artist",
       "image":"p07.png",
       "team":"Tech"
@@ -60,6 +67,7 @@
       "id":8,
       "nick_name":"Jing",
       "name":"Zeng Yong Jing",
+      "chtname":"曾詠晶",
       "name_subtext":"Technical Artist",
       "image":"p08.png",
       "team":"Tech"
@@ -68,6 +76,7 @@
       "id":9,
       "nick_name":"Liz",
       "name":"Lin Yi Yi",
+      "chtname":"林依依",
       "name_subtext":"Technical Artist",
       "image":"p09.png",
       "team":"Tech"
@@ -76,6 +85,7 @@
       "id":10,
       "nick_name":"Tim",
       "name":"Chen I Tsang",
+      "chtname":"陳奕蒼",
       "name_subtext":"Technical Artist",
       "image":"p10.png",
       "team":"Tech"
@@ -84,6 +94,7 @@
       "id":11,
       "nick_name":"Jason",
       "name":"Ho Cyhun Hsien",
+      "chtname":"何俊賢",
       "name_subtext":"Technical Artist",
       "image":"p11.png",
       "team":"Tech"
@@ -92,6 +103,7 @@
       "id":12,
       "nick_name":"Jeffrey",
       "name":"Chang Hsuan Hao",
+      "chtname":"張軒豪",
       "name_subtext":"Senior Engineer",
       "image":"p12.png",
       "team":"Tech"
@@ -100,6 +112,7 @@
       "id":13,
       "nick_name":"Esther",
       "name":"Wu Yi Ting",
+      "chtname":"吳宜庭",
       "name_subtext":"Technical Artist",
       "image":"p13.png",
       "team":"Tech"
@@ -108,6 +121,7 @@
       "id":14,
       "nick_name":"Jeff",
       "name":"Hung Chia Fu",
+      "chtname":"洪嘉甫",
       "name_subtext":"Technical Artist",
       "image":"p14.png",
       "team":"Tech"
@@ -116,6 +130,7 @@
       "id":15,
       "nick_name":"Duri",
       "name":"Shen Shih Che",
+      "chtname":"沈仕哲",
       "name_subtext":"Software Engineer",
       "image":"p15.png",
       "team":"Tech"
@@ -124,6 +139,7 @@
       "id":16,
       "nick_name":"Hanna",
       "name":"Chen Han Chun",
+      "chtname":"陳函君",
       "name_subtext":"CG Artist",
       "image":"p16.png",
       "team":"Art"
@@ -132,6 +148,7 @@
       "id":17,
       "nick_name":"Eunice",
       "name":"Tseng Yu Chen",
+      "chtname":"曾于槙",
       "name_subtext":"CG Artist",
       "image":"p17.png",
       "team":"Art"
@@ -140,6 +157,7 @@
       "id":18,
       "nick_name":"Doris",
       "name":"Huang YuTing",
+      "chtname":"黃于庭",
       "name_subtext":"CG Artist",
       "image":"p18.png",
       "team":"Art"
@@ -148,6 +166,7 @@
       "id":19,
       "nick_name":"MING",
       "name":"Li Ming Xue",
+      "chtname":"李明學",
       "name_subtext":"CG Artist",
       "image":"p19.png",
       "team":"Art"
@@ -156,9 +175,28 @@
       "id":20,
       "nick_name":"Vivi",
       "name":"Chen Wei Jing",
+      "chtname":"陳薇淨",
       "name_subtext":"CG Artist",
       "image":"p20.png",
       "team":"Art"
+    },
+    {
+      "id":21,
+      "nick_name":"YaWen",
+      "name":"Wang Ya Wen",
+      "chtname":"王雅文",
+      "name_subtext":"UE Team Mascot",
+      "image":"p21.png",
+      "team":"Animation"
+    },
+    {
+      "id":22,
+      "nick_name":"Wayne",
+      "name":"Ju Wei Cheng",
+      "chtname":"朱韋丞",
+      "name_subtext":"Studio Manager",
+      "image":"p21.png",
+      "team":"Managment"
     }
   ]
 }
