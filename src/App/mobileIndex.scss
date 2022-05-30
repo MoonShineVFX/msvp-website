@@ -2,7 +2,7 @@
 @media screen and (max-width:1024px) {
 
 }
-@media screen and (max-width:800px) {
+@media screen and (max-width:830px) {
   .container{
     width: 100%;
     margin: 0 auto;
@@ -24,6 +24,7 @@
         li{
           a{
             padding: 1rem 6px;
+            color: #a5a5a5;
           }
         }
       }
@@ -111,54 +112,33 @@
       }  
     } 
   } 
-
-  #chapter1 {
-    .flex-content{
-      display: flex;
-      flex-direction: column;
-      .title{
-        font-size: 2rem;
-      }
-      p{
-        font-size: 1rem;
-      }
-      .left{
-        width: 100%;
-      }
-      .right{
-        width: 100%;
-      }
-      .posY {
-        top: 0;
+  #About_staff{
+    .about_department_list{
+      ul{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        li{
+          padding: 5px 9px;
+          &:first-child{
+          }
+        }
       }
     }
-    .marginTop50{
-      margin-top: 20px;
-    }
-    .marginTop100{
-      margin-top: 30px;
-    }
-    
-  }
-  #chapter2{
-    .lists{
-      flex-direction: column;
-      .listItem{
-        width: 100%;
-        &:nth-child(even){
-          color:#ddd;
+    .aboutstaff_list{
+      .aboutstaff_item{
+        .person_info{
+          .name{
+            font-size: 1.2rem;
+          }
+          .bar{
+            margin: 10px auto;
+          }
         }
       }
     }
   }
-  #chapter3{
-    .works{
-      flex-direction: column;
-      .listItem{
-        width: 100%;
-      }
-    }
-  }
+
+  
 }
 @media screen and (max-width: 420px){
   #navbar{

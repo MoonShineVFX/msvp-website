@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import PagesNavbar from './Components/PagesNavbar'
+import MobilePagesNavbar from './Components/MobilePagesNavbar';
 import Footer from '../App/Footer'
 
 
@@ -27,6 +28,9 @@ function App() {
   const [isToggled, setToggled] = useState(false);
   const [isScorllEnd, setISScorllEnd]= useState(false)
   const toggleTrueFalse = () => setToggled(!isToggled);
+  const switchToggle = event => {
+    setToggled(!isToggled)
+  };
 
 
   useEffect(()=>{
@@ -36,6 +40,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <MobilePagesNavbar navData={navbar} isToggled={isToggled} switchToggle={switchToggle} />
       <PagesNavbar data={navbar} toggleTrueFalse={toggleTrueFalse}/>
       <Routes> 
         <Route path="" element={<Home />} />
