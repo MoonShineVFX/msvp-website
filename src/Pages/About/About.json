@@ -10,33 +10,6 @@
       "team":"Animation"
     },
     {
-      "id":2,
-      "nick_name":"Zoe",
-      "name":"Hsu Hwa Chin",
-      "chtname":"徐華璟",
-      "name_subtext":"Animation Assitant Director",
-      "image":"p02.png",
-      "team":"Animation"
-    },
-    {
-      "id":3,
-      "nick_name":"Weite",
-      "name":"Lee Wei Te",
-      "chtname":"李維德",
-      "name_subtext":"Project Manager",
-      "image":"p03.png",
-      "team":"Managment"
-    },
-    {
-      "id":4,
-      "nick_name":"Hua Sheng",
-      "name":"Jen Chia Sheng",
-      "chtname":"任珈陞",
-      "name_subtext":"Project Assistant",
-      "image":"p04.png",
-      "team":"Managment"
-    },
-    {
       "id":5,
       "nick_name":"Vance",
       "name":"Huang Yung Jie",
@@ -52,6 +25,15 @@
       "chtname":"王文凡",
       "name_subtext":"Technical Artist",
       "image":"p06.png",
+      "team":"Tech"
+    },
+    {
+      "id":9,
+      "nick_name":"Liz",
+      "name":"Lin Yi Yi",
+      "chtname":"林依依",
+      "name_subtext":"Technical Artist",
+      "image":"p09.png",
       "team":"Tech"
     },
     {
@@ -73,15 +55,6 @@
       "team":"Tech"
     },
     {
-      "id":9,
-      "nick_name":"Liz",
-      "name":"Lin Yi Yi",
-      "chtname":"林依依",
-      "name_subtext":"Technical Artist",
-      "image":"p09.png",
-      "team":"Tech"
-    },
-    {
       "id":10,
       "nick_name":"Tim",
       "name":"Chen I Tsang",
@@ -100,15 +73,6 @@
       "team":"Tech"
     },
     {
-      "id":12,
-      "nick_name":"Jeffrey",
-      "name":"Chang Hsuan Hao",
-      "chtname":"張軒豪",
-      "name_subtext":"Senior Engineer",
-      "image":"p12.png",
-      "team":"Tech"
-    },
-    {
       "id":13,
       "nick_name":"Esther",
       "name":"Wu Yi Ting",
@@ -124,6 +88,15 @@
       "chtname":"洪嘉甫",
       "name_subtext":"Technical Artist",
       "image":"p14.png",
+      "team":"Tech"
+    },
+    {
+      "id":12,
+      "nick_name":"Jeffrey",
+      "name":"Chang Hsuan Hao",
+      "chtname":"張軒豪",
+      "name_subtext":"Senior Engineer",
+      "image":"p12.png",
       "team":"Tech"
     },
     {
@@ -181,12 +154,12 @@
       "team":"Art"
     },
     {
-      "id":21,
-      "nick_name":"YaWen",
-      "name":"Wang Ya Wen",
-      "chtname":"王雅文",
-      "name_subtext":"UE Team Mascot",
-      "image":"p21.png",
+      "id":2,
+      "nick_name":"Zoe",
+      "name":"Hsu Hwa Chin",
+      "chtname":"徐華璟",
+      "name_subtext":"Animation Assitant Director",
+      "image":"p02.png",
       "team":"Animation"
     },
     {
@@ -197,6 +170,33 @@
       "name_subtext":"Studio Manager",
       "image":"p22.png",
       "team":"Managment"
+    },
+    {
+      "id":3,
+      "nick_name":"Weite",
+      "name":"Lee Wei Te",
+      "chtname":"李維德",
+      "name_subtext":"Project Manager",
+      "image":"p03.png",
+      "team":"Managment"
+    },
+    {
+      "id":4,
+      "nick_name":"Hua Sheng",
+      "name":"Jen Chia Sheng",
+      "chtname":"任珈陞",
+      "name_subtext":"Project Assistant",
+      "image":"p04.png",
+      "team":"Managment"
+    },
+    {
+      "id":21,
+      "nick_name":"YaWen",
+      "name":"Wang Ya Wen",
+      "chtname":"王雅文",
+      "name_subtext":"UE Team Mascot",
+      "image":"p21.png",
+      "team":"Animation"
     }
   ]
 }
