@@ -70,8 +70,8 @@
 }
 .eduplace .eduplace_list .eduplace_item .right .desc {
   text-align: center;
-  font-size: 13px;
-  line-height: 20px;
+  font-size: 15px;
+  line-height: 150%;
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -105,7 +105,7 @@
   font-weight: 800;
 }
 .edu_intro_bigbg .intro_content .desc {
-  font-size: 18px;
+  font-size: 15px;
   color: #cacaca;
   letter-spacing: 1px;
   line-height: 150%;

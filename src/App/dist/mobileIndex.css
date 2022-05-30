@@ -8,6 +8,15 @@
     margin: 0 auto;
   }
 
+  .pageHeader .caption {
+    width: 100%;
+  }
+  .pageHeader .caption .desc {
+    letter-spacing: 1px;
+    font-size: 15px;
+    line-height: 150%;
+  }
+
   #header .caption {
     width: 80%;
   }
@@ -293,5 +302,84 @@
   }
   #About_staff .aboutstaff_list .aboutstaff_item:nth-child(2n+0) {
     margin-right: 0;
+  }
+
+  #Pages_services #servives_about {
+    margin-top: -250px;
+  }
+  #Pages_services #servives_about .about_item {
+    flex-direction: column;
+  }
+  #Pages_services #servives_about .about_item:nth-child(2) .about_item_text, #Pages_services #servives_about .about_item:nth-child(4) .about_item_text {
+    order: 1;
+  }
+  #Pages_services #servives_about .about_item:nth-child(2) .about_item_img, #Pages_services #servives_about .about_item:nth-child(4) .about_item_img {
+    order: 2;
+  }
+  #Pages_services #servives_about .about_item .about_item_text {
+    width: 100%;
+  }
+  #Pages_services #servives_about .about_item .about_item_img {
+    width: 100%;
+  }
+
+  .chartlist ul {
+    box-sizing: border-box;
+    padding: 15\6 px;
+  }
+  .chartlist ul li .chartlist_item img {
+    box-sizing: border-box;
+    height: 40px;
+  }
+  .chartlist ul li .chartlist_item .title {
+    font-size: 0.8rem;
+  }
+  .chartlist ul li .chartlist_item .number {
+    margin-top: 20px;
+  }
+  .chartlist ul li .chartlist_item .sub_text {
+    font-size: 0.7rem;
+  }
+
+  .eduplace .eduplace_list .eduplace_item {
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 30px;
+  }
+  .eduplace .eduplace_list .eduplace_item:first-child .left {
+    order: 2;
+  }
+  .eduplace .eduplace_list .eduplace_item:first-child .right {
+    order: 1;
+  }
+  .eduplace .eduplace_list .eduplace_item .left {
+    width: 100%;
+  }
+  .eduplace .eduplace_list .eduplace_item .right {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .eduplace .eduplace_list .eduplace_item .right .title {
+    font-size: 2rem;
+  }
+
+  .edu_intro_bigbg .intro_content {
+    margin: 0 5%;
+  }
+
+  .edu_latestCourse {
+    margin: 0 5%;
+  }
+  .edu_latestCourse .latestCourse_list ul .latestCourse_item {
+    flex: 0 0 48%;
+    padding-top: 70%;
+  }
+
+  .edu_Portfolio .edu_Portfolio_list {
+    margin: 0 5%;
+  }
+  .edu_Portfolio .edu_Portfolio_list ul .edu_Portfolio_item {
+    flex: 0 0 47%;
+    height: 129px;
   }
 }
