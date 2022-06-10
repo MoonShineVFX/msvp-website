@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import { useTranslation,Trans } from 'react-i18next';
 import EduChart from './EduChart'
 import EduPlace from './EduPlace'
 import EduBigBg from './EduBigBg'
@@ -14,6 +15,7 @@ function Education() {
   const [isOpen , setIsOpen] = useState(false)
   const [searchResults, setSearchResults] = useState([]);
   const [workData, setWorkData] = useState(EduWorkjsonsData);
+  const { t } = useTranslation();
   // 開啟單作品
   const handleAddClick = (dataId) => {
     const results  =   workData.works.find((d)=>{
@@ -35,12 +37,12 @@ function Education() {
       }
       <div 
         className="pageHeader" 
-        style={{backgroundImage: `url(${process.env.PUBLIC_URL +'/images/intro/intro01.jpg'})`}}
+        style={{backgroundImage: `url(${process.env.PUBLIC_URL +'/images/education/education01.jpg'})`}}
       >
       <div className="caption">
 
-        <div className="title">Education System</div>
-        <div className='desc'>因市場專業人才的稀缺，夢想開始重視人才培育。自 2018 年舉辦推廣課程，並結合自身專案經歷，發展出一套教育系統培養符合市場的即戰力。</div>
+        <div className="title">{t(`edu_title`)}</div>
+        <div className='desc'>{t(`edu_desc`)}</div>
 
       </div>
 

@@ -11,6 +11,9 @@
   justify-content: space-between;
   align-items: center;
 }
+.chartlist ul li {
+  width: 30%;
+}
 .chartlist ul li .chartlist_item {
   display: flex;
   flex-direction: column;
@@ -23,6 +26,12 @@
   font-size: 25px;
   font-weight: 800;
   letter-spacing: 2px;
+}
+.chartlist ul li .chartlist_item .desc {
+  text-align: center;
+  font-size: 14px;
+  width: 70%;
+  margin-top: 15px;
 }
 .chartlist ul li .chartlist_item .number {
   font-size: 30px;

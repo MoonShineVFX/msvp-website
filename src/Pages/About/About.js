@@ -1,16 +1,13 @@
 import React from 'react'
 import aboutstaffData from '../About/About.json'
 import Aboutstaff from './Aboutstaff'
+import VideoHeader from '../../App/Components/VideoHeader'
 function About() {
   const {aboutstaff} = aboutstaffData
   return (
     <div id="Pages_about">
-      <div 
-        className="pageHeader" 
-        style={{backgroundImage: `url(${process.env.PUBLIC_URL +'/images/intro/intro01.jpg'})`}}
-      >
+      <VideoHeader  videourl={'https://vimeo.com/719047386'}/>
 
-      </div>
       <Aboutstaff aboutStaffData={aboutstaff} />
     </div>
   )

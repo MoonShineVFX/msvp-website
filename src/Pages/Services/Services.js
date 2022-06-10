@@ -9,7 +9,7 @@ function Services() {
     <div id="Pages_services">
       <div 
         className="pageHeader" 
-        style={{backgroundImage: `url(${process.env.PUBLIC_URL +'/images/intro/intro01.jpg'})`}}
+        style={{backgroundImage: `url(${process.env.PUBLIC_URL +'/images/service/service01.jpg'})`}}
       >
 
       </div>
