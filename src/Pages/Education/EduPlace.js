@@ -4,6 +4,12 @@ import { MdOutlineArrowBackIosNew,MdOutlineArrowForwardIos } from "react-icons/m
 import { useTranslation } from 'react-i18next';
 function EduPlace() {
   const { t } = useTranslation();
+  const ArrowLeft = (props) => (
+    <MdOutlineArrowBackIosNew {...props} color="white"/>
+  );
+  const ArrowRight = (props) => (
+    <MdOutlineArrowForwardIos {...props} color="white" />
+  );
   const settings = {
     dots: true,
     infinite: true,
@@ -12,8 +18,8 @@ function EduPlace() {
     autoplay: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <MdOutlineArrowForwardIos color="white" />,
-    prevArrow: <MdOutlineArrowBackIosNew color="white"/>
+    nextArrow: <ArrowRight />,
+    prevArrow: <ArrowLeft  />
   };
   return (
     <div className='eduplace'>

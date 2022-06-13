@@ -54,6 +54,7 @@ function Works({workData,handler}) {
               onClick={()=>handleClick(item.id) }
               data-aos="zoom-out-up"
               data-aos-delay={index+'00'}
+              key={index}
             >
               <div className="item_bg" style={{backgroundImage: `url(${process.env.PUBLIC_URL +'/images/works/'+ item.image})`}}>
               </div>

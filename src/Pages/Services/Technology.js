@@ -26,6 +26,7 @@ function Technology({techData}) {
                 const {id,title,desc,image}=item
                 return(
                   <li 
+                    key={index}
                     onClick={()=>handleClick(index)}
                     className={currentId === index ? "active" : ""}
                   >

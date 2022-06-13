@@ -10,7 +10,7 @@ function ServicesAbout({aboutData}) {
         about.map((item,index)=>{
           const {title,desc,image} = item
           return(
-            <div className='about_item'>
+            <div className='about_item' key={index}>
               <div className="about_item_text" data-aos="fade-right">
                 <div className="title"> {t(`${title}`)}</div>
                 <div className="desc">

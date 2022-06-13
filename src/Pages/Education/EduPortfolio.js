@@ -16,6 +16,7 @@ function EduPortfolio({workData,handler}) {
             data.map((item,index)=>{
             return(
               <li 
+                key={index}
                 className='edu_Portfolio_item'
                 onClick={()=>handleClick(item.id) }
                 data-aos="zoom-out-up"

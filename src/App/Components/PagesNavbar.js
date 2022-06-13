@@ -13,7 +13,12 @@ function PagesNavbar({data ,toggleTrueFalse}) {
   return (
     <div id="navbar" className='site-menu'>
       <div className="logo">
-        <img src={process.env.PUBLIC_URL+'/images/2022/MSXR_White_H.png'} alt="" />
+        <Link
+          to={'/'}
+        >
+          <img src={process.env.PUBLIC_URL+'/images/2022/MSXR_White_H.png'} alt="" />
+        </Link>
+        
       </div>
       <div className="navlist">
         <ul>
@@ -23,7 +28,6 @@ function PagesNavbar({data ,toggleTrueFalse}) {
                 <li key={index}>
                   <Link 
                     to={item.type}
-                    spy={true}
                     className={ pathname.substring(1) === item.type ? 'active' : ''}
                   >
                     {t(`${item.chtName}`)}
