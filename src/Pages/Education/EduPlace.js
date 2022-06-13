@@ -22,13 +22,19 @@ function EduPlace() {
             <div className="left">
               <Slider {...settings} className="edu_slider">
                 <div>
-                  <img src={process.env.PUBLIC_URL +'/images/education/m01.png'} alt="" />
+                  <img src={process.env.PUBLIC_URL +'/images/education/internship/internship01.jpg'} alt="" />
                 </div>
                 <div>
-                  <img src={process.env.PUBLIC_URL +'/images/education/m01.png'} alt="" />
+                  <img src={process.env.PUBLIC_URL +'/images/education/internship/internship02.jpg'} alt="" />
                 </div>
                 <div>
-                  <img src={process.env.PUBLIC_URL +'/images/education/m01.png'} alt="" />
+                  <img src={process.env.PUBLIC_URL +'/images/education/internship/internship03.jpg'} alt="" />
+                </div>
+                <div>
+                  <img src={process.env.PUBLIC_URL +'/images/education/internship/internship04.jpg'} alt="" />
+                </div>
+                <div>
+                  <img src={process.env.PUBLIC_URL +'/images/education/internship/internship05.jpg'} alt="" />
                 </div>
 
               </Slider>
@@ -45,15 +51,21 @@ function EduPlace() {
         <div className="eduplace_item set2">
           <div className="left">
             <Slider {...settings} className="edu_slider">
-              <div>
-                <img src={process.env.PUBLIC_URL +'/images/education/m01.png'} alt="" />
-              </div>
-              <div>
-                <img src={process.env.PUBLIC_URL +'/images/education/m01.png'} alt="" />
-              </div>
-              <div>
-                <img src={process.env.PUBLIC_URL +'/images/education/m01.png'} alt="" />
-              </div>
+                <div>
+                  <img src={process.env.PUBLIC_URL +'/images/education/cgark/cgark01.jpg'} alt="" />
+                </div>
+                <div>
+                  <img src={process.env.PUBLIC_URL +'/images/education/cgark/cgark02.jpg'} alt="" />
+                </div>
+                <div>
+                  <img src={process.env.PUBLIC_URL +'/images/education/cgark/cgark03.jpg'} alt="" />
+                </div>
+                <div>
+                  <img src={process.env.PUBLIC_URL +'/images/education/cgark/cgark04.jpg'} alt="" />
+                </div>
+                <div>
+                  <img src={process.env.PUBLIC_URL +'/images/education/cgark/cgark05.jpg'} alt="" />
+                </div>
 
             </Slider>
           </div>

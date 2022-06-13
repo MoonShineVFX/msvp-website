@@ -1,7 +1,12 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next';
 import LatestCourse from './LatestCourse';
-function EduBigBg() {
+
+
+
+
+
+function EduBigBg({courseData,handler}) {
   const { t } = useTranslation();
   return (
     <div className='edu_intro_bigbg' >
@@ -14,7 +19,7 @@ function EduBigBg() {
           {t('edu_intro_desc')}
         </div>
       </div>
-      <LatestCourse />
+      <LatestCourse courseData={courseData} handler={handler}/>
 
     </div>
   )
