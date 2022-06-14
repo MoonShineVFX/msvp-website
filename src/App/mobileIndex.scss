@@ -408,11 +408,16 @@
       }
     }
   }
-
+  .pageHeader{
+    .caption{
+      width: 90%;
+    }
+  } 
   .chartlist{
     ul{
       box-sizing: border-box;
       padding:15\6px;
+      align-items: flex-start;
       li{
         .chartlist_item{
           img{
@@ -483,6 +488,16 @@
       }
     }
   }
+  .course_single_modal{
+    .itemContent{
+      width: 90%;
+      article{
+        .article-content{
+          padding: 9px 9px;
+        }
+      }
+    } 
+  } 
 
   
 

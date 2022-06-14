@@ -323,9 +323,14 @@
     width: 100%;
   }
 
+  .pageHeader .caption {
+    width: 90%;
+  }
+
   .chartlist ul {
     box-sizing: border-box;
     padding: 15\6 px;
+    align-items: flex-start;
   }
   .chartlist ul li .chartlist_item img {
     box-sizing: border-box;
@@ -381,5 +386,12 @@
   .edu_Portfolio .edu_Portfolio_list ul .edu_Portfolio_item {
     flex: 0 0 47%;
     height: 129px;
+  }
+
+  .course_single_modal .itemContent {
+    width: 90%;
+  }
+  .course_single_modal .itemContent article .article-content {
+    padding: 9px 9px;
   }
 }
