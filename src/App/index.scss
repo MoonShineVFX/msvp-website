@@ -115,7 +115,7 @@ a{
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  z-index: -1;
+  z-index: 0;
   &::before{
     content: '';
     width: 100%;
@@ -161,6 +161,7 @@ a{
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 2;
+   
     .title{
       font-size: 2rem;
       font-weight: bold;
@@ -204,7 +205,7 @@ section.fluid_section{
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: -1;
+  z-index: 0;
   &::before{
     content: '';
     width: 100%;
