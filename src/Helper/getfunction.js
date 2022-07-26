@@ -168,10 +168,6 @@ export const getPrevWorkForDashboard = async (item , callback) => {
   })
 }
 
-export const getSearchWork = async (search , callback)=>{
- //TODO
-}
-
 export const createWork = async (data , callback)=>{
   const collectionRef = collection(db ,"data")
   try {
@@ -242,17 +238,19 @@ const categoryDoc = doc(db , 'category' , uid)
   }
 }
 
-// admin Award
-export const getAwardForDashboard = async (callback) => {
-  const q = query(collection(db, "awards"))
+// 學生作品
+export const getAllStudentWorksForDashboard = async (callback)=>{
+  const q = query(collection(db, "studentWork"),orderBy('time_added' , 'desc'),limit(30))
   const data = await getDocs(q);
-  mapDataWithImage('img_award',data.docs.map(doc=> ({...doc.data(),uid:doc.id})),function(res){
+
+  mapDataWithImage('studentWork',data.docs.map(doc=> ({...doc.data(),uid:doc.id})),function(res){
     callback(res)
   })
 }
 
-export const createAward = async (data , callback)=>{
-  const collectionRef = collection(db ,"awards")
+
+export const createStudentWork = async (data , callback)=>{
+  const collectionRef = collection(db ,"studentWork")
   try {
     await addDoc(collectionRef,data)
     callback('success')
@@ -260,36 +258,43 @@ export const createAward = async (data , callback)=>{
     callback(error)
   }
 }
-export const deleteAward = async(uid,callback)=>{
-  const awardDoc = doc(db , 'awards' , uid)
+export const deleteStudentWork = async(uid,callback)=>{
+  const StudentWorkDoc = doc(db , 'studentWork' , uid)
+  
   try {
-    await deleteDoc(awardDoc)
+    await deleteDoc(StudentWorkDoc)
     callback('success')
   } catch (error) {
     callback(error)
   }
 }
-export const updateAward = async (uid,currentData,callback)=>{
-  const awardDoc = doc(db , 'awards' , uid)
-  try {
-    await updateDoc( awardDoc ,currentData)
-    callback('success')
-  } catch (error) {
-    callback(error)
-  }
-}
+ export const updateStudentWork = async (uid,currentData,callback)=>{
+  const StudentWorkDoc = doc(db , 'studentWork' , uid)
+   
+    try {
+      await updateDoc( StudentWorkDoc ,currentData)
+      callback('success')
+    } catch (error) {
+      callback(error)
+    }
+ }
 
-//admin service
-export const getServiceForDashboard = async (callback) => {
-  const q = query(collection(db, "service"))
+ // 學生作品分類
+
+
+ // ABOUT 組員 人員
+ export const getAllAboutUserForDashboard = async (callback)=>{
+  const q = query(collection(db, "AboutUser"),orderBy('time_added' , 'desc'),limit(30))
   const data = await getDocs(q);
-  mapDataWithImage('img_service',data.docs.map(doc=> ({...doc.data(),uid:doc.id})),function(res){
+
+  mapDataWithImage('img_about',data.docs.map(doc=> ({...doc.data(),uid:doc.id})),function(res){
     callback(res)
   })
 }
 
-export const createService = async (data , callback)=>{
-  const collectionRef = collection(db ,"service")
+
+export const createAboutUser = async (data , callback)=>{
+  const collectionRef = collection(db ,"AboutUser")
   try {
     await addDoc(collectionRef,data)
     callback('success')
@@ -297,21 +302,61 @@ export const createService = async (data , callback)=>{
     callback(error)
   }
 }
-export const deleteService = async(uid,callback)=>{
-  const serviceDoc = doc(db , 'service' , uid)
+export const deleteAboutUser = async(uid,callback)=>{
+  const AboutUserDoc = doc(db , 'AboutUser' , uid)
+  
   try {
-    await deleteDoc(serviceDoc)
+    await deleteDoc(AboutUserDoc)
     callback('success')
   } catch (error) {
     callback(error)
   }
 }
-export const updateService = async (uid,currentData,callback)=>{
-  const serviceDoc = doc(db , 'service' , uid)
-  try {
-    await updateDoc( serviceDoc ,currentData)
-    callback('success')
-  } catch (error) {
-    callback(error)
+ export const updateAboutUser = async (uid,currentData,callback)=>{
+  const AboutUserDoc = doc(db , 'AboutUser' , uid)
+   
+    try {
+      await updateDoc( AboutUserDoc ,currentData)
+      callback('success')
+    } catch (error) {
+      callback(error)
+    }
+ }
+  // ABOUT 組別 分類
+  export const getAllTeamForDashboard = async (callback)=>{
+    const q = query(collection(db, "Team"),orderBy('sort_num' , 'desc'))
+    const data = await getDocs(q);
+    mapDataWithUid(data.docs.map(doc=> ({...doc.data(),uid:doc.id})),function(res){
+      callback(res)
+    })
   }
-}
+  
+  export const createTeam = async (data , callback)=>{
+    const collectionRef = collection(db ,"Team")
+    try {
+      await addDoc(collectionRef,data)
+      callback('success')
+    } catch (error) {
+      callback(error)
+    }
+  }
+  export const deleteTeam = async(uid,callback)=>{
+    const TeamDoc = doc(db , 'Team' , uid)
+    
+    try {
+      await deleteDoc(TeamDoc)
+      callback('success')
+    } catch (error) {
+      callback(error)
+    }
+  }
+  export const updateTeam = async (uid,currentData,callback)=>{
+  const TeamDoc = doc(db , 'Team' , uid)
+    
+    try {
+      await updateDoc( TeamDoc ,currentData)
+      callback('success')
+    } catch (error) {
+      callback(error)
+    }
+  }

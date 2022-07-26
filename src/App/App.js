@@ -21,6 +21,9 @@ import Education from '../Pages/Education/Education';
 //back pages
 import AdminHome from '../Pages/Back/Home'
 import AdminCategory from '../Pages/Back/Category'
+import AdminStudentWorks from '../Pages/Back/Edu/Home'
+import AdminAbout from '../Pages/Back/About/Home'
+import AdminTeam from '../Pages/Back/About/Category'
 
 
 
@@ -52,6 +55,9 @@ function App() {
         <Route path="admin" element={<DashboardPageLayout />}>
           <Route path="" element={<AdminHome />} />
           <Route path="category" element={<AdminCategory />} />
+          <Route path="studentwork" element={<AdminStudentWorks />} />
+          <Route path="about" element={<AdminAbout />} />
+          <Route path="team" element={<AdminTeam />} />
 
         </Route>
       </Routes>

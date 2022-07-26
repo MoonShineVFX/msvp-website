@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.updateService = exports.deleteService = exports.createService = exports.getServiceForDashboard = exports.updateAward = exports.deleteAward = exports.createAward = exports.getAwardForDashboard = exports.updateCategory = exports.deleteCategory = exports.createCategory = exports.getAllCategoryForDashboard = exports.updateWork = exports.deleteWork = exports.createWork = exports.getSearchWork = exports.getPrevWorkForDashboard = exports.getNextWorkForDashboard = exports.getAllWorksForDashboard = exports.getNextWorksByCategoryAndLimits = exports.getWorksByCategoryAndLimits = exports.queryByCategoryId = exports.getCategory = exports.getWorks = exports.getNewestWorks = void 0;
+exports.updateTeam = exports.deleteTeam = exports.createTeam = exports.getAllTeamForDashboard = exports.updateAboutUser = exports.deleteAboutUser = exports.createAboutUser = exports.getAllAboutUserForDashboard = exports.updateStudentWork = exports.deleteStudentWork = exports.createStudentWork = exports.getAllStudentWorksForDashboard = exports.updateCategory = exports.deleteCategory = exports.createCategory = exports.getAllCategoryForDashboard = exports.updateWork = exports.deleteWork = exports.createWork = exports.getPrevWorkForDashboard = exports.getNextWorkForDashboard = exports.getAllWorksForDashboard = exports.getNextWorksByCategoryAndLimits = exports.getWorksByCategoryAndLimits = exports.queryByCategoryId = exports.getCategory = exports.getWorks = exports.getNewestWorks = void 0;
 
 var _firebase = _interopRequireDefault(require("../firebaseConfig/firebase"));
 
@@ -421,30 +421,47 @@ var getPrevWorkForDashboard = function getPrevWorkForDashboard(item, callback) {
 
 exports.getPrevWorkForDashboard = getPrevWorkForDashboard;
 
-var getSearchWork = function getSearchWork(search, callback) {
-  return regeneratorRuntime.async(function getSearchWork$(_context14) {
+var createWork = function createWork(data, callback) {
+  var collectionRef;
+  return regeneratorRuntime.async(function createWork$(_context14) {
     while (1) {
       switch (_context14.prev = _context14.next) {
         case 0:
+          collectionRef = (0, _firestore.collection)(_firebase["default"], "data");
+          _context14.prev = 1;
+          _context14.next = 4;
+          return regeneratorRuntime.awrap((0, _firestore.addDoc)(collectionRef, data));
+
+        case 4:
+          callback('success');
+          _context14.next = 10;
+          break;
+
+        case 7:
+          _context14.prev = 7;
+          _context14.t0 = _context14["catch"](1);
+          callback(_context14.t0);
+
+        case 10:
         case "end":
           return _context14.stop();
       }
     }
-  });
+  }, null, null, [[1, 7]]);
 };
 
-exports.getSearchWork = getSearchWork;
+exports.createWork = createWork;
 
-var createWork = function createWork(data, callback) {
-  var collectionRef;
-  return regeneratorRuntime.async(function createWork$(_context15) {
+var deleteWork = function deleteWork(uid, callback) {
+  var workDoc;
+  return regeneratorRuntime.async(function deleteWork$(_context15) {
     while (1) {
       switch (_context15.prev = _context15.next) {
         case 0:
-          collectionRef = (0, _firestore.collection)(_firebase["default"], "data");
+          workDoc = (0, _firestore.doc)(_firebase["default"], 'data', uid);
           _context15.prev = 1;
           _context15.next = 4;
-          return regeneratorRuntime.awrap((0, _firestore.addDoc)(collectionRef, data));
+          return regeneratorRuntime.awrap((0, _firestore.deleteDoc)(workDoc));
 
         case 4:
           callback('success');
@@ -464,18 +481,18 @@ var createWork = function createWork(data, callback) {
   }, null, null, [[1, 7]]);
 };
 
-exports.createWork = createWork;
+exports.deleteWork = deleteWork;
 
-var deleteWork = function deleteWork(uid, callback) {
+var updateWork = function updateWork(uid, currentData, callback) {
   var workDoc;
-  return regeneratorRuntime.async(function deleteWork$(_context16) {
+  return regeneratorRuntime.async(function updateWork$(_context16) {
     while (1) {
       switch (_context16.prev = _context16.next) {
         case 0:
           workDoc = (0, _firestore.doc)(_firebase["default"], 'data', uid);
           _context16.prev = 1;
           _context16.next = 4;
-          return regeneratorRuntime.awrap((0, _firestore.deleteDoc)(workDoc));
+          return regeneratorRuntime.awrap((0, _firestore.updateDoc)(workDoc, currentData));
 
         case 4:
           callback('success');
@@ -493,37 +510,6 @@ var deleteWork = function deleteWork(uid, callback) {
       }
     }
   }, null, null, [[1, 7]]);
-};
-
-exports.deleteWork = deleteWork;
-
-var updateWork = function updateWork(uid, currentData, callback) {
-  var workDoc;
-  return regeneratorRuntime.async(function updateWork$(_context17) {
-    while (1) {
-      switch (_context17.prev = _context17.next) {
-        case 0:
-          workDoc = (0, _firestore.doc)(_firebase["default"], 'data', uid);
-          _context17.prev = 1;
-          _context17.next = 4;
-          return regeneratorRuntime.awrap((0, _firestore.updateDoc)(workDoc, currentData));
-
-        case 4:
-          callback('success');
-          _context17.next = 10;
-          break;
-
-        case 7:
-          _context17.prev = 7;
-          _context17.t0 = _context17["catch"](1);
-          callback(_context17.t0);
-
-        case 10:
-        case "end":
-          return _context17.stop();
-      }
-    }
-  }, null, null, [[1, 7]]);
 }; //admin category
 
 
@@ -531,16 +517,16 @@ exports.updateWork = updateWork;
 
 var getAllCategoryForDashboard = function getAllCategoryForDashboard(callback) {
   var q, data;
-  return regeneratorRuntime.async(function getAllCategoryForDashboard$(_context18) {
+  return regeneratorRuntime.async(function getAllCategoryForDashboard$(_context17) {
     while (1) {
-      switch (_context18.prev = _context18.next) {
+      switch (_context17.prev = _context17.next) {
         case 0:
           q = (0, _firestore.query)((0, _firestore.collection)(_firebase["default"], "category"), (0, _firestore.orderBy)('sort_num', 'desc'));
-          _context18.next = 3;
+          _context17.next = 3;
           return regeneratorRuntime.awrap((0, _firestore.getDocs)(q));
 
         case 3:
-          data = _context18.sent;
+          data = _context17.sent;
           mapDataWithUid(data.docs.map(function (doc) {
             return _objectSpread({}, doc.data(), {
               uid: doc.id
@@ -551,7 +537,7 @@ var getAllCategoryForDashboard = function getAllCategoryForDashboard(callback) {
 
         case 5:
         case "end":
-          return _context18.stop();
+          return _context17.stop();
       }
     }
   });
@@ -561,14 +547,45 @@ exports.getAllCategoryForDashboard = getAllCategoryForDashboard;
 
 var createCategory = function createCategory(data, callback) {
   var collectionRef;
-  return regeneratorRuntime.async(function createCategory$(_context19) {
+  return regeneratorRuntime.async(function createCategory$(_context18) {
+    while (1) {
+      switch (_context18.prev = _context18.next) {
+        case 0:
+          collectionRef = (0, _firestore.collection)(_firebase["default"], "category");
+          _context18.prev = 1;
+          _context18.next = 4;
+          return regeneratorRuntime.awrap((0, _firestore.addDoc)(collectionRef, data));
+
+        case 4:
+          callback('success');
+          _context18.next = 10;
+          break;
+
+        case 7:
+          _context18.prev = 7;
+          _context18.t0 = _context18["catch"](1);
+          callback(_context18.t0);
+
+        case 10:
+        case "end":
+          return _context18.stop();
+      }
+    }
+  }, null, null, [[1, 7]]);
+};
+
+exports.createCategory = createCategory;
+
+var deleteCategory = function deleteCategory(uid, callback) {
+  var categoryDoc;
+  return regeneratorRuntime.async(function deleteCategory$(_context19) {
     while (1) {
       switch (_context19.prev = _context19.next) {
         case 0:
-          collectionRef = (0, _firestore.collection)(_firebase["default"], "category");
+          categoryDoc = (0, _firestore.doc)(_firebase["default"], 'category', uid);
           _context19.prev = 1;
           _context19.next = 4;
-          return regeneratorRuntime.awrap((0, _firestore.addDoc)(collectionRef, data));
+          return regeneratorRuntime.awrap((0, _firestore.deleteDoc)(categoryDoc));
 
         case 4:
           callback('success');
@@ -588,18 +605,18 @@ var createCategory = function createCategory(data, callback) {
   }, null, null, [[1, 7]]);
 };
 
-exports.createCategory = createCategory;
+exports.deleteCategory = deleteCategory;
 
-var deleteCategory = function deleteCategory(uid, callback) {
+var updateCategory = function updateCategory(uid, currentData, callback) {
   var categoryDoc;
-  return regeneratorRuntime.async(function deleteCategory$(_context20) {
+  return regeneratorRuntime.async(function updateCategory$(_context20) {
     while (1) {
       switch (_context20.prev = _context20.next) {
         case 0:
           categoryDoc = (0, _firestore.doc)(_firebase["default"], 'category', uid);
           _context20.prev = 1;
           _context20.next = 4;
-          return regeneratorRuntime.awrap((0, _firestore.deleteDoc)(categoryDoc));
+          return regeneratorRuntime.awrap((0, _firestore.updateDoc)(categoryDoc, currentData));
 
         case 4:
           callback('success');
@@ -617,55 +634,24 @@ var deleteCategory = function deleteCategory(uid, callback) {
       }
     }
   }, null, null, [[1, 7]]);
-};
-
-exports.deleteCategory = deleteCategory;
-
-var updateCategory = function updateCategory(uid, currentData, callback) {
-  var categoryDoc;
-  return regeneratorRuntime.async(function updateCategory$(_context21) {
-    while (1) {
-      switch (_context21.prev = _context21.next) {
-        case 0:
-          categoryDoc = (0, _firestore.doc)(_firebase["default"], 'category', uid);
-          _context21.prev = 1;
-          _context21.next = 4;
-          return regeneratorRuntime.awrap((0, _firestore.updateDoc)(categoryDoc, currentData));
-
-        case 4:
-          callback('success');
-          _context21.next = 10;
-          break;
-
-        case 7:
-          _context21.prev = 7;
-          _context21.t0 = _context21["catch"](1);
-          callback(_context21.t0);
-
-        case 10:
-        case "end":
-          return _context21.stop();
-      }
-    }
-  }, null, null, [[1, 7]]);
-}; // admin Award
+}; // 學生作品
 
 
 exports.updateCategory = updateCategory;
 
-var getAwardForDashboard = function getAwardForDashboard(callback) {
+var getAllStudentWorksForDashboard = function getAllStudentWorksForDashboard(callback) {
   var q, data;
-  return regeneratorRuntime.async(function getAwardForDashboard$(_context22) {
+  return regeneratorRuntime.async(function getAllStudentWorksForDashboard$(_context21) {
     while (1) {
-      switch (_context22.prev = _context22.next) {
+      switch (_context21.prev = _context21.next) {
         case 0:
-          q = (0, _firestore.query)((0, _firestore.collection)(_firebase["default"], "awards"));
-          _context22.next = 3;
+          q = (0, _firestore.query)((0, _firestore.collection)(_firebase["default"], "studentWork"), (0, _firestore.orderBy)('time_added', 'desc'), (0, _firestore.limit)(30));
+          _context21.next = 3;
           return regeneratorRuntime.awrap((0, _firestore.getDocs)(q));
 
         case 3:
-          data = _context22.sent;
-          mapDataWithImage('img_award', data.docs.map(function (doc) {
+          data = _context21.sent;
+          mapDataWithImage('studentWork', data.docs.map(function (doc) {
             return _objectSpread({}, doc.data(), {
               uid: doc.id
             });
@@ -675,24 +661,55 @@ var getAwardForDashboard = function getAwardForDashboard(callback) {
 
         case 5:
         case "end":
-          return _context22.stop();
+          return _context21.stop();
       }
     }
   });
 };
 
-exports.getAwardForDashboard = getAwardForDashboard;
+exports.getAllStudentWorksForDashboard = getAllStudentWorksForDashboard;
 
-var createAward = function createAward(data, callback) {
+var createStudentWork = function createStudentWork(data, callback) {
   var collectionRef;
-  return regeneratorRuntime.async(function createAward$(_context23) {
+  return regeneratorRuntime.async(function createStudentWork$(_context22) {
+    while (1) {
+      switch (_context22.prev = _context22.next) {
+        case 0:
+          collectionRef = (0, _firestore.collection)(_firebase["default"], "studentWork");
+          _context22.prev = 1;
+          _context22.next = 4;
+          return regeneratorRuntime.awrap((0, _firestore.addDoc)(collectionRef, data));
+
+        case 4:
+          callback('success');
+          _context22.next = 10;
+          break;
+
+        case 7:
+          _context22.prev = 7;
+          _context22.t0 = _context22["catch"](1);
+          callback(_context22.t0);
+
+        case 10:
+        case "end":
+          return _context22.stop();
+      }
+    }
+  }, null, null, [[1, 7]]);
+};
+
+exports.createStudentWork = createStudentWork;
+
+var deleteStudentWork = function deleteStudentWork(uid, callback) {
+  var StudentWorkDoc;
+  return regeneratorRuntime.async(function deleteStudentWork$(_context23) {
     while (1) {
       switch (_context23.prev = _context23.next) {
         case 0:
-          collectionRef = (0, _firestore.collection)(_firebase["default"], "awards");
+          StudentWorkDoc = (0, _firestore.doc)(_firebase["default"], 'studentWork', uid);
           _context23.prev = 1;
           _context23.next = 4;
-          return regeneratorRuntime.awrap((0, _firestore.addDoc)(collectionRef, data));
+          return regeneratorRuntime.awrap((0, _firestore.deleteDoc)(StudentWorkDoc));
 
         case 4:
           callback('success');
@@ -712,18 +729,18 @@ var createAward = function createAward(data, callback) {
   }, null, null, [[1, 7]]);
 };
 
-exports.createAward = createAward;
+exports.deleteStudentWork = deleteStudentWork;
 
-var deleteAward = function deleteAward(uid, callback) {
-  var awardDoc;
-  return regeneratorRuntime.async(function deleteAward$(_context24) {
+var updateStudentWork = function updateStudentWork(uid, currentData, callback) {
+  var StudentWorkDoc;
+  return regeneratorRuntime.async(function updateStudentWork$(_context24) {
     while (1) {
       switch (_context24.prev = _context24.next) {
         case 0:
-          awardDoc = (0, _firestore.doc)(_firebase["default"], 'awards', uid);
+          StudentWorkDoc = (0, _firestore.doc)(_firebase["default"], 'studentWork', uid);
           _context24.prev = 1;
           _context24.next = 4;
-          return regeneratorRuntime.awrap((0, _firestore.deleteDoc)(awardDoc));
+          return regeneratorRuntime.awrap((0, _firestore.updateDoc)(StudentWorkDoc, currentData));
 
         case 4:
           callback('success');
@@ -741,55 +758,25 @@ var deleteAward = function deleteAward(uid, callback) {
       }
     }
   }, null, null, [[1, 7]]);
-};
+}; // 學生作品分類
+// ABOUT 組員 人員
 
-exports.deleteAward = deleteAward;
 
-var updateAward = function updateAward(uid, currentData, callback) {
-  var awardDoc;
-  return regeneratorRuntime.async(function updateAward$(_context25) {
+exports.updateStudentWork = updateStudentWork;
+
+var getAllAboutUserForDashboard = function getAllAboutUserForDashboard(callback) {
+  var q, data;
+  return regeneratorRuntime.async(function getAllAboutUserForDashboard$(_context25) {
     while (1) {
       switch (_context25.prev = _context25.next) {
         case 0:
-          awardDoc = (0, _firestore.doc)(_firebase["default"], 'awards', uid);
-          _context25.prev = 1;
-          _context25.next = 4;
-          return regeneratorRuntime.awrap((0, _firestore.updateDoc)(awardDoc, currentData));
-
-        case 4:
-          callback('success');
-          _context25.next = 10;
-          break;
-
-        case 7:
-          _context25.prev = 7;
-          _context25.t0 = _context25["catch"](1);
-          callback(_context25.t0);
-
-        case 10:
-        case "end":
-          return _context25.stop();
-      }
-    }
-  }, null, null, [[1, 7]]);
-}; //admin service
-
-
-exports.updateAward = updateAward;
-
-var getServiceForDashboard = function getServiceForDashboard(callback) {
-  var q, data;
-  return regeneratorRuntime.async(function getServiceForDashboard$(_context26) {
-    while (1) {
-      switch (_context26.prev = _context26.next) {
-        case 0:
-          q = (0, _firestore.query)((0, _firestore.collection)(_firebase["default"], "service"));
-          _context26.next = 3;
+          q = (0, _firestore.query)((0, _firestore.collection)(_firebase["default"], "AboutUser"), (0, _firestore.orderBy)('time_added', 'desc'), (0, _firestore.limit)(30));
+          _context25.next = 3;
           return regeneratorRuntime.awrap((0, _firestore.getDocs)(q));
 
         case 3:
-          data = _context26.sent;
-          mapDataWithImage('img_service', data.docs.map(function (doc) {
+          data = _context25.sent;
+          mapDataWithImage('img_about', data.docs.map(function (doc) {
             return _objectSpread({}, doc.data(), {
               uid: doc.id
             });
@@ -799,24 +786,55 @@ var getServiceForDashboard = function getServiceForDashboard(callback) {
 
         case 5:
         case "end":
-          return _context26.stop();
+          return _context25.stop();
       }
     }
   });
 };
 
-exports.getServiceForDashboard = getServiceForDashboard;
+exports.getAllAboutUserForDashboard = getAllAboutUserForDashboard;
 
-var createService = function createService(data, callback) {
+var createAboutUser = function createAboutUser(data, callback) {
   var collectionRef;
-  return regeneratorRuntime.async(function createService$(_context27) {
+  return regeneratorRuntime.async(function createAboutUser$(_context26) {
+    while (1) {
+      switch (_context26.prev = _context26.next) {
+        case 0:
+          collectionRef = (0, _firestore.collection)(_firebase["default"], "AboutUser");
+          _context26.prev = 1;
+          _context26.next = 4;
+          return regeneratorRuntime.awrap((0, _firestore.addDoc)(collectionRef, data));
+
+        case 4:
+          callback('success');
+          _context26.next = 10;
+          break;
+
+        case 7:
+          _context26.prev = 7;
+          _context26.t0 = _context26["catch"](1);
+          callback(_context26.t0);
+
+        case 10:
+        case "end":
+          return _context26.stop();
+      }
+    }
+  }, null, null, [[1, 7]]);
+};
+
+exports.createAboutUser = createAboutUser;
+
+var deleteAboutUser = function deleteAboutUser(uid, callback) {
+  var AboutUserDoc;
+  return regeneratorRuntime.async(function deleteAboutUser$(_context27) {
     while (1) {
       switch (_context27.prev = _context27.next) {
         case 0:
-          collectionRef = (0, _firestore.collection)(_firebase["default"], "service");
+          AboutUserDoc = (0, _firestore.doc)(_firebase["default"], 'AboutUser', uid);
           _context27.prev = 1;
           _context27.next = 4;
-          return regeneratorRuntime.awrap((0, _firestore.addDoc)(collectionRef, data));
+          return regeneratorRuntime.awrap((0, _firestore.deleteDoc)(AboutUserDoc));
 
         case 4:
           callback('success');
@@ -836,18 +854,18 @@ var createService = function createService(data, callback) {
   }, null, null, [[1, 7]]);
 };
 
-exports.createService = createService;
+exports.deleteAboutUser = deleteAboutUser;
 
-var deleteService = function deleteService(uid, callback) {
-  var serviceDoc;
-  return regeneratorRuntime.async(function deleteService$(_context28) {
+var updateAboutUser = function updateAboutUser(uid, currentData, callback) {
+  var AboutUserDoc;
+  return regeneratorRuntime.async(function updateAboutUser$(_context28) {
     while (1) {
       switch (_context28.prev = _context28.next) {
         case 0:
-          serviceDoc = (0, _firestore.doc)(_firebase["default"], 'service', uid);
+          AboutUserDoc = (0, _firestore.doc)(_firebase["default"], 'AboutUser', uid);
           _context28.prev = 1;
           _context28.next = 4;
-          return regeneratorRuntime.awrap((0, _firestore.deleteDoc)(serviceDoc));
+          return regeneratorRuntime.awrap((0, _firestore.updateDoc)(AboutUserDoc, currentData));
 
         case 4:
           callback('success');
@@ -865,37 +883,130 @@ var deleteService = function deleteService(uid, callback) {
       }
     }
   }, null, null, [[1, 7]]);
-};
+}; // ABOUT 組別 分類
 
-exports.deleteService = deleteService;
 
-var updateService = function updateService(uid, currentData, callback) {
-  var serviceDoc;
-  return regeneratorRuntime.async(function updateService$(_context29) {
+exports.updateAboutUser = updateAboutUser;
+
+var getAllTeamForDashboard = function getAllTeamForDashboard(callback) {
+  var q, data;
+  return regeneratorRuntime.async(function getAllTeamForDashboard$(_context29) {
     while (1) {
       switch (_context29.prev = _context29.next) {
         case 0:
-          serviceDoc = (0, _firestore.doc)(_firebase["default"], 'service', uid);
-          _context29.prev = 1;
-          _context29.next = 4;
-          return regeneratorRuntime.awrap((0, _firestore.updateDoc)(serviceDoc, currentData));
+          q = (0, _firestore.query)((0, _firestore.collection)(_firebase["default"], "Team"), (0, _firestore.orderBy)('sort_num', 'desc'));
+          _context29.next = 3;
+          return regeneratorRuntime.awrap((0, _firestore.getDocs)(q));
+
+        case 3:
+          data = _context29.sent;
+          mapDataWithUid(data.docs.map(function (doc) {
+            return _objectSpread({}, doc.data(), {
+              uid: doc.id
+            });
+          }), function (res) {
+            callback(res);
+          });
+
+        case 5:
+        case "end":
+          return _context29.stop();
+      }
+    }
+  });
+};
+
+exports.getAllTeamForDashboard = getAllTeamForDashboard;
+
+var createTeam = function createTeam(data, callback) {
+  var collectionRef;
+  return regeneratorRuntime.async(function createTeam$(_context30) {
+    while (1) {
+      switch (_context30.prev = _context30.next) {
+        case 0:
+          collectionRef = (0, _firestore.collection)(_firebase["default"], "Team");
+          _context30.prev = 1;
+          _context30.next = 4;
+          return regeneratorRuntime.awrap((0, _firestore.addDoc)(collectionRef, data));
 
         case 4:
           callback('success');
-          _context29.next = 10;
+          _context30.next = 10;
           break;
 
         case 7:
-          _context29.prev = 7;
-          _context29.t0 = _context29["catch"](1);
-          callback(_context29.t0);
+          _context30.prev = 7;
+          _context30.t0 = _context30["catch"](1);
+          callback(_context30.t0);
 
         case 10:
         case "end":
-          return _context29.stop();
+          return _context30.stop();
       }
     }
   }, null, null, [[1, 7]]);
 };
 
-exports.updateService = updateService;
+exports.createTeam = createTeam;
+
+var deleteTeam = function deleteTeam(uid, callback) {
+  var TeamDoc;
+  return regeneratorRuntime.async(function deleteTeam$(_context31) {
+    while (1) {
+      switch (_context31.prev = _context31.next) {
+        case 0:
+          TeamDoc = (0, _firestore.doc)(_firebase["default"], 'Team', uid);
+          _context31.prev = 1;
+          _context31.next = 4;
+          return regeneratorRuntime.awrap((0, _firestore.deleteDoc)(TeamDoc));
+
+        case 4:
+          callback('success');
+          _context31.next = 10;
+          break;
+
+        case 7:
+          _context31.prev = 7;
+          _context31.t0 = _context31["catch"](1);
+          callback(_context31.t0);
+
+        case 10:
+        case "end":
+          return _context31.stop();
+      }
+    }
+  }, null, null, [[1, 7]]);
+};
+
+exports.deleteTeam = deleteTeam;
+
+var updateTeam = function updateTeam(uid, currentData, callback) {
+  var TeamDoc;
+  return regeneratorRuntime.async(function updateTeam$(_context32) {
+    while (1) {
+      switch (_context32.prev = _context32.next) {
+        case 0:
+          TeamDoc = (0, _firestore.doc)(_firebase["default"], 'Team', uid);
+          _context32.prev = 1;
+          _context32.next = 4;
+          return regeneratorRuntime.awrap((0, _firestore.updateDoc)(TeamDoc, currentData));
+
+        case 4:
+          callback('success');
+          _context32.next = 10;
+          break;
+
+        case 7:
+          _context32.prev = 7;
+          _context32.t0 = _context32["catch"](1);
+          callback(_context32.t0);
+
+        case 10:
+        case "end":
+          return _context32.stop();
+      }
+    }
+  }, null, null, [[1, 7]]);
+};
+
+exports.updateTeam = updateTeam;
