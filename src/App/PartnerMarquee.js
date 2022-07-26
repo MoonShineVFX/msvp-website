@@ -17,9 +17,9 @@ function PartnerMarquee({partnerData}) {
         <div className="marquee-content">
           {
             partner?
-            partner.map((item)=>{
+            partner.map((item,index)=>{
               return (
-                <div class="marquee-item">
+                <div className="marquee-item" key={index}>
                   <img 
                     src={process.env.PUBLIC_URL+'/images/partner/'+item.image} alt=""
                   />

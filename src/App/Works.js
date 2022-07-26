@@ -1,53 +1,68 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import { useTranslation } from 'react-i18next';
-import categoryData from './category.json'
+// import categoryData from './category.json'
+import { LoadingAnim } from '../Helper/HtmlComponents';
+//Helper
+import { getCategory,getWorks} from '../Helper/getfunction'
 
-function Works({workData,handler}) {
-  const {works} = workData
-  const [data, setData] = useState(works);
-  const [currentCategory, setCurrentCategory] = useState('ALL');
-  const { t } = useTranslation();
-  const filterCategory = (category)=>{
-    if(category === 'ALL'){
-      setCurrentCategory('ALL')
-      setData(works)
+function Works() {
+  const [workData, setWorkData] = useState([]);
+  const [filteredWorkData, setFilteredWorkData] = useState([]);
+  const [categoryData, setCategoryData] = useState([]);
+  const [currentCategory, setCurrentCategory] = useState('1');
+
+  const { t,i18n } = useTranslation();
+  const filterCategory = (categoryID)=>{
+    if(categoryID === '1'){
+      setCurrentCategory('1')
+      setFilteredWorkData(workData)
       
       return
     }
-    const filteredData =  works.filter((value)=>{
-      return value.category === category;
-    })
-    setCurrentCategory(category)
-    setData(filteredData);
-    
+    const filteredData =  workData.filter((value)=>
+      value.category.includes(categoryID)
+    )
+    setCurrentCategory(categoryID)
+    setFilteredWorkData(filteredData);
     
   }
   // 點擊作品
   const handleClick= (dataId) =>{
-    handler(dataId)
+    console.log(dataId)
   }
+  useEffect(()=>{
+    getWorks((res)=>{
+      setWorkData(res)
+      setFilteredWorkData(res)
+    })
+    getCategory((res)=>{
+      setCategoryData(res)
+    })
+
+  },[])
+
   return (
     <section id="works">
-      <div className="works_categories_list">
-        <ul>
-          {categoryData.category.map((item, index)=>{
-            return (
-              <li 
-                type="button" 
-                className={currentCategory === item.eng_name ? 'button active' : 'button'}
-                onClick={()=> filterCategory(item.eng_name)} 
-                key={index}
-                > 
-                {t(`${item.cht_name}`)}
-                </li>
-              )
-            })
-          }
+      <div id='catrgoriesList' className=''>
+        <ul className='flex justify-center items-center gap-4 h-14'>
+        {
+          categoryData ? 
+          categoryData.map((item,index)=>{
+            const{id, name , name_cht } = item
+            return(
+              <li key={name+id} 
+                  onClick={()=> filterCategory(id)} 
+                  className={"cursor-pointer text-xs hover:text-white " + (currentCategory === id ? ' text-white ' : 'text-zinc-500  ' )}>
+                {i18n.language === 'zh-TW' ? name_cht : name}
+              </li>
+            )
+          }): <LoadingAnim />
+        }
         </ul>
       </div>
       <div className="works_list">
-        {data ? 
-          data.map((item,index)=>{
+        {filteredWorkData ? 
+          filteredWorkData.map((item,index)=>{
           return(
             <div 
               className={currentCategory === item.category || 'ALL' ? 'item' : 'item'}
@@ -56,7 +71,7 @@ function Works({workData,handler}) {
               data-aos-delay={index+'00'}
               key={index}
             >
-              <div className="item_bg" style={{backgroundImage: `url(${process.env.PUBLIC_URL +'/images/works/'+ item.image})`}}>
+              <div className="item_bg" style={{backgroundImage: `url(${item.imgpath})`}}>
               </div>
               <div className='title'> {item.title}</div>
             </div>

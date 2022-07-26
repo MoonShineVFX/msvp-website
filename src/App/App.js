@@ -6,9 +6,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-import PagesNavbar from './Components/PagesNavbar'
-import MobilePagesNavbar from './Components/MobilePagesNavbar';
-import Footer from '../App/Footer'
+
+import PublicPageLayout from '../Layouts/PublicPageLayout'
+import DashboardPageLayout from '../Layouts/DashboardPageLayout'
+
 
 
 //pages
@@ -17,13 +18,13 @@ import About from '../Pages/About/About'
 import Services from '../Pages/Services/Services';
 import Education from '../Pages/Education/Education';
 
+//back pages
+import AdminHome from '../Pages/Back/Home'
+import AdminCategory from '../Pages/Back/Category'
 
-//data
-import pagesNavData from './Components/PagesNavbar.json'
 
 
 function App() {
-  const {navbar} =pagesNavData
 
   const [isToggled, setToggled] = useState(false);
   const [isScorllEnd, setISScorllEnd]= useState(false)
@@ -40,15 +41,20 @@ function App() {
 
   return (
     <BrowserRouter>
-      <MobilePagesNavbar navData={navbar} isToggled={isToggled} switchToggle={switchToggle} />
-      <PagesNavbar data={navbar} toggleTrueFalse={toggleTrueFalse}/>
       <Routes> 
-        <Route path="" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="services" element={<Services />} />
-        <Route path="education" element={<Education />} />
+        <Route path="/" element={<PublicPageLayout />}>
+          <Route path="" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="services" element={<Services />} />
+          <Route path="education" element={<Education />} />
+        </Route>
+        
+        <Route path="admin" element={<DashboardPageLayout />}>
+          <Route path="" element={<AdminHome />} />
+          <Route path="category" element={<AdminCategory />} />
+
+        </Route>
       </Routes>
-      <Footer/>
     </BrowserRouter>
 
   );

@@ -16,7 +16,7 @@ function Space({spaceData,handler}) {
             space.map((item,index)=>{
               const {id,title,image}= item
               return(
-                <div className="space_item"  onClick={()=>handleClick(id)} data-aos="fade-up">
+                <div key={id} className="space_item"  onClick={()=>handleClick(id)} data-aos="fade-up">
                   <div className="space_item_bg" style={{backgroundImage: `url(${process.env.PUBLIC_URL + '/images/space/'+ image })`}}></div>
                   <div className="title" >{t(`${title}`)}</div>
                 </div>

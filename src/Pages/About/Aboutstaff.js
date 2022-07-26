@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import { motion,AnimatePresence } from "framer-motion/dist/framer-motion"
+import { motion,AnimatePresence } from "framer-motion"
 function Aboutstaff({aboutStaffData}) {
 
   const [data, setData] = useState(aboutStaffData);

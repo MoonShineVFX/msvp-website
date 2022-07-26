@@ -17,29 +17,30 @@ import PartnerMarquee from '../App/PartnerMarquee';
 
 //data
 import worksjsonData from '../App/worksData.json'
-import techData from '../App/techArray.json'
 import spacejsonData from '../App/space.json'
 import partnerjsonData from '../App/partner.json'
-import aboutjsonData from '../App/about.json'
+
+
+
 function Home() {
   const [isOpen , setIsOpen] = useState(false)
   const [searchResults, setSearchResults] = useState([]);
-  const [workData, setWorkData] = useState(worksjsonData);
+
+
   const [isSpaceOpen , setIsSapceOpen] = useState(false)
   const [spaceData, setSpaceData] = useState(spacejsonData);
   const [searchSpaceResults, setSearchSapceResults] = useState([]);
   const [isHeaderOpen , setIsHeaderOpen] = useState(false)
 
- 
 
   // 開啟單作品
-  const handleAddClick = (dataId) => {
-    const results  =   workData.works.find((d)=>{
-      return d.id === dataId
-    })
-    setSearchResults(results)
-    setIsOpen(!isOpen)
-  };
+  // const handleAddClick = (dataId) => {
+  //   const results  =   workData.works.find((d)=>{
+  //     return d.id === dataId
+  //   })
+  //   setSearchResults(results)
+  //   setIsOpen(!isOpen)
+  // };
   // 開啟作品modal
   const handleOpen = () => {
     setIsOpen(!isOpen)
@@ -65,6 +66,8 @@ function Home() {
   const handleHeaderOpen = () => {
     setIsHeaderOpen(!isHeaderOpen)
   }
+
+
   
 
 
@@ -81,11 +84,9 @@ function Home() {
       }
 
       <Header handler={handleHeaderClick}/>
-      <Works workData={worksjsonData} handler={handleAddClick} />
+      <Works />
       <IntroBigBg/>
-      {/* <About aboutData={aboutjsonData}/> */}
       <Space spaceData={spacejsonData} handler={handleSpaceClick} />
-      {/* <Technology techData={techData} /> */}
       <PartnerMarquee  partnerData={partnerjsonData}/>
       <Contact/>
 
