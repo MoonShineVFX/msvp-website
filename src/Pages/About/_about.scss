@@ -13,13 +13,7 @@
       display: flex;
       justify-content: space-evenly;
       li{
-        font-size: 17px;
-        font-weight: 300;
-        color: #b7b7b7;
-        transition: 0.3s;
-        box-sizing: border-box;
-        padding: 5px 15px;
-        cursor: pointer;
+        
         &.active{
           color:white;
           border: 1px solid #fff;

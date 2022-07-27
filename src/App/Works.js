@@ -1,5 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import { useTranslation } from 'react-i18next';
+import { useRecoilState } from 'recoil';
+import { modalState, movieState } from '../atoms/modalAtom';
 // import categoryData from './category.json'
 import { LoadingAnim } from '../Helper/HtmlComponents';
 //Helper
@@ -10,7 +12,8 @@ function Works() {
   const [filteredWorkData, setFilteredWorkData] = useState([]);
   const [categoryData, setCategoryData] = useState([]);
   const [currentCategory, setCurrentCategory] = useState('1');
-
+  const [showModal, setShowModal] = useRecoilState(modalState);
+  const [currentMovie, setCurrentMovie] = useRecoilState(movieState);
   const { t,i18n } = useTranslation();
   const filterCategory = (categoryID)=>{
     if(categoryID === '1'){
@@ -65,11 +68,15 @@ function Works() {
           filteredWorkData.map((item,index)=>{
           return(
             <div 
-              className={currentCategory === item.category || 'ALL' ? 'item' : 'item'}
-              onClick={()=>handleClick(item.id) }
+              className={currentCategory === item.team || 'ALL' ? 'item' : 'item'}
+              
               data-aos="zoom-out-up"
               data-aos-delay={index+'00'}
               key={index}
+              onClick={() => {
+                setShowModal(true);
+                setCurrentMovie(item);
+              }}
             >
               <div className="item_bg" style={{backgroundImage: `url(${item.imgpath})`}}>
               </div>

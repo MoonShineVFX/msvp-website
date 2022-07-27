@@ -239,6 +239,14 @@ const categoryDoc = doc(db , 'category' , uid)
 }
 
 // 學生作品
+export const getAllStudentWorks = async (callback)=>{
+  const q = query(collection(db, "studentWork"),orderBy('time_added' , 'desc'), where("display", "==", '1'))
+  const data = await getDocs(q);
+
+  mapDataWithImage('studentWork',data.docs.map(doc=> ({...doc.data(),uid:doc.id})),function(res){
+    callback(res)
+  })
+}
 export const getAllStudentWorksForDashboard = async (callback)=>{
   const q = query(collection(db, "studentWork"),orderBy('time_added' , 'desc'),limit(30))
   const data = await getDocs(q);
@@ -283,11 +291,19 @@ export const deleteStudentWork = async(uid,callback)=>{
 
 
  // ABOUT 組員 人員
+ export const getAboutUser = async (callback)=>{
+  const q = query(collection(db, "AboutUser"),orderBy('time_added' , 'desc'), where("display", "==", '1'))
+  const data = await getDocs(q);
+
+  mapDataWithImage('img_team',data.docs.map(doc=> ({...doc.data(),uid:doc.id})),function(res){
+    callback(res)
+  })
+}
  export const getAllAboutUserForDashboard = async (callback)=>{
   const q = query(collection(db, "AboutUser"),orderBy('time_added' , 'desc'),limit(30))
   const data = await getDocs(q);
 
-  mapDataWithImage('img_about',data.docs.map(doc=> ({...doc.data(),uid:doc.id})),function(res){
+  mapDataWithImage('img_team',data.docs.map(doc=> ({...doc.data(),uid:doc.id})),function(res){
     callback(res)
   })
 }

@@ -1,9 +1,12 @@
 import React,{useState,useEffect} from 'react'
 import ReactPlayer from 'react-player'
+import { useRecoilState, useRecoilValue } from 'recoil';
+import { modalState, movieState } from '../../atoms/modalAtom';
 function EduPortfolioSingle({data,handler}) {
-  const {title,link,desc } = data
   // let finalIntro= intro.replace('\\n', '\n')
   const [active , setActive] = useState(false)
+  const [showModal, setShowModal] = useRecoilState(modalState);
+  const movie = useRecoilValue(movieState);
 
   // 點擊按鈕或背景關閉
   const handleClick= () =>{
@@ -21,13 +24,19 @@ function EduPortfolioSingle({data,handler}) {
   },[]);
   return (
     <div className="workitem">
-      <div className={active ? "blackbg active" : "blackbg"} onClick={handleClick}></div>
+      <div className={active ? "blackbg active" : "blackbg"} 
+      onClick={() => {
+        setShowModal(false);
+      }}></div>
       <div className={active ? "itemContent active" : "itemContent"}>
-        <div className="closeBtn" onClick={handleClick}>X</div>
+        <div className="closeBtn" 
+        onClick={() => {
+          setShowModal(false);
+        }}>X</div>
         <div className="thumb player-wrapper" >
           <ReactPlayer 
             className='react-player'
-            url={link} 
+            url={movie.video_url}
             width= "100%"
             height= "100%"
             controls={true}
@@ -35,8 +44,8 @@ function EduPortfolioSingle({data,handler}) {
           />
         </div>
         <article>
-          <div className="title">{title}</div>
-          <div className="description">{desc}</div>
+          <div className="title">{movie.title}</div>
+          <div className="description">{movie.intro}</div>
         </article>
       </div>
     </div>

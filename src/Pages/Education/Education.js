@@ -12,6 +12,10 @@ import EduPortfolioSingle from './EduPortfolioSingle'
 import EduWorkjsonsData from './EduWorksData.json'
 import coursejsonData from './course.json'
 
+//
+import { useRecoilValue } from 'recoil';
+import { modalState, movieState } from '../../atoms/modalAtom';
+
 function Education() {
   const [isOpen , setIsOpen] = useState(false)
   const [isCourseOpen , setIsCourseOpen] = useState(false)
@@ -20,6 +24,7 @@ function Education() {
   const [workData, setWorkData] = useState(EduWorkjsonsData);
   const [courseData, setCourseData] = useState(coursejsonData);
   const { t } = useTranslation();
+  const showModal = useRecoilValue(modalState);
   // 開啟單作品
   const handleAddClick = (dataId) => {
     const results  =   workData.works.find((d)=>{
@@ -70,9 +75,8 @@ function Education() {
 
   return (
     <div id="Pages_education">
-      {
-        isOpen ?  <EduPortfolioSingle data={searchResults} handler={handleOpen} visible={isOpen} /> : null
-      }
+      {showModal && <EduPortfolioSingle />}
+
       {
         isCourseOpen ? <CourseSingjeModal data={searchCourseResults}  handler={handleCourseOpen} handleChangeArticle={handleChangeArticle}/> : null
       }

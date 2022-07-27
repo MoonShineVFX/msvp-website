@@ -1,7 +1,8 @@
 import React,{useState,useEffect} from 'react';
+import { useRecoilValue } from 'recoil';
+import { modalState, movieState } from '../atoms/modalAtom';
 
 import Header from '../App/Header'
-
 import Works from '../App/Works'
 import HomeAbout from '../App/HomeAbout'
 import Space from '../App/Space'
@@ -32,7 +33,7 @@ function Home() {
   const [searchSpaceResults, setSearchSapceResults] = useState([]);
   const [isHeaderOpen , setIsHeaderOpen] = useState(false)
 
-
+  const showModal = useRecoilValue(modalState);
   // 開啟單作品
   // const handleAddClick = (dataId) => {
   //   const results  =   workData.works.find((d)=>{
@@ -73,9 +74,8 @@ function Home() {
 
   return (
     <div>
-      {
-        isOpen ?  <WorkSingle data={searchResults} handler={handleOpen} visible={isOpen} /> : null
-      }
+      {showModal && <WorkSingle />}
+
       {
         isSpaceOpen ?  <SpaceSingle data={searchSpaceResults} handler={handleSpaceOpen} visible={isSpaceOpen} /> : null
       }

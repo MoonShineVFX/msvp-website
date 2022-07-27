@@ -90,7 +90,7 @@ function Home() {
           setFile({
             "filename":imgFileName,
             "file":selectedFile,
-            "folder":'data/',
+            "folder":'img_team/',
             "maxWidth":307,
             "maxHeight":401,
             "compressFormat":"JPEG",
@@ -159,8 +159,9 @@ function Home() {
             <tr>
               <th className='bg-zinc-100 border-b border-zinc-300 text-left'>作品ID</th>
               <th className='bg-zinc-100 border-b border-zinc-300 text-left'>排序</th>
-              <th className='bg-zinc-100 border-b border-zinc-300 text-left'>作品名稱</th>
-              <th className='bg-zinc-100 border-b border-zinc-300 text-left'>分類</th>
+              <th className='bg-zinc-100 border-b border-zinc-300 text-left'>暱稱</th>
+              <th className='bg-zinc-100 border-b border-zinc-300 text-left'>職稱</th>
+              <th className='bg-zinc-100 border-b border-zinc-300 text-left'>Team</th>
               <th className='bg-zinc-100 border-b border-zinc-300 text-left'>狀態</th>
               <th className='bg-zinc-100 border-b border-zinc-300 text-left'>上傳日期</th>
               <th className='bg-zinc-100 border-b border-zinc-300 text-left'>編輯</th>
@@ -170,15 +171,16 @@ function Home() {
             {
               workData ?
               workData.map((item,index)=>{
-                const {uid,id, display, title, time_added,category,sort_num} =item
+                const {uid,id, display, nickname,name,subtext, time_added,team,sort_num} =item
                 return(
-                  <tr className=' hover:bg-zinc-200' key={id+title}>
+                  <tr className=' hover:bg-zinc-200' key={id}>
                     <td className='p-2 text-xs'>{id}</td>
                     <td className='p-2 text-xs'>{sort_num}</td>
-                    <td className='p-2 text-xs'>{title}</td>
+                    <td className='p-2 text-xs'>{nickname}</td>
+                    <td className='p-2 text-xs'>{subtext}</td>
                     <td className='p-2 text-xs'>
                       {categoryData.map((item) => {
-                        if(item.id === category)
+                        if(item.id === team)
                           return <div key={item.id}>{item.name}</div>
                       })}
                     </td>
