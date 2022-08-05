@@ -52,14 +52,14 @@ function App() {
           <Route path="education" element={<Education />} />
         </Route>
         
-        <Route path="admin" element={<DashboardPageLayout />}>
+        {/* <Route path="admin" element={<DashboardPageLayout />}>
           <Route path="" element={<AdminHome />} />
           <Route path="category" element={<AdminCategory />} />
           <Route path="studentwork" element={<AdminStudentWorks />} />
           <Route path="about" element={<AdminAbout />} />
           <Route path="team" element={<AdminTeam />} />
 
-        </Route>
+        </Route> */}
       </Routes>
     </BrowserRouter>
 
