@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link ,useLocation  } from "react-router-dom";
+import {auth} from '../../../firebaseConfig/fireauth';
+import { signOut  } from "firebase/auth";
 function AdminNavbar() {
   return (
 <aside className="w-64 " aria-label="Sidebar">
-   <div className="overflow-y-auto py-4 px-3 bg-gray-50   dark:bg-gray-800 h-screen">
+   <div className="overflow-y-auto py-4 px-3 bg-gray-50 fixed w-full  dark:bg-gray-800 h-screen">
       <ul className="space-y-2">
          <li className='text-black font-bold'>首頁作品</li>
          <li>
@@ -46,6 +48,9 @@ function AdminNavbar() {
                <span className="flex-1 ml-3 whitespace-nowrap">分類</span>
             </Link>
          </li> */}
+         <li  className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+            <button onClick={() => signOut(auth)} className="btn btn-primary">Sign out</button>
+         </li>
 
 
 

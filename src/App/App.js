@@ -9,8 +9,11 @@ import 'aos/dist/aos.css'
 
 import PublicPageLayout from '../Layouts/PublicPageLayout'
 import DashboardPageLayout from '../Layouts/DashboardPageLayout'
-
-
+import { AuthProvider } from "../Components/Auth";
+import PublicRoutes from '../Routes/PublicRoutes'
+import ProtectedRoutes from '../Routes/ProtectedRoutes'
+//login
+import Login from '../Components/Login'
 
 //pages
 import Home from '../Pages/Home'
@@ -43,6 +46,7 @@ function App() {
 
 
   return (
+    <AuthProvider>
     <BrowserRouter>
       <Routes> 
         <Route path="/" element={<PublicPageLayout />}>
@@ -52,16 +56,20 @@ function App() {
           <Route path="education" element={<Education />} />
         </Route>
         
-        {/* <Route path="admin" element={<DashboardPageLayout />}>
+        <Route path="admin" element={<ProtectedRoutes />}>
           <Route path="" element={<AdminHome />} />
           <Route path="category" element={<AdminCategory />} />
           <Route path="studentwork" element={<AdminStudentWorks />} />
           <Route path="about" element={<AdminAbout />} />
           <Route path="team" element={<AdminTeam />} />
 
-        </Route> */}
+        </Route>
+        <Route path="login" element={<PublicRoutes />}>
+          <Route path="/login" element={<Login />} />
+        </Route>
       </Routes>
     </BrowserRouter>
+    </AuthProvider>
 
   );
 }

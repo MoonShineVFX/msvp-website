@@ -28,7 +28,7 @@ function EditForm({categoryData,handleCreateWork , handleEditWork}) {
     formStatus === 'EDIT' ? reset(work && work) : reset()
   },[])
   return (
-    <div className={'w-full h-screen  absolute top-0 left-0 z-20 overflow-hidden'}>
+    <div className={'w-full h-screen fixed top-0 left-0 z-20 overflow-hidden'}>
       <div className=' opacity-30 absolute inset-0 bg-black ' onClick={handleClose}></div>
       <div className=' relative w-4/5 bg-white mx-auto my-20 p-5 overflow-auto'>
         <div className='text-xl text-center font-bold'>{formStatus === 'ADD' ? '新增作品' : '編輯作品'}</div>

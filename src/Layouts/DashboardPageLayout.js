@@ -6,7 +6,7 @@ function DashboardPageLayout() {
   return (
     <React.Fragment>
       <RecoilRoot>
-        <div className='flex'>
+        <div className='flex '>
           <AdminNavbar />
           <Outlet />
         </div>
