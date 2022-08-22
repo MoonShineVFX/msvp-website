@@ -47,7 +47,7 @@ function Works() {
   return (
     <section id="works">
       <div id='catrgoriesList' className=''>
-        <ul className='flex justify-center items-center gap-4 h-14'>
+        <ul className='flex justify-center items-center gap-4 h-14 flex-wrap text-xs xs:w-5/6 xs:mx-auto xs:mb-10 xs:text-sm xs:justify-start'>
         {
           categoryData ? 
           categoryData.map((item,index)=>{
@@ -55,12 +55,13 @@ function Works() {
             return(
               <li key={name+id} 
                   onClick={()=> filterCategory(id)} 
-                  className={"cursor-pointer text-xs hover:text-white " + (currentCategory === id ? ' text-white ' : 'text-zinc-500  ' )}>
+                  className={"cursor-pointer  hover:text-white " + (currentCategory === id ? ' text-white border-b ' : 'text-zinc-500  ' )}>
                 {i18n.language === 'zh-TW' ? name_cht : name}
               </li>
             )
           }): <LoadingAnim />
         }
+        <li></li><li></li><li></li>
         </ul>
       </div>
       <div className="works_list">

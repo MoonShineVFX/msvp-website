@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next';
 import { Link ,useLocation  } from "react-router-dom";
-function MobilePagesNavbar({navData,isToggled,switchToggle}) {
+function MobilePagesNavbar({data,isToggled,switchToggle}) {
   const { t, i18n } = useTranslation();
   const changeLanguage = (lng) => {
       i18n.changeLanguage(lng);
@@ -13,8 +13,8 @@ function MobilePagesNavbar({navData,isToggled,switchToggle}) {
   return (
     <div className={isToggled ?  "mobile_navlist active" : "mobile_navlist"}>
         <ul>
-          { navData?
-            navData.map((item,index)=>{
+          { data?
+            data.map((item,index)=>{
               return(
                 <li key={index}>
                   <Link 

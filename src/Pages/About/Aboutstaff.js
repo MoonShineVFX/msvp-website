@@ -39,11 +39,11 @@ function Aboutstaff() {
   console.log(data)
   return (
     <section id="About_staff">
-      <div className="unitHeader">
+      <div className="unitHeader xs:text-2xl xs:font-semibold xs:text-center">
         <h1> Our Team</h1>
       </div>
-      <div className="about_department_list">
-        <ul>
+      <div className="about_department_list  xs:mt-5">
+        <ul className='w-full'>
           {
             categoryData ? 
             categoryData.map((item,index)=>{
@@ -67,10 +67,10 @@ function Aboutstaff() {
             return(
               <motion.div  
                 key={item.id} 
-                layout
-                animate={{ opacity: 1 }}
                 initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
+                
                 className="aboutstaff_item"
                 style={{backgroundImage: `url(${item.imgpath})`}}
               >
