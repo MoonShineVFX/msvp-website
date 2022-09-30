@@ -1,18 +1,31 @@
-import React,{useState} from 'react'
+import React, {useEffect, useState} from 'react';
 import { useTranslation } from 'react-i18next';
 function Technology({techData}) {
   const [currentId, setCurrentId] = useState(0);
   const [loaded, setLoaded] = useState(false);
+
+  // 如果 0.05 秒內影片就準備好，就不要顯示讀取 GIF，以免一直閃
+  const [triggerNotLoaded, setTriggerNotLoaded] = useState(null);
+  useEffect(() => {
+    if (!triggerNotLoaded) return;
+    const tid = setTimeout(() => {
+      if (triggerNotLoaded) setLoaded(false);
+      setTriggerNotLoaded(false);
+    }, 50);
+    return () => clearTimeout(tid);
+  }, [triggerNotLoaded])
+
   const { t } = useTranslation();
   const {tech} = techData
   const handleClick= (index) =>{
     setCurrentId(index)
-    setLoaded(false)
+    setTriggerNotLoaded(true);
     // handler(dataId)
   }
 
-  const handleImageLoaded =()=> {
-    console.log('loaded');
+  const handleVideoLoaded =()=> {
+    console.debug('video loaded');
+    setTriggerNotLoaded(false);
     setLoaded(true);
   } 
   return (
@@ -23,7 +36,7 @@ function Technology({techData}) {
           <ul>
             {techData ? 
               tech.map((item,index)=>{
-                const {id,title,desc,image}=item
+                const {id,title,desc,filename}=item
                 return(
                   <li 
                     key={index}
@@ -38,17 +51,35 @@ function Technology({techData}) {
           </ul>
         </div>
         <div className="technology_view">
-          <div className="technology_gif" >
-              <img 
-                src={process.env.PUBLIC_URL +'/images/tech/'+ tech[currentId].image} alt=""
-                style={{display: loaded? 'block': 'none'}}
-                onLoad={handleImageLoaded}
-              />
-          </div>
+          {techData ?
+            tech.map((item, index)=>{
+              const {id, title, desc, filename} = item
+              const isActive = currentId === index;
+
+              if (!isActive) return null;
+
+              return(
+                <div className="technology_gif" key={id}
+                     style={{
+                       display: loaded ? 'block': 'none',
+                       width: '100%',
+                       aspectRatio: 16 / 9
+                     }}
+                >
+                  <video  preload={'auto'} autoPlay loop muted={true} onCanPlayThrough={handleVideoLoaded}>
+                    <source src={process.env.PUBLIC_URL +'/images/tech/'+ filename + '.mp4'} type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
+                    <img
+                      src={process.env.PUBLIC_URL +'/images/tech/'+ filename + '.jpg'} alt={desc}
+                    />
+                  </video>
+                </div>
+              )
+            }): null
+          }
           {!loaded && <div
             style={{
               width: '100%', 
-              height: '150px',
+              aspectRatio: 16 / 9,
               display:'flex',
               justifyContent:'center',
               alignItems:'center'

@@ -4,31 +4,31 @@
       "id":1,
       "title":"tech_title1",
       "desc":"tech_desc1",
-      "image":"rd00.gif"
+      "filename":"rd00"
     },
     {
       "id":2,
       "title":"tech_title2",
       "desc":"tech_desc2",
-      "image":"rd01.gif"
+      "filename":"rd01"
     },
     {
       "id":3,
       "title":"tech_title3",
       "desc":"tech_desc3",
-      "image":"rd02.gif"
+      "filename":"rd02"
     },
     {
       "id":4,
       "title":"tech_title4",
       "desc":"tech_desc4",
-      "image":"rd03.gif"
+      "filename":"rd03"
     },
     {
       "id":5,
       "title":"tech_title5",
       "desc":"tech_desc5",
-      "image":"rd04.gif"
+      "filename":"rd04"
     }
   ]
 }
