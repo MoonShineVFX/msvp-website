@@ -47,7 +47,7 @@ function Contact() {
       <h1>{t('section_title7')}</h1>
       <div id="map" className="mt30">
         <LoadScript
-          googleMapsApiKey="AIzaSyALn6DfUt8F-0Si3V8YztvB-L73sWGYC2g"
+          googleMapsApiKey="AIzaSyA5aHF6KeKR756XlfJDGyZc7SLpuKiKhCY"
         >
           <GoogleMap
             mapContainerStyle={containerStyle}
