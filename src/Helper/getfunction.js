@@ -78,7 +78,7 @@ const mapDataWithUid = async (data, callback)=>{
  * 不用處理圖片路徑的 直接 set
  * **/ 
  export const getCategory = async (callback)=>{
-  const q = query(collection(db, "category"),orderBy('sort_num' , 'asc'))
+  const q = query(collection(db, "category"),orderBy('sort_num' , 'desc'))
   const data = await getDocs(q);
   // mapCategoryData(data.docs.map(doc=> doc.data()))
   callback(data.docs.map(doc=> doc.data()))
