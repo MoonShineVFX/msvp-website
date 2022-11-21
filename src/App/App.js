@@ -28,9 +28,6 @@ import AdminStudentWorks from '../Pages/Back/Edu/Home'
 import AdminAbout from '../Pages/Back/About/Home'
 import AdminTeam from '../Pages/Back/About/Category'
 
-//ga
-import ReactGA from 'react-ga';
-ReactGA.initialize('G-JDQXN9LTQ7');
 
 
 function App() {
