@@ -1,7 +1,8 @@
 import React,{useState,useEffect} from 'react'
 import { useTranslation } from 'react-i18next';
+import { FaTimes } from "react-icons/fa";
 function SpaceSingle({data,handler}) {
-  const {title,link,desc,purpose,spec,spacespce,image,space_image1 } = data
+  const {title,link,desc,purpose,spec,spacespce,image,space_image1,spacespec,shooting,ledspec,trussspec,recommendation } = data
   // let finalIntro= intro.replace('\\n', '\n')
   const [active , setActive] = useState(false)
   const { t } = useTranslation();
@@ -24,9 +25,9 @@ function SpaceSingle({data,handler}) {
     <div className="workitem">
       <div className={active ? "blackbg active" : "blackbg"} onClick={handleClick}></div>
       <div className={active ? "itemContent img_itemContent active" : "itemContent img_itemContent"}>
-        <div className="closeBtn" onClick={handleClick}>X</div>
+        <div className="closeBtn" onClick={handleClick}><FaTimes /></div>
         <div className="thumb img_thumb" style={{backgroundImage: `url(${process.env.PUBLIC_URL + '/images/space/'+ image })`}}>
-          
+          <div className="title">{t(`${title}`)}</div>
         </div>
         <article>
           <div className="title">{t(`${title}`)}</div>
@@ -36,15 +37,23 @@ function SpaceSingle({data,handler}) {
           </div>
           <div className="description">
             <div>{t('spec_desc_title1')}</div>
-            <div dangerouslySetInnerHTML={{ __html:t(`${purpose}`) }}/>
+            <div dangerouslySetInnerHTML={{ __html:t(`${spacespec}`) }}/>
           </div>
           <div className="description">
             <div>{t('spec_desc_title2')}</div>
-            <div dangerouslySetInnerHTML={{ __html:t(`${spec}`) }}/>
+            <div dangerouslySetInnerHTML={{ __html:t(`${shooting}`) }}/>
           </div>
           <div className="description">
             <div>{t('spec_desc_title3')}</div>
-            <div dangerouslySetInnerHTML={{ __html:t(`${spacespce}`) }}/>
+            <div dangerouslySetInnerHTML={{ __html:t(`${ledspec}`) }}/>
+          </div>
+          <div className="description">
+            <div>{t('spec_desc_title4')}</div>
+            <div dangerouslySetInnerHTML={{ __html:t(`${trussspec}`) }}/>
+          </div>
+          <div className="description">
+            <div>{t('spec_desc_title5')}</div>
+            <div dangerouslySetInnerHTML={{ __html:t(`${recommendation}`) }}/>
           </div>
         </article>
       </div>

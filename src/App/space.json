@@ -4,21 +4,25 @@
       "id":1,
       "title":"space_title1",
       "desc":"space_desc1",
-      "purpose":"space_purpose1",
-      "spec":"space_spec1",
-      "spacespce":"space_spacespce1",
+      "spacespec":"space_spacespec1",
+      "shooting":"space_shooting1",
+      "ledspec":"space_ledspec1",
+      "trussspec":"space_trussspec1",
+      "recommendation":"space_recommendation1",
       "image":"space01.png",
-      "space_image1":"space01-2.png"
+      "space_image1":"space01_a.png"
     },
     {
       "id":2,
       "title":"space_title2",
       "desc":"space_desc2",
-      "purpose":"space_purpose2",
-      "spec":"space_spec2",
-      "spacespce":"space_spacespce2",
+      "spacespec":"space_spacespec2",
+      "shooting":"space_shooting2",
+      "ledspec":"space_ledspec2",
+      "trussspec":"space_trussspec2",
+      "recommendation":"space_recommendation2",
       "image":"space02.png",
-      "space_image1":""
+      "space_image1":"space02_b.png"
       
     }
   ]

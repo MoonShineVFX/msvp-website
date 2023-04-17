@@ -121,7 +121,7 @@ a{
     width: 100%;
     height: 100%;
     background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,1) 90%);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 100%);
     position: absolute;
     top: 0;
     left: 0;
@@ -343,8 +343,8 @@ section.fluid_section{
     position: absolute;
     width: 40px;
     height: 40px;
-    top: 10px;
-    right: -20px;
+    top: 20px;
+    right: 20px;
     z-index: 10;
     color: #fff;
     display: flex;
@@ -367,7 +367,7 @@ section.fluid_section{
     top: 50%;
     left: 50%;
     z-index: 2;
-    width: 780px;
+    width: 80%;
     max-height: 700px;
     color:white;
     transition: 0.5s ease;
@@ -380,6 +380,7 @@ section.fluid_section{
     background-image: radial-gradient(ellipse at top left, #42454c61, #25282e78);
     box-shadow: 0 0 32px #000;
     backdrop-filter: blur(5px);
+    overflow-y: scroll;
     &.header{
       border:0;
       background: none;
@@ -394,27 +395,35 @@ section.fluid_section{
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .title{
+        font-size: 45px;
+        font-weight: bolder;
+      }
     }
     .img_thumb{
-      min-height: 320px;
+      min-height: 420px;
       max-height: 500px;
     }
     article{
       padding: 20px;
       box-sizing: border-box;
       width: 100%;
-      max-height: 270px;
-      overflow-y: scroll;
+      
       margin: 9px;
+      margin-bottom: 40px;
       
       .title{
-        font-size: 16px;
+        font-size: 22px;
         margin-bottom: 15px;
       }
       .description{
-        font-size: 12px;
-        line-height: 21px;
-        color:#ddd;
+        font-size: 16px;
+        line-height: 24px;
+        color:#eee;
+        font-weight: 300;
         max-height: 121px;
         overflow-y: auto;
         white-space: pre-line;
@@ -427,6 +436,7 @@ section.fluid_section{
        
       }
       .space_image{
+        margin: 15px 0 15px 0 ;
         img{
           width: 100%;
         }
@@ -1089,7 +1099,7 @@ section.fluid_section{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.2);
     z-index: 2;
 
   }
