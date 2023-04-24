@@ -8,12 +8,12 @@ function Guidelines() {
   return (
     <div id="Pages_guidelines">
       <div 
-        className="pageHeader" 
+        className="min-h-[30vh] md:min-h-[65vh] bg-center bg-no-repeat bg-cover " 
         style={{backgroundImage: `url(${process.env.PUBLIC_URL +'/images/guidelines/guidelines01.jpg'})`}}
       >
       </div>
       <div className='w-10/12 mx-auto '>
-        <div className="text-white text-center text-3xl font-bold mb-28 ">{t(`guide_title`)}</div>
+        <div className="text-white text-center text-3xl font-bold mb-14 md:mb-28 mt-14 ">{t(`guide_title`)}</div>
         <Accordion items={itemdata} />
       </div>
 
