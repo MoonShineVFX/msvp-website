@@ -11,6 +11,7 @@
   "pagenavbar2":"關於我們",
   "pagenavbar3":"服務項目",
   "pagenavbar4":"教育推廣",
+  "pagenavbar5":"說明文件",
   "play_video":"OUR SHOWREEL",
   "work_catrgory1":"全部",
   "work_catrgory2":"線上發表會",
@@ -81,5 +82,6 @@
   "eduplace_item2_desc":"夢想方舟是由台灣頂尖的動畫特效人才集結成立的動畫學院，教授影像、娛樂與互動領域等課程，由資深的業界人士，傳授業界的知識與經驗，讓創作者將創意實踐，完成理想目標。",
   "edu_intro_title":"夢想教你學 Unreal Engine",
   "edu_intro_desc":"Unreal Engine 是一款開放、強大的遊戲開發引擎，其細膩的畫面表現與即時的光影效果，近來在影視特效產業掀起一陣旋風，能夠快速地建立 3D 場景，並應用在虛擬實拍及各種影像製作上，如虛擬演唱會、線上發表會、戲劇電影拍攝、動畫製作等等。",
-  "FeaturedCourse":"精選課程"
+  "FeaturedCourse":"精選課程",
+  "guide_title":"Art Guidelines"
 }

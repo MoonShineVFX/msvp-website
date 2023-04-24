@@ -23,6 +23,12 @@
       "chtName":"pagenavbar4",
       "engName":"EDUCATION",
       "type":"education"
+    },
+    {
+      "id":5,
+      "chtName":"pagenavbar5",
+      "engName":"GUIDELINES",
+      "type":"guidelines"
     }
   ]
 }

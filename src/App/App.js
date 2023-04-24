@@ -20,6 +20,7 @@ import Home from '../Pages/Home'
 import About from '../Pages/About/About'
 import Services from '../Pages/Services/Services';
 import Education from '../Pages/Education/Education';
+import Guidelines from '../Pages/Guidelines/Guidelines';
 
 //back pages
 import AdminHome from '../Pages/Back/Home'
@@ -54,6 +55,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="services" element={<Services />} />
           <Route path="education" element={<Education />} />
+          <Route path="guidelines" element={<Guidelines />} />
         </Route>
         
         <Route path="admin" element={<ProtectedRoutes />}>
