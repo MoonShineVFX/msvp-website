@@ -11,11 +11,9 @@ function Guidelines() {
         className="pageHeader" 
         style={{backgroundImage: `url(${process.env.PUBLIC_URL +'/images/guidelines/guidelines01.jpg'})`}}
       >
-        <div className="caption">
-          <div className="title">{t(`guide_title`)}</div>
-        </div>
       </div>
-      <div className='w-10/12 mx-auto'>
+      <div className='w-10/12 mx-auto '>
+        <div className="text-white text-center text-3xl font-bold mb-28 ">{t(`guide_title`)}</div>
         <Accordion items={itemdata} />
       </div>
 
