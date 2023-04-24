@@ -18,7 +18,7 @@ function AccordionItem(props) {
       <div className={contentClass}>
         <div className="p-0  overflow-x-auto md:p-4 ">
          
-          <table class="styled-table table-auto border-collapse  ">
+          <table class="styled-table table-auto border-collapse  mx-auto">
               <thead className='bg-[#3A3E4C]'>
                   <tr>
                       <th className='p-2 px-8 md:p-10 border border-black text-white/0'>Name</th>
