@@ -94,7 +94,7 @@ function Home() {
             "maxWidth":307,
             "maxHeight":401,
             "compressFormat":"JPEG",
-            "quality":80
+            "quality":95
           });
       } else {
           setFile(null);

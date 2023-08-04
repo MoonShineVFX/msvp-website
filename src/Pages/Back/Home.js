@@ -91,10 +91,10 @@ function Home() {
             "filename":imgFileName,
             "file":selectedFile,
             "folder":'data/',
-            "maxWidth":537,
-            "maxHeight":371,
+            "maxWidth":720,
+            "maxHeight":480,
             "compressFormat":"JPEG",
-            "quality":90
+            "quality":95
           });
       } else {
           setFile(null);

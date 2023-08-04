@@ -93,10 +93,10 @@ function Home() {
             "filename":imgFileName,
             "file":selectedFile,
             "folder":'studentWork/',
-            "maxWidth":320,
-            "maxHeight":180,
+            "maxWidth":640,
+            "maxHeight":360,
             "compressFormat":"JPEG",
-            "quality":75
+            "quality":95
           });
       } else {
           setFile(null);
