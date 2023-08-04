@@ -45,9 +45,9 @@ function Works() {
   },[])
 
   return (
-    <section id="works">
+    <div id="works">
       <div id='catrgoriesList' className=''>
-        <ul className='flex justify-center items-center gap-4 h-14 flex-wrap text-xs xs:w-5/6 xs:mx-auto xs:mb-10 xs:text-sm xs:justify-start'>
+        <ul className='flex justify-center items-center gap-4 h-16 flex-wrap text-xs xs:w-5/6 xs:mx-auto xs:mb-10 xs:text-sm xs:justify-start'>
         {
           categoryData ? 
           categoryData.map((item,index)=>{
@@ -55,7 +55,7 @@ function Works() {
             return(
               <li key={name+id} 
                   onClick={()=> filterCategory(id)} 
-                  className={"cursor-pointer  hover:text-white " + (currentCategory === id ? ' text-white border-b ' : 'text-zinc-500  ' )}>
+                  className={"cursor-pointer text-lg  hover:text-white " + (currentCategory === id ? ' text-white border-b ' : 'text-zinc-400  ' )}>
                 {i18n.language === 'zh-TW' ? name_cht : name}
               </li>
             )
@@ -64,24 +64,23 @@ function Works() {
         <li></li><li></li><li></li>
         </ul>
       </div>
-      <div className="works_list">
+      <div className="grid grid-cols-2 md:grid-cols-3">
         {filteredWorkData ? 
           filteredWorkData.map((item,index)=>{
           return(
             <div 
-              className={currentCategory === item.team || 'ALL' ? 'item' : 'item'}
-              
-              data-aos="zoom-out-up"
-              data-aos-delay={index+'00'}
+              className={`bg-black w-full  relative  transition-all cursor-pointer  overflow-hidden group ${currentCategory === item.team || 'ALL' ? 'item' : 'item'}`}
               key={index}
               onClick={() => {
                 setShowModal(true);
                 setCurrentMovie(item);
               }}
             >
-              <div className="item_bg" style={{backgroundImage: `url(${item.imgpath})`}}>
-              </div>
-              <div className='title'> {item.title}</div>
+              <div
+                className='bg-center bg-cover bg-no-repeat aspect-[13/9]  w-full h-full  group-hover:scale-110 brightness-90 group-hover:brightness-110 transition  '
+                style={{backgroundImage : `url(${item.imgpath})`}}
+              ></div>
+               <div className={"transition-all  group-hover:bottom-9 group-hover:opacity-100 opacity-0 font-light absolute left-2 bottom-2 text-shadow  lg:bottom-8 lg:left-8 text-base lg:text-lg" }> {item.title} </div>
             </div>
           )
         }):""}
@@ -93,7 +92,7 @@ function Works() {
       
       </div>
       
-    </section>
+    </div>
   )
 }
 
