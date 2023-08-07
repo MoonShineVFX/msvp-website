@@ -81,7 +81,7 @@ a {
 }
 #navbar .navlist ul {
   display: flex;
-  font-size: 8pt;
+  font-size: 10pt;
 }
 #navbar .navlist ul li {
   cursor: pointer;

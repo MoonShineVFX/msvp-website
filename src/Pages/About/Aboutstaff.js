@@ -39,11 +39,11 @@ function Aboutstaff() {
   console.log(data)
   return (
     <section id="About_staff">
-      <div className="unitHeader xs:text-2xl xs:font-semibold xs:text-center">
-        <h1> Our Team</h1>
+      <div className=" xs:text-2xl xs:font-semibold xs:text-center">
+        <h1 className='text-2xl font-semibold'> Our Team</h1>
       </div>
-      <div className="about_department_list  xs:mt-5">
-        <ul className='w-full'>
+      <div className="  xs:mt-5">
+        <ul className='w-full grid grid-cols-3 md:grid-cols-5 my-6 gap-3 '>
           {
             categoryData ? 
             categoryData.map((item,index)=>{
@@ -51,7 +51,7 @@ function Aboutstaff() {
               return(
                 <li key={name+id} 
                     onClick={()=> filterCategory(id)} 
-                    className={"cursor-pointer text-sm hover:text-white box-border p-2 transition-all " + (currentCategory === id ? ' text-white  border rounded-full ' : 'text-zinc-500  border-0  ' )}>
+                    className={"cursor-pointer text-md hover:text-white box-border p-2 transition-all text-center  " + (currentCategory === id ? ' text-white  border-b ' : 'text-zinc-300  border-0  ' )}>
                   { name}
                 </li>
               )
@@ -59,34 +59,34 @@ function Aboutstaff() {
           }
         </ul>
       </div>
-      <motion.div layout className="aboutstaff_list">
+      <div  className="grid grid-cols-2 md:grid-cols-4 gap-3">
         <AnimatePresence>
         {
           filteredData?
           filteredData.map((item)=>{
             return(
-              <motion.div  
+              <div  
                 key={item.id} 
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 
-                className="aboutstaff_item"
+                className=" aspect-[9/13] bg-cover bg-center bg-no-repeat  rounded-md relative  group brightness-90  hover:brightness-110"
                 style={{backgroundImage: `url(${item.imgpath})`}}
               >
-                <div className="person_info">
-                  <div className="name">{item.nickname}</div>
-                  <div className="bar"></div>
-                  <div className="name_subtext">{item.subtext}</div>
+                <div className=" flex flex-col h-full justify-end items-center pb-4 group-hover:pb-8 transition-all">
+                  <div className="name md:text-3xl font-bold">{item.nickname}</div>
+                  <div className="bar w-3 h-1 my-3 bg-white"></div>
+                  <div className="text-sm ">{item.subtext}</div>
                 </div>
               
 
-              </motion.div>
+              </div>
             )
           }) : <div>Loading...</div>
         }
         </AnimatePresence>
-      </motion.div>
+      </div>
 
     </section>
   )
