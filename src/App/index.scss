@@ -4,7 +4,7 @@
   --white:#ffF;
   --grey:#ddd;
   --main-color01:#5257CF;
-  --main-p-font-size:8pt;
+  --main-p-font-size:12pt;
 }
 /* Scroll Bar */
 ::-webkit-scrollbar {
@@ -234,11 +234,11 @@ section.fluid_section{
       text-transform: capitalize;
     }
     .desc{
-      font-weight: 100;
-      font-size: 8pt;
+      font-weight: 300;
+      font-size: 12pt;
       line-height: 1.2;
-      letter-spacing: 2px;
-      margin-top: 15px;
+      letter-spacing: 1px;
+      margin-top: 4px;
     }
     p{
       font-weight: 100;
@@ -818,7 +818,7 @@ section.fluid_section{
       .caption{
         margin-top: 20px;
         .title{
-          font-size: 1em;
+          font-size: 1.2em;
           margin-bottom: 15px;
           letter-spacing: 1px;
           text-transform: capitalize;
