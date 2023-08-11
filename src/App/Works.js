@@ -46,8 +46,8 @@ function Works() {
 
   return (
     <div id="works">
-      <div id='catrgoriesList' className=''>
-        <ul className='flex justify-center items-center gap-4 h-16 flex-wrap text-xs xs:w-5/6 xs:mx-auto xs:mb-10 xs:text-sm xs:justify-start'>
+      <div id='catrgoriesList' className='my-4'>
+        <ul className='flex justify-start items-center gap-4  flex-wrap text-sm md:text-lg md:justify-center  mx-4 md:mx-0'>
         {
           categoryData ? 
           categoryData.map((item,index)=>{
@@ -55,7 +55,7 @@ function Works() {
             return(
               <li key={name+id} 
                   onClick={()=> filterCategory(id)} 
-                  className={"cursor-pointer text-lg  hover:text-white " + (currentCategory === id ? ' text-white border-b ' : 'text-zinc-400  ' )}>
+                  className={"cursor-pointer  hover:text-white " + (currentCategory === id ? ' text-white border-b ' : 'text-zinc-400  ' )}>
                 {i18n.language === 'zh-TW' ? name_cht : name}
               </li>
             )
@@ -64,7 +64,7 @@ function Works() {
         <li></li><li></li><li></li>
         </ul>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3">
+      <div className="grid grid-cols-2 md:grid-cols-3 ">
         {filteredWorkData ? 
           filteredWorkData.map((item,index)=>{
           return(

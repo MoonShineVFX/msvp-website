@@ -4,14 +4,12 @@
   margin-bottom: 200px;
 }
 .chartlist{
-  margin-top: -150px;
+  margin-top: -12%;
   margin-bottom: 100px;
   ul{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
     li{
-      width: 30%;
+
       .chartlist_item{
         display: flex;
         flex-direction: column;
@@ -484,7 +482,7 @@
         .title{
           position: absolute;
           z-index: 2;
-          font-size: 8pt;
+          font-size: 14pt;
           bottom: 5px;
           left: 5px;
         }
