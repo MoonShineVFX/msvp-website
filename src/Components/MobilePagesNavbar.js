@@ -15,6 +15,19 @@ function MobilePagesNavbar({data,isToggled,switchToggle}) {
         <ul>
           { data?
             data.map((item,index)=>{
+              if(item.type === 'about'){
+                return     (
+                  <li key='about'>
+                    <a 
+                      href="https://moonshine.tw/about"
+                      target="_blank"
+                    >
+                      {t(`${item.chtName}`)}
+                    </a>
+                  </li>
+                )            
+
+              }
               return(
                 <li key={index}>
                   <Link 

@@ -24,6 +24,20 @@ function PagesNavbar({data ,toggleTrueFalse}) {
         <ul>
           { data?
             data.map((item,index)=>{
+              if(item.type === 'about'){
+                return     (
+                  <li key='about'>
+                    <a 
+                      href="https://moonshine.tw/about"
+                      target="_blank"
+                      className={ pathname.substring(1) === item.type ? 'active' : ''}
+                    >
+                      {t(`${item.chtName}`)}
+                    </a>
+                  </li>
+                )            
+
+              }
               return(
                 <li key={index}>
                   <Link 

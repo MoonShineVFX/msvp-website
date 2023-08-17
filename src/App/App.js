@@ -55,7 +55,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="services" element={<Services />} />
           <Route path="education" element={<Education />} />
-          <Route path="guidelines" element={<Guidelines />} />
+          {/* <Route path="guidelines" element={<Guidelines />} /> */}
         </Route>
         
         <Route path="admin" element={<ProtectedRoutes />}>
