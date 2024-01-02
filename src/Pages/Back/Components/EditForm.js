@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
 import { constSelector, useRecoilState, useRecoilValue } from 'recoil';
 import { formDisplayState, workState,formStatusState } from '../atoms/fromTypes'
-import { useForm } from 'react-hook-form';
+import { useForm,Controller } from 'react-hook-form';
 
 
 function EditForm({categoryData,handleCreateWork , handleEditWork}) {
-  const {register, handleSubmit, reset, formState: { errors }} = useForm(
-    {defaultValues: { title: "", intro: "",sort_num:"",youtube_id:"" ,year_of_work:"",video_url:"",vimeo_id:"", youtube_id:""}});
+  const {control,register, handleSubmit, reset, formState: { errors }} = useForm(
+    {defaultValues: { title: "", intro: "",sort_num:"",youtube_id:"" ,year_of_work:"",video_url:"",vimeo_id:"", youtube_id:"",is_social_link:false}});
   const onSubmit = (data) => {
     console.log(data)
     if(data.method === 'ADD'){
@@ -72,6 +72,48 @@ function EditForm({categoryData,handleCreateWork , handleEditWork}) {
                   className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none "
                   placeholder="影片位置"
                   {...register('video_url')}
+                />
+              </div>
+
+              <div className='flex flex-col mb-3 '>
+                <Controller
+                  name="is_social_link"
+                  control={control}
+                  defaultValue={work && work.is_social_link}
+                  render={({ field }) => (
+                    <div className="flex mb-2 ">
+                      <label className="inline-flex relative items-center mr-5 cursor-pointer">
+                        <input
+                          type="checkbox"
+                          className="sr-only peer"
+                          checked={field.value}
+                          onChange={(e) => field.onChange(e.target.checked)}
+                        />
+                        <div
+                          className={`w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-green-300 ${
+                            field.value
+                              ? 'peer-checked:after:translate-x-full peer-checked:bg-green-600'
+                              : ''
+                          } peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all`}
+                        ></div>
+                        <span className="ml-2 text-sm font-medium ">
+                          以社群超連結另開視窗(fb,ig)
+                        </span>
+                      </label>
+                    </div>
+                  )}
+                />
+                <Controller
+                  name="social_link"
+                  control={control}
+                  defaultValue={work && work.social_link}
+                  rules={{ required: false }}
+                  render={({ field }) => (
+                    <input {...field} 
+                      type="text" placeholder="輸入連結" 
+                      className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none "
+                    />
+                  )}
                 />
               </div>
 

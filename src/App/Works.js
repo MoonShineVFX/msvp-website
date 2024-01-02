@@ -67,22 +67,44 @@ function Works() {
       <div className="grid grid-cols-2 md:grid-cols-3 ">
         {filteredWorkData ? 
           filteredWorkData.map((item,index)=>{
-          return(
-            <div 
-              className={`bg-black w-full  relative  transition-all cursor-pointer  overflow-hidden group ${currentCategory === item.team || 'ALL' ? 'item' : 'item'}`}
-              key={index}
-              onClick={() => {
-                setShowModal(true);
-                setCurrentMovie(item);
-              }}
-            >
-              <div
-                className='bg-center bg-cover bg-no-repeat aspect-[13/9]  w-full h-full  group-hover:scale-110 brightness-90 group-hover:brightness-110 transition  '
-                style={{backgroundImage : `url(${item.imgpath})`}}
-              ></div>
-               <div className={"transition-all  group-hover:bottom-9 group-hover:opacity-100 opacity-0 font-light absolute left-2 bottom-2 text-shadow  lg:bottom-8 lg:left-8 text-base lg:text-lg" }> {item.title} </div>
-            </div>
-          )
+            if (item.is_social_link) { 
+              return(
+                <a
+                  href={item.social_link} // 這裡設置超連結的 URL
+                  target="_blank" // 打開新分頁
+                  rel="noopener noreferrer" // 安全性要求
+                  className={`bg-black w-full relative transition-all cursor-pointer overflow-hidden group ${
+                    currentCategory === item.team || 'ALL' ? 'item' : 'item'
+                  }`}
+                  key={index}
+                >
+                  <div
+                    className='bg-center bg-cover bg-no-repeat aspect-[13/9]  w-full h-full  group-hover:scale-110 brightness-90 group-hover:brightness-110 transition  '
+                    style={{backgroundImage : `url(${item.imgpath})`}}
+                  ></div>
+                   <div className={"transition-all  group-hover:bottom-9 group-hover:opacity-100 opacity-0 font-light absolute left-2 bottom-2 text-shadow  lg:bottom-8 lg:left-8 text-base lg:text-lg" }> {item.title} </div>
+                </a>
+              )
+            }else{
+              return(
+
+                <div 
+                  className={`bg-black w-full  relative  transition-all cursor-pointer  overflow-hidden group ${currentCategory === item.team || 'ALL' ? 'item' : 'item'}`}
+                  key={index}
+                  onClick={() => {
+                    setShowModal(true);
+                    setCurrentMovie(item);
+                  }}
+                >
+                  <div
+                    className='bg-center bg-cover bg-no-repeat aspect-[13/9]  w-full h-full  group-hover:scale-110 brightness-90 group-hover:brightness-110 transition  '
+                    style={{backgroundImage : `url(${item.imgpath})`}}
+                  ></div>
+                   <div className={"transition-all  group-hover:bottom-9 group-hover:opacity-100 opacity-0 font-light absolute left-2 bottom-2 text-shadow  lg:bottom-8 lg:left-8 text-base lg:text-lg" }> {item.title} </div>
+                </div>
+              )
+            }
+
         }):""}
         <div className="item"></div>
         <div className="item"></div>

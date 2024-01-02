@@ -51,7 +51,7 @@ function Home() {
       ]
     });
   }
-
+  //新增作品
   const handleCreateWork = (data) =>{
     let currentData ={
       "id": Date.now().toString(36),
@@ -61,8 +61,10 @@ function Home() {
       "video_url": data.video_url,
       "sort_num": data.sort_num ? data.sort_num : '666',
       "display":data.display ,
-      "year_of_work":data.yearofwork ? data.yearofwork : '2022',
-      "category":data.category ? data.category : '1'
+      "year_of_work":data.yearofwork ? data.yearofwork : '2024',
+      "category":data.category ? data.category : '1',
+      "is_social_link":data.is_social_link,
+      "social_link":data.social_link
     }
     createWork(currentData,function(res){
       console.log(res)
@@ -70,6 +72,7 @@ function Home() {
     })
   }
 
+  //編輯作品
   const handleEditWork = (uid,data) =>{
     let selectedFile = data.file[0];
     // 設定圖檔重新命名
@@ -82,6 +85,8 @@ function Home() {
       "display":data.display,
       "year_of_work":data.year_of_work ,
       "category":data.category ,
+      "is_social_link":data.is_social_link,
+      "social_link":data.social_link
     }
     // 如果有圖檔存在 執行新增資料 否則不執行
     if (selectedFile) {

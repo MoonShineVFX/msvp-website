@@ -26,7 +26,6 @@ function MobilePagesNavbar({data,isToggled,switchToggle}) {
                     </a>
                   </li>
                 )            
-
               }
               return(
                 <li key={index}>
