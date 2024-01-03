@@ -83,6 +83,7 @@ function Works() {
                     style={{backgroundImage : `url(${item.imgpath})`}}
                   ></div>
                    <div className={"transition-all  group-hover:bottom-9 group-hover:opacity-100 opacity-0 font-light absolute left-2 bottom-2 text-shadow  lg:bottom-8 lg:left-8 text-base lg:text-lg" }> {item.title} </div>
+                   <div className='absolute right-2 top-2  bg-black text-white  rounded-xl text-xs py-1 px-2 opacity-50 '>外部連結</div>
                 </a>
               )
             }else{
