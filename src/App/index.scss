@@ -368,7 +368,7 @@ section.fluid_section{
     left: 50%;
     z-index: 2;
     width: 80%;
-    max-height: 700px;
+    max-height: 90vh;
     color:white;
     transition: 0.5s ease;
     transform: translate(-50%,-40%);
@@ -472,7 +472,7 @@ section.fluid_section{
 }
 .player-wrapper {
   position: relative;
-  padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
+  padding-top: 56.25%;
 }
 
 .react-player {
