@@ -73,7 +73,7 @@ function Contact() {
         <div className="infoArea">
           <div className="infoContent width1">
               <p>Tel</p>
-              <p>+886-2-27857037</p>
+              <p>Xizhi +886-2-86462356 / Neihu +886-2-27857037</p>
           </div>
           <div className="infoContent width1">
               <p>Email</p>
