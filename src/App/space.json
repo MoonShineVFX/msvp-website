@@ -8,9 +8,10 @@
       "shooting":"space_shooting1",
       "ledspec":"space_ledspec1",
       "trussspec":"space_trussspec1",
+      "mosys":"space_mosys1",
       "recommendation":"space_recommendation1",
       "image":"space01.png",
-      "space_image1":"space01_a.png"
+      "space_image1":"https://r2.web.moonshine.tw/msweb/msvp/images/cave_space.jpg"
     },
     {
       "id":2,
@@ -22,7 +23,7 @@
       "trussspec":"space_trussspec2",
       "recommendation":"space_recommendation2",
       "image":"space02.png",
-      "space_image1":"space02_b.png"
+      "space_image1":"https://r2.web.moonshine.tw/msweb/msvp/images/cube_space.jpg"
       
     }
   ]
