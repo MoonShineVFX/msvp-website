@@ -8,6 +8,12 @@ function PagesNavbar({data ,toggleTrueFalse}) {
   const changeLanguage = (lng) => {
       i18n.changeLanguage(lng);
   };
+  const scrollToElement = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   const { pathname } = useLocation();
   console.log(pathname)
   return (
@@ -22,34 +28,45 @@ function PagesNavbar({data ,toggleTrueFalse}) {
       </div>
       <div className="navlist">
         <ul>
-          { data?
-            data.map((item,index)=>{
-              if(item.type === 'about'){
-                return     (
-                  <li key='about'>
-                    <a 
-                      href="https://moonshine.tw/about"
+        {data && data.map((item, index) => (
+          <li key={index}>
+            {(() => {
+              switch (item.type) {
+                case 'external':
+                  return (
+                    <a
+                      href={item.href}
                       target="_blank"
-                      className={ pathname.substring(1) === item.type ? 'active' : ''}
+                      className={pathname.substring(1) === item.type ? 'active' : ''}
                     >
                       {t(`${item.chtName}`)}
                     </a>
-                  </li>
-                )            
-
+                  );
+                case 'internal':
+                  return (
+                    <Link
+                      to={item.href}
+                      className={pathname.substring(1) === item.type ? 'active' : ''}
+                    >
+                      {t(`${item.chtName}`)}
+                    </Link>
+                  );
+                case 'scroll':
+                  return (
+                    <div
+                      onClick={() => scrollToElement(item.href)}
+                      className={pathname.substring(1) === item.type ? 'active' : ''}
+                    >
+                      {t(`${item.chtName}`)}
+                    </div>
+                  );
+                default:
+                  return null;
               }
-              return(
-                <li key={index}>
-                  <Link 
-                    to={item.type}
-                    className={ pathname.substring(1) === item.type ? 'active' : ''}
-                  >
-                    {t(`${item.chtName}`)}
-                  </Link>
-                </li>
-              )
-            }): ""
-          }
+            })()}
+          </li>
+        ))}
+
           <div className='lang_btngroup'>
             <li className={i18n.language === 'zh-TW' ? 'active' : ''}>
               <a onClick={() => changeLanguage("zh-TW")}>中文</a>

@@ -4,25 +4,36 @@
       "id":1,
       "chtName":"pagenavbar1",
       "engName":"HOME",
-      "type":""
+      "type":"internal",
+      "href":""
     },
     {
       "id":2,
-      "chtName":"pagenavbar2",
-      "engName":"ABOUT",
-      "type":"about"
+      "chtName":"pagenavbar6",
+      "engName":"STAGE",
+      "type":"scroll",
+      "href":"space"
     },
     {
       "id":3,
-      "chtName":"pagenavbar3",
-      "engName":"SERVICES",
-      "type":"services"
+      "chtName":"pagenavbar2",
+      "engName":"ABOUT",
+      "type":"external",
+      "href":"https://moonshine.tw/about"
     },
     {
       "id":4,
+      "chtName":"pagenavbar3",
+      "engName":"SERVICES",
+      "type":"internal",
+      "href":"services"
+    },
+    {
+      "id":5,
       "chtName":"pagenavbar4",
       "engName":"EDUCATION",
-      "type":"education"
+      "type":"internal",
+      "href":"education"
     }
   ]
 }
