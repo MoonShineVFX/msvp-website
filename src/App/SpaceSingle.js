@@ -47,12 +47,12 @@ function SpaceSingle({data,handler}) {
             <div>{t('spec_desc_title3')}</div>
             <div dangerouslySetInnerHTML={{ __html:t(`${ledspec}`) }}/>
           </div>
-          <div className="description">
+          <div className="description" style={{color:'#8ffff8'}}>
             <div>{t('spec_desc_title4')}</div>
             <div dangerouslySetInnerHTML={{ __html:t(`${trussspec}`) }}/>
           </div>
           {mosys && (
-            <div className="description">
+            <div className="description" style={{color:'#d8cfad'}}>
               <div>{t('spec_desc_title6')}</div>
               <div dangerouslySetInnerHTML={{ __html:t(`${mosys}`) }}/>
             </div>
