@@ -20,6 +20,7 @@ function SpaceSingle({ data, handler }) {
     mosys,
     rotating,
     recommendation,
+    address,
   } = data;
   // let finalIntro= intro.replace('\\n', '\n')
   const [active, setActive] = useState(false);
@@ -130,6 +131,13 @@ function SpaceSingle({ data, handler }) {
             <div>{t("spec_desc_title5")}</div>
             <div dangerouslySetInnerHTML={{ __html: t(`${recommendation}`) }} />
           </div>
+
+          {address && (
+            <div className="description">
+              <div>{t("spec_desc_title8")}</div>
+              <div dangerouslySetInnerHTML={{ __html: t(`${address}`) }} />
+            </div>
+          )}
         </article>
       </div>
     </div>
