@@ -1,20 +1,42 @@
 import React from "react";
 import { FaBars } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 function PagesNavbar({ data, toggleTrueFalse }) {
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
+
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
   };
+
   const scrollToElement = (id) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
+      console.log(`成功滾動到元素: ${id}`);
+    } else {
+      console.log(`找不到元素: ${id}`);
+      // 如果找不到元素，嘗試滾動到頁面頂部
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
-  const { pathname } = useLocation();
+
+  const handleScrollClick = (href) => {
+    if (pathname !== "/") {
+      // 如果不在首頁，先導航到首頁
+      navigate("/");
+      // 等待頁面載入完成後再滾動
+      setTimeout(() => {
+        scrollToElement(href);
+      }, 500);
+    } else {
+      // 如果已在首頁，直接滾動
+      scrollToElement(href);
+    }
+  };
   return (
     <div id="navbar" className="site-menu">
       <div className="logo">
@@ -48,6 +70,7 @@ function PagesNavbar({ data, toggleTrueFalse }) {
                       return (
                         <Link
                           to={item.href}
+                          onClick={() => handleScrollClick(item.href)}
                           className={
                             pathname.substring(1) === item.type ? "active" : ""
                           }
@@ -58,7 +81,7 @@ function PagesNavbar({ data, toggleTrueFalse }) {
                     case "scroll":
                       return (
                         <div
-                          onClick={() => scrollToElement(item.href)}
+                          onClick={() => handleScrollClick(item.href)}
                           className={
                             pathname.substring(1) === item.type ? "active" : ""
                           }

@@ -1,39 +1,40 @@
 {
-  "navbar":[
+  "navbar": [
     {
-      "id":1,
-      "chtName":"pagenavbar1",
-      "engName":"HOME",
-      "type":"internal",
-      "href":""
+      "id": 1,
+      "chtName": "pagenavbar1",
+      "engName": "HOME",
+      "type": "internal",
+      "href": "/"
     },
     {
-      "id":2,
-      "chtName":"pagenavbar6",
-      "engName":"STAGE",
-      "type":"scroll",
-      "href":"space"
+      "id": 2,
+      "chtName": "pagenavbar6",
+      "engName": "STAGE",
+      "type": "scroll",
+      "href": "space"
+    },
+
+    {
+      "id": 4,
+      "chtName": "pagenavbar3",
+      "engName": "SERVICES",
+      "type": "internal",
+      "href": "services"
     },
     {
-      "id":3,
-      "chtName":"pagenavbar2",
-      "engName":"ABOUT",
-      "type":"external",
-      "href":"https://moonshine.tw/about"
+      "id": 5,
+      "chtName": "pagenavbar4",
+      "engName": "EDUCATION",
+      "type": "internal",
+      "href": "education"
     },
     {
-      "id":4,
-      "chtName":"pagenavbar3",
-      "engName":"SERVICES",
-      "type":"internal",
-      "href":"services"
-    },
-    {
-      "id":5,
-      "chtName":"pagenavbar4",
-      "engName":"EDUCATION",
-      "type":"internal",
-      "href":"education"
+      "id": 3,
+      "chtName": "pagenavbar2",
+      "engName": "ABOUT",
+      "type": "external",
+      "href": "https://moonshine.tw/about"
     }
   ]
 }
